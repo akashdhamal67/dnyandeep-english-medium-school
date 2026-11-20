@@ -301,86 +301,86 @@
 
   <main id="main-content">
     
-    <!-- 1. HERO SECTION -->
-    <section class="relative text-white overflow-hidden min-h-[620px] lg:min-h-[88vh] xl:min-h-[92vh] flex flex-col justify-between pt-12 pb-8 sm:pt-16 sm:pb-10 lg:pt-20 lg:pb-12">
+    <!-- 1. HERO SECTION (Fits exactly in viewport, zero vertical scroll needed) -->
+    <section class="hero-viewport relative text-white">
       <!-- Hero Background Video & Responsive Poster -->
       <div class="absolute inset-0 z-0 overflow-hidden">
-        <!-- Video element (Desktop & tablet) with watermark scaled out and offset -->
+        <!-- Video element (Desktop & tablet) - Unscaled full frame -->
         <video class="hero-video-bg hidden md:block w-full h-full object-cover" autoplay muted loop playsinline poster="videos/hero-poster.jpg">
           <source src="videos/hero-bg.mp4" type="video/mp4">
         </video>
         <!-- Static Poster image on mobile / reduced motion fallback -->
-        <img src="videos/hero-poster.jpg" alt="Dnyandeep English School Campus Banner" class="md:hidden w-full h-full object-cover" />
+        <img src="videos/hero-poster.jpg" alt="Dnyandeep English School Campus Banner" class="md:hidden w-full h-full object-cover object-[center_45%]" />
         
         <!-- Left-to-right gradient overlay: rgba(18,59,38,0.82) at 0%, 0.55 at 45%, 0.10 at 100% -->
-        <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, rgba(18,59,38,0.85) 0%, rgba(18,59,38,0.58) 45%, rgba(18,59,38,0.10) 100%);"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, rgba(18,59,38,0.82) 0%, rgba(18,59,38,0.55) 45%, rgba(18,59,38,0.10) 100%);"></div>
         
-        <!-- Corner gradient mask on bottom-right to ensure watermark is 100% invisible -->
-        <div class="absolute bottom-0 right-0 w-48 h-36 bg-gradient-to-tl from-[#123B26]/80 to-transparent pointer-events-none"></div>
+        <!-- Discrete Corner Watermark Blur/Gradient Mask (120x90px) -->
+        <div class="absolute bottom-0 right-0 w-[120px] h-[90px] rounded-tl-2xl bg-gradient-to-tl from-[#123B26]/95 via-[#123B26]/80 to-transparent backdrop-blur-[6px] pointer-events-none z-1"></div>
 
         <!-- Light bottom gradient behind the stats bar -->
-        <div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#0c2719]/80 via-[#123B26]/40 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0c2719]/80 via-[#123B26]/35 to-transparent pointer-events-none"></div>
       </div>
       
-      <!-- Top / Center Content Area -->
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto">
+      <!-- Top / Center Content Area (Vertically Centered in Available Space) -->
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto pt-4 pb-2 md:py-3">
         <!-- Text Column limited to max-width 640px so headline wraps cleanly on 3 lines -->
-        <div class="max-w-[640px] space-y-6 text-center lg:text-left">
+        <div class="max-w-[640px] flex flex-col hero-content-gap text-center lg:text-left">
           
           <!-- Badge -->
-          <div class="hero-animate hero-delay-1 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#123B26]/70 backdrop-blur-md border border-[#F2E3A0]/60 text-[#F2E3A0] text-xs font-semibold uppercase tracking-[0.08em] shadow-sm">
+          <div class="hero-animate hero-delay-1 inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#123B26]/75 backdrop-blur-md border border-[#F2E3A0]/60 text-[#F2E3A0] text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] shadow-sm self-center lg:self-start">
             <span class="w-2 h-2 rounded-full bg-[#F2E3A0]"></span>
             <span>Admissions Open for Academic Year 2026–27</span>
           </div>
 
           <!-- Main Headline with clamp typography and soft text shadow -->
-          <h1 class="hero-animate hero-delay-2 font-serif font-semibold text-white tracking-[-0.01em] leading-[1.1] text-[clamp(2.25rem,4.6vw,4rem)] [text-shadow:0_2px_14px_rgba(0,0,0,0.35)]">
+          <h1 class="hero-animate hero-delay-2 hero-headline text-white">
             Quality SSC Education with <span class="text-[#F2E3A0]">All-Round Development</span>
           </h1>
 
-          <!-- Tagline: Inter 18-19px, max-w 540px, 3 glass pill chips + sentence -->
-          <div class="hero-animate hero-delay-3 max-w-[540px] space-y-3 mx-auto lg:mx-0">
+          <!-- Tagline: clamp text, max-w 540px, 3 glass pill chips + sentence -->
+          <div class="hero-animate hero-delay-3 max-w-[540px] flex flex-col gap-2.5 mx-auto lg:mx-0">
             <!-- 3 Glass Style Chips -->
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium shadow-xs">
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium shadow-xs">
                 <i data-lucide="check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
                 Nursery to Class 10th
               </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium shadow-xs">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium shadow-xs">
                 <i data-lucide="check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
                 Experienced Teachers
               </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium shadow-xs">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-medium shadow-xs">
                 <i data-lucide="check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
                 Affordable Fees
               </span>
             </div>
             <!-- Sentence on its own line -->
-            <p class="text-[18px] sm:text-[19px] leading-[1.6] text-white/95 font-normal [text-shadow:0_2px_14px_rgba(0,0,0,0.35)]">
+            <p class="hero-tagline-text">
               Nurturing confident, responsible, and future-ready students.
             </p>
           </div>
 
           <!-- Button Hierarchy: Single Row with consistent spacing (stacks neatly on mobile) -->
-          <div class="hero-animate hero-delay-4 pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 sm:gap-6">
+          <div class="hero-animate hero-delay-4 pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
             <!-- 1. Solid Cream Primary Button (slightly larger) -->
-            <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-13 px-8 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-base tracking-wide shadow-xl shadow-black/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5 whitespace-nowrap">
+            <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-11 sm:h-12 px-6 sm:px-7 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm sm:text-base tracking-wide shadow-xl shadow-black/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap">
               <span>Apply for Admission</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
 
             <!-- 2. Round 56px Play Button with pulsing ring + label next to it (no box) -->
-            <button id="open-video-modal" type="button" class="group flex items-center gap-3 text-left focus:outline-none py-1">
-              <span class="relative w-14 h-14 rounded-full border-2 border-[#F2E3A0] bg-[#123B26]/70 backdrop-blur-md flex items-center justify-center shrink-0 pulsing-ring group-hover:scale-105 transition-transform shadow-lg">
-                <i data-lucide="play" class="w-5 h-5 text-[#F2E3A0] fill-[#F2E3A0] translate-x-0.5"></i>
+            <button id="open-video-modal" type="button" class="group flex items-center gap-3 text-left focus:outline-none">
+              <span class="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-full border-2 border-[#F2E3A0] bg-[#123B26]/75 backdrop-blur-md flex items-center justify-center shrink-0 pulsing-ring group-hover:scale-105 transition-transform shadow-lg">
+                <i data-lucide="play" class="w-4 h-4 sm:w-5 sm:h-5 text-[#F2E3A0] fill-[#F2E3A0] translate-x-0.5"></i>
               </span>
-              <span class="text-sm sm:text-base font-bold text-white group-hover:text-[#F2E3A0] transition-colors [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
+              <span class="text-sm sm:text-base font-bold text-white group-hover:text-[#F2E3A0] transition-colors [text-shadow:0_1px_6px_rgba(0,0,0,0.4)] whitespace-nowrap">
                 Watch Our Story
               </span>
             </button>
 
             <!-- 3. Programs & Curriculum text link with arrow & underline on hover (no box) -->
-            <a href="academics.html" class="group inline-flex items-center gap-1.5 text-sm sm:text-base font-medium text-white/95 hover:text-[#F2E3A0] py-2 transition-colors [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
+            <a href="academics.html" class="group inline-flex items-center gap-1.5 text-sm sm:text-base font-medium text-white/95 hover:text-[#F2E3A0] py-1 transition-colors [text-shadow:0_1px_6px_rgba(0,0,0,0.4)] whitespace-nowrap">
               <span class="relative pb-0.5 border-b border-transparent group-hover:border-[#F2E3A0] transition-all">
                 Programs & Curriculum
               </span>
@@ -391,65 +391,57 @@
         </div>
       </div>
 
-      <!-- Bottom Glass Stats Bar + Subtle Scroll Indicator -->
-      <div class="hero-animate hero-delay-5 relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 lg:mt-12">
-        <div class="relative bg-[#123B26]/55 backdrop-blur-[10px] border border-white/20 rounded-[16px] shadow-2xl p-4 sm:p-5">
-          <!-- 4 Items with Icons, Bold Value and Small Label (2x2 on mobile, 4-col on tablet/desktop) -->
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y lg:divide-y-0 lg:divide-x divide-white/15">
+      <!-- Bottom Pinned Glass Stats Bar (Height about 76-88px, always fits inside hero) -->
+      <div class="hero-animate hero-delay-5 relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3 sm:pb-4 shrink-0">
+        <div class="relative bg-[#123B26]/60 backdrop-blur-[10px] border border-white/20 rounded-[16px] shadow-2xl p-3 sm:p-3.5 lg:py-3 lg:px-5">
+          <!-- 4 Items with Icons, Bold Value and Small Label (2x2 on mobile, single compact row on desktop) -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6 divide-y lg:divide-y-0 lg:divide-x divide-white/15">
             
             <!-- Item 1: 1944 / Founded -->
-            <div class="flex items-center gap-3 pt-2 lg:pt-0 lg:px-4 first:pt-0 first:lg:pl-0">
-              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
-                <i data-lucide="calendar" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-1.5 lg:pt-0 lg:px-3 first:pt-0 first:lg:pl-0">
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
               </div>
-              <div>
-                <p class="text-white font-serif font-bold text-xl sm:text-2xl leading-none">1944</p>
-                <p class="text-xs text-white/80 font-medium mt-1">Founded</p>
+              <div class="min-w-0">
+                <p class="text-white font-serif font-bold text-lg sm:text-xl lg:text-2xl leading-none">1944</p>
+                <p class="text-[11px] sm:text-xs text-white/80 font-medium mt-0.5 truncate">Founded</p>
               </div>
             </div>
 
             <!-- Item 2: SSC Board / Maharashtra State -->
-            <div class="flex items-center gap-3 pt-2 lg:pt-0 lg:px-4">
-              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
-                <i data-lucide="award" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-1.5 lg:pt-0 lg:px-3">
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
+                <i data-lucide="award" class="w-4 h-4"></i>
               </div>
-              <div>
-                <p class="text-white font-serif font-bold text-xl sm:text-2xl leading-none">SSC Board</p>
-                <p class="text-xs text-white/80 font-medium mt-1">Maharashtra State</p>
+              <div class="min-w-0">
+                <p class="text-white font-serif font-bold text-lg sm:text-xl lg:text-2xl leading-none">SSC Board</p>
+                <p class="text-[11px] sm:text-xs text-white/80 font-medium mt-0.5 truncate">Maharashtra State</p>
               </div>
             </div>
 
             <!-- Item 3: Nursery–10th / Classes -->
-            <div class="flex items-center gap-3 pt-4 sm:pt-2 lg:pt-0 lg:px-4">
-              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
-                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-2.5 sm:pt-1.5 lg:pt-0 lg:px-3">
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
               </div>
-              <div>
-                <p class="text-white font-serif font-bold text-xl sm:text-2xl leading-none">Nursery–10th</p>
-                <p class="text-xs text-white/80 font-medium mt-1">Classes</p>
+              <div class="min-w-0">
+                <p class="text-white font-serif font-bold text-lg sm:text-xl lg:text-2xl leading-none">Nursery–10th</p>
+                <p class="text-[11px] sm:text-xs text-white/80 font-medium mt-0.5 truncate">Classes</p>
               </div>
             </div>
 
             <!-- Item 4: Academics & Sports / Holistic Growth -->
-            <div class="flex items-center gap-3 pt-4 sm:pt-2 lg:pt-0 lg:px-4">
-              <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
-                <i data-lucide="activity" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2.5 sm:gap-3 pt-2.5 sm:pt-1.5 lg:pt-0 lg:px-3">
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-[#F2E3A0]">
+                <i data-lucide="activity" class="w-4 h-4"></i>
               </div>
-              <div>
-                <p class="text-white font-serif font-bold text-xl sm:text-2xl leading-none">Academics & Sports</p>
-                <p class="text-xs text-white/80 font-medium mt-1">Holistic Growth</p>
+              <div class="min-w-0">
+                <p class="text-white font-serif font-bold text-lg sm:text-xl lg:text-2xl leading-none truncate">Academics & Sports</p>
+                <p class="text-[11px] sm:text-xs text-white/80 font-medium mt-0.5 truncate">Holistic Growth</p>
               </div>
             </div>
 
           </div>
-        </div>
-
-        <!-- Subtle Scroll Indicator with Gentle Bounce -->
-        <div class="mt-4 flex justify-center">
-          <a href="#about" aria-label="Scroll to About Section" class="inline-flex flex-col items-center text-white/70 hover:text-[#F2E3A0] transition-colors gentle-bounce">
-            <span class="text-[10px] uppercase tracking-widest font-semibold mb-0.5">Scroll</span>
-            <i data-lucide="chevron-down" class="w-4 h-4"></i>
-          </a>
         </div>
       </div>
 
