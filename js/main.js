@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initGalleryFilter();
   initForms();
+  initVideoModal();
 });
 
 // 1. Dark Mode Management
@@ -277,3 +278,47 @@ function showStatusMessage(container, message, type) {
   container.textContent = message;
 }
 
+
+
+// Video Lightbox Modal Controller (youtube-nocookie.com)
+function initVideoModal() {
+  const modal = document.getElementById('video-modal');
+  const openBtn = document.getElementById('open-video-modal');
+  const closeBtn = document.getElementById('close-video-modal');
+  const iframe = document.getElementById('video-iframe');
+  const youtubeVideoId = 'swoo5zICo18';
+  const embedUrl = 'https://www.youtube-nocookie.com/embed/' + youtubeVideoId + '?autoplay=1&rel=0&modestbranding=1';
+
+  if (!modal || !openBtn) return;
+
+  function openModal() {
+    modal.classList.remove('hidden');
+    if (iframe) {
+      iframe.src = embedUrl;
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    if (iframe) {
+      iframe.src = '';
+    }
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+}

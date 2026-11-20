@@ -192,3 +192,26 @@ html.dark ::-webkit-scrollbar-track {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-light);
 }
+
+/* Hero Video Background & Responsive Fallback */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .hero-video-bg {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-bg {
+    display: none;
+  }
+}
