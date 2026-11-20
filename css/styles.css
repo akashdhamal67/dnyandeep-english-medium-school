@@ -1,0 +1,194 @@
+/* Dnyandeep English School - School Uniform Color Theme & Design System */
+
+:root {
+  /* School Uniform Palette */
+  --primary-green: #1F5A3A;        /* Deep uniform green */
+  --primary-dark: #123B26;         /* Hero and footer background */
+  --primary-light: #2F7A50;        /* Hover states and tints */
+  --accent-cream: #F2E3A0;         /* Cream-yellow from the blouse */
+  --accent-dark: #6B5A1E;          /* For text on cream */
+  --page-bg: #FBFAF4;              /* Warm white */
+  --tint-bg: #EEF3EA;              /* Very light green tint for alternating sections */
+  --card-surface: #FFFFFF;         /* Card surface */
+  --body-text: #1B2A22;            /* Body text */
+  --text-muted: #55655B;           /* Muted text */
+  --border-color: #DDE5D8;         /* Borders */
+
+  /* Aliases for compatibility */
+  --primary-navy: var(--primary-green);
+  --primary-navy-dark: var(--primary-dark);
+  --primary-navy-light: var(--primary-light);
+  --cream-bg: var(--page-bg);
+  --cream-card: var(--card-surface);
+  --text-dark: var(--body-text);
+  --border-light: var(--border-color);
+}
+
+/* Custom Typography & Base */
+body {
+  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--body-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* School Uniform Plaid Pattern Motif (Subtle 4-6% opacity) */
+.plaid-motif {
+  background-color: #123B26;
+  background-image: 
+    linear-gradient(rgba(242, 227, 160, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 227, 160, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 2px, transparent 2px);
+  background-size: 24px 24px, 24px 24px, 72px 72px, 72px 72px;
+}
+
+.plaid-border-top {
+  border-top: 4px solid #1F5A3A;
+  position: relative;
+}
+.plaid-border-top::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-image: repeating-linear-gradient(90deg, #F2E3A0 0, #F2E3A0 12px, #1F5A3A 12px, #1F5A3A 24px, #FFFFFF 24px, #FFFFFF 36px, #123B26 36px, #123B26 48px);
+  opacity: 0.85;
+}
+
+/* Dark Mode Overrides (Dark Green Family) */
+html.dark body {
+  background-color: #0b1c13 !important;
+  color: #f1f7f3 !important;
+}
+
+html.dark body.bg-\[#FBFAF4\],
+html.dark .bg-\[#FBFAF4\] {
+  background-color: #0b1c13 !important;
+}
+
+html.dark .bg-cream-bg,
+html.dark .bg-\[#fcfbf7\] {
+  background-color: #0b1c13 !important;
+}
+
+html.dark .bg-cream-50 {
+  background-color: #0e2218 !important;
+}
+
+html.dark .bg-cream-100 {
+  background-color: #142e20 !important;
+}
+
+html.dark .bg-cream-card,
+html.dark .bg-white {
+  background-color: #11281c !important;
+}
+
+html.dark .border-cream-border,
+html.dark .border-slate-200 {
+  border-color: #1c3d2c !important;
+}
+
+html.dark .text-navy-900,
+html.dark .text-slate-800,
+html.dark .text-slate-900 {
+  color: #f1f7f3 !important;
+}
+
+html.dark .text-navy-800,
+html.dark .text-slate-700 {
+  color: #d1ded7 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500 {
+  color: #9cb5a7 !important;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #0b1c13 !important;
+}
+
+html.dark .bg-slate-900 {
+  background-color: #0d2217 !important;
+}
+
+html.dark .bg-slate-950 {
+  background-color: #08160e !important;
+}
+
+/* Scroll Animations */
+.fade-up-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active navigation link styling */
+.nav-link.active {
+  color: var(--primary-green) !important;
+  font-weight: 600;
+}
+
+/* Badge pulse animation */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.95;
+  }
+}
+
+.soft-pulse {
+  animation: softPulse 3s infinite ease-in-out;
+}
+
+/* Smooth Accordion */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.25s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}
+
+/* Focus styles for keyboard accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tint-bg);
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #08160e;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}

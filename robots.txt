@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://des.org.in/sitemap.xml
+
