@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileMenu();
   initStickyHeader();
+  initHeroVideoController();
   initScrollAnimations();
   initFaqAccordion();
   initGalleryFilter();
@@ -86,13 +87,53 @@ function initStickyHeader() {
   const header = document.getElementById('site-header');
   if (!header) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('shadow-md', 'backdrop-blur-md', 'bg-white/95', 'dark:bg-slate-900/95');
-      header.classList.remove('bg-white', 'dark:bg-slate-900');
+  function handleScroll() {
+    if (window.scrollY > 20) {
+      header.classList.add('shadow-md', 'border-[#DDE5D8]/80');
     } else {
-      header.classList.remove('shadow-md', 'backdrop-blur-md', 'bg-white/95', 'dark:bg-slate-900/95');
-      header.classList.add('bg-white', 'dark:bg-slate-900');
+      header.classList.remove('shadow-md', 'border-[#DDE5D8]/80');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+// 3b. Hero Video Visibility & Tab Observer (Pauses when hidden or offscreen)
+function initHeroVideoController() {
+  const video = document.querySelector('.hero-video-bg');
+  const heroSection = video ? video.closest('section') : null;
+  if (!video || !heroSection) return;
+
+  // IntersectionObserver: pause when hero is not visible
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!document.hidden && video.paused) {
+            video.play().catch(() => {});
+          }
+        } else {
+          if (!video.paused) {
+            video.pause();
+          }
+        }
+      });
+    }, { threshold: 0.15 });
+
+    observer.observe(heroSection);
+  }
+
+  // VisibilityChange: pause when user changes tab or minimises
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (!video.paused) video.pause();
+    } else {
+      const rect = heroSection.getBoundingClientRect();
+      const inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      if (inView && video.paused) {
+        video.play().catch(() => {});
+      }
     }
   });
 }
