@@ -299,7 +299,7 @@
   <main id="main-content">
     
     <!-- 1. HERO SECTION -->
-    <section class="relative bg-gradient-to-b from-[#0c2719] via-[#123B26] to-[#0c2719] text-white overflow-hidden py-8 lg:py-12">
+    <section class="relative text-white overflow-hidden min-h-[620px] lg:min-h-[85vh] xl:min-h-[90vh] flex items-center py-16 sm:py-20 lg:py-24">
       <!-- Hero Background Video & Responsive Poster -->
       <div class="absolute inset-0 z-0 overflow-hidden">
         <!-- Video element (Desktop & tablet) -->
@@ -308,79 +308,63 @@
         </video>
         <!-- Static Poster image on mobile / reduced motion fallback -->
         <img src="videos/hero-poster.jpg" alt="Dnyandeep English School Campus Banner" class="md:hidden w-full h-full object-cover" />
-        <!-- Dark Green Overlay (about 60% opacity) ensuring high contrast & readability -->
-        <div class="absolute inset-0 bg-[#123B26]/90 sm:bg-[#123B26]/80 backdrop-brightness-75"></div>
-        <!-- Subtle plaid decorative motif layer -->
-        <div class="absolute inset-0 opacity-20 plaid-motif mix-blend-overlay pointer-events-none"></div>
+        
+        <!-- Left-to-right gradient overlay: ~70% dark green behind text on left, fading to ~15-20% on right for vivid video visibility -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#123B26]/90 via-[#123B26]/65 to-[#123B26]/20 md:from-[#123B26]/85 md:via-[#123B26]/50 md:to-[#123B26]/15"></div>
+        <!-- Very light bottom gradient (~30%) ensuring stats row readability -->
+        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0c2719]/60 via-[#123B26]/30 to-transparent pointer-events-none"></div>
       </div>
       
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-6 text-center lg:text-left fade-up-init">
           
-          <div class="lg:col-span-7 space-y-6 text-center lg:text-left fade-up-init">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F2E3A0]/20 border border-[#F2E3A0]/40 text-[#F2E3A0] text-xs sm:text-sm font-semibold soft-pulse">
-              <span class="w-2 h-2 rounded-full bg-[#F2E3A0]"></span>
-              Admissions Open for Academic Year 2026–27
-            </div>
-
-            <!-- Main Headline -->
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight text-white tracking-tight">
-              Quality SSC Education with <span class="text-[#F2E3A0]">All-Round Development</span>
-            </h1>
-
-            <!-- Subtext -->
-            <p class="text-lg sm:text-xl text-[#EEF3EA] max-w-2xl font-light leading-relaxed">
-              From Nursery to Class 10th | Experienced Teachers | Affordable Fees. Nurturing confident, responsible, and future-ready students.
-            </p>
-
-            <!-- Buttons -->
-            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-wide shadow-xl shadow-[#F2E3A0]/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                <span>Apply for Admission</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
-              <button id="open-video-modal" type="button" class="px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 border-2 border-[#F2E3A0] text-[#F2E3A0] hover:text-white font-bold text-sm backdrop-blur-sm transition-all flex items-center gap-2 shadow-lg">
-                <i data-lucide="play-circle" class="w-5 h-5 text-[#F2E3A0]"></i>
-                <span>Watch Our Story</span>
-              </button>
-              <a href="academics.html" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border-2 border-white/80 hover:border-white text-white font-semibold text-sm backdrop-blur-sm transition-all flex items-center gap-2">
-                <span>Programs & Curriculum</span>
-                <i data-lucide="book-open" class="w-4 h-4"></i>
-              </a>
-            </div>
-
-            <!-- Key Highlights Pill -->
-            <div class="pt-6 grid grid-cols-3 gap-3 border-t border-[#1c3d2c]/80 text-left">
-              <div>
-                <p class="text-[#F2E3A0] font-serif font-bold text-xl sm:text-2xl">1944</p>
-                <p class="text-xs text-[#DDE5D8]">Founded Heritage</p>
-              </div>
-              <div>
-                <p class="text-[#F2E3A0] font-serif font-bold text-xl sm:text-2xl">SSC Board</p>
-                <p class="text-xs text-[#DDE5D8]">Maharashtra State</p>
-              </div>
-              <div>
-                <p class="text-[#F2E3A0] font-serif font-bold text-xl sm:text-2xl">Holistic</p>
-                <p class="text-xs text-[#DDE5D8]">Academics & Sports</p>
-              </div>
-            </div>
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#123B26]/60 backdrop-blur-md border border-[#F2E3A0]/60 text-[#F2E3A0] text-xs sm:text-sm font-semibold soft-pulse shadow-md">
+            <span class="w-2 h-2 rounded-full bg-[#F2E3A0]"></span>
+            <span>Admissions Open for Academic Year 2026–27</span>
           </div>
 
-          <!-- Hero Image with Real Campus Photograph -->
-          <div class="lg:col-span-5 fade-up-init">
-            <div class="relative mx-auto max-w-md lg:max-w-none">
-              <div class="absolute -inset-1.5 bg-gradient-to-r from-[#1F5A3A] to-[#2F7A50] rounded-3xl blur-lg opacity-40"></div>
-              <div class="relative bg-[#123B26] rounded-3xl border border-[#F2E3A0]/25 overflow-hidden shadow-2xl p-3">
-                <img src="images/students-group.png" alt="Dnyandeep English School Students and Faculty" class="w-full aspect-[4/3] object-cover rounded-2xl shadow-md" />
-                <div class="p-3 text-center">
-                  <p class="text-xs font-semibold text-[#F2E3A0]">Dnyandeep English School, Manjari Khurd, Pune</p>
-                  <p class="text-[11px] text-[#DDE5D8]/80">Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham</p>
-                </div>
-              </div>
-            </div>
+          <!-- Main Headline with Soft Text Shadow -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight text-white tracking-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35)]">
+            Quality SSC Education with <span class="text-[#F2E3A0]">All-Round Development</span>
+          </h1>
+
+          <!-- Subtext Tagline -->
+          <p class="text-lg sm:text-xl text-white max-w-2xl font-normal leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]">
+            From Nursery to Class 10th | Experienced Teachers | Affordable Fees. Nurturing confident, responsible, and future-ready students.
+          </p>
+
+          <!-- Buttons in a Single Clean Row on Desktop (wrap neatly on mobile) -->
+          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-12 px-6 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-wide shadow-xl shadow-black/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap">
+              <span>Apply for Admission</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <button id="open-video-modal" type="button" class="h-12 px-6 rounded-xl bg-[#123B26]/60 hover:bg-[#123B26]/90 border-2 border-[#F2E3A0] text-[#F2E3A0] hover:text-white font-bold text-sm backdrop-blur-sm transition-all flex items-center justify-center gap-2 shadow-lg whitespace-nowrap">
+              <i data-lucide="play-circle" class="w-5 h-5 text-[#F2E3A0]"></i>
+              <span>Watch Our Story</span>
+            </button>
+            <a href="academics.html" class="h-12 px-6 rounded-xl bg-[#123B26]/60 hover:bg-[#123B26]/90 border-2 border-white/80 hover:border-white text-white font-semibold text-sm backdrop-blur-sm transition-all flex items-center justify-center gap-2 shadow-lg whitespace-nowrap">
+              <span>Programs & Curriculum</span>
+              <i data-lucide="book-open" class="w-4 h-4"></i>
+            </a>
           </div>
 
+          <!-- Key Highlights Pill / Stats Row -->
+          <div class="pt-6 grid grid-cols-3 gap-4 sm:gap-6 border-t border-white/20 text-left max-w-xl">
+            <div class="bg-black/20 sm:bg-transparent backdrop-blur-xs p-2 sm:p-0 rounded-lg">
+              <p class="text-[#F2E3A0] font-serif font-bold text-2xl sm:text-3xl [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">1944</p>
+              <p class="text-xs sm:text-sm text-white/90 font-medium">Founded Heritage</p>
+            </div>
+            <div class="bg-black/20 sm:bg-transparent backdrop-blur-xs p-2 sm:p-0 rounded-lg">
+              <p class="text-[#F2E3A0] font-serif font-bold text-2xl sm:text-3xl [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">SSC Board</p>
+              <p class="text-xs sm:text-sm text-white/90 font-medium">Maharashtra State</p>
+            </div>
+            <div class="bg-black/20 sm:bg-transparent backdrop-blur-xs p-2 sm:p-0 rounded-lg">
+              <p class="text-[#F2E3A0] font-serif font-bold text-2xl sm:text-3xl [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">Holistic</p>
+              <p class="text-xs sm:text-sm text-white/90 font-medium">Academics & Sports</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
