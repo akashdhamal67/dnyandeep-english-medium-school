@@ -16,45 +16,58 @@ const IMAGES = {
   HERO_SCENE: "images/hero-illustration.webp",
   HERO_SCENE_ALT: "Dnyandeep English School Academic Campus Illustration",
 
-  // About Section (4:3, 1200x900)
-  ABOUT_CARD: "images/about-heritage.webp",
-  ABOUT_CARD_640: "images/about-heritage-640.webp",
-  ABOUT_CARD_ALT: "Illustration of Dnyandeep English School heritage building with central archway and courtyard",
+  // About Section (4:3, 1200x900) - Real Premises Photo from des.org.in
+  ABOUT_CARD: "images/premises-building-front.webp?v=7",
+  ABOUT_CARD_640: "images/premises-building-front-640.webp?v=7",
+  ABOUT_CARD_ALT: "Dnyandeep English School building facade and main campus entrance",
 
   // Leadership Section (1:1, 600x600)
-  LEADERSHIP_AVATAR: "images/leadership-avatar.webp",
-  LEADERSHIP_AVATAR_640: "images/leadership-avatar-640.webp",
+  LEADERSHIP_AVATAR: "images/leadership-avatar.webp?v=7",
+  LEADERSHIP_AVATAR_640: "images/leadership-avatar-640.webp?v=7",
   LEADERSHIP_AVATAR_ALT: "Neutral stylised educator icon avatar in deep forest green and warm cream",
 
   // Academic Programs (2:1, 1520x770)
-  PROGRAM_PRE_PRIMARY: "images/programs-pre-primary.webp",
-  PROGRAM_PRE_PRIMARY_640: "images/programs-pre-primary-640.webp",
+  PROGRAM_PRE_PRIMARY: "images/programs-pre-primary.webp?v=7",
+  PROGRAM_PRE_PRIMARY_640: "images/programs-pre-primary-640.webp?v=7",
   PROGRAM_PRE_PRIMARY_ALT: "Illustration of nursery classroom scene with wooden blocks, picture books and rainbow rug",
 
-  PROGRAM_PRIMARY: "images/programs-primary.webp",
-  PROGRAM_PRIMARY_640: "images/programs-primary-640.webp",
+  PROGRAM_PRIMARY: "images/programs-primary.webp?v=7",
+  PROGRAM_PRIMARY_640: "images/programs-primary-640.webp?v=7",
   PROGRAM_PRIMARY_ALT: "Illustration of primary school classroom with teacher at chalkboard, seated children, globe and bookshelf",
 
-  PROGRAM_SECONDARY: "images/programs-secondary.webp",
-  PROGRAM_SECONDARY_640: "images/programs-secondary-640.webp",
+  PROGRAM_SECONDARY: "images/programs-secondary.webp?v=7",
+  PROGRAM_SECONDARY_640: "images/programs-secondary-640.webp?v=7",
   PROGRAM_SECONDARY_ALT: "Illustration of secondary school science lab with microscope, beakers, solar system model and teacher guiding students",
 
-  // Campus Facilities (3:2, 1200x800)
-  FACILITY_SPORTS: "images/facility-sports.webp",
-  FACILITY_SPORTS_640: "images/facility-sports-640.webp",
-  FACILITY_SPORTS_ALT: "Illustration of school sports playground with football field and running track",
+  // Campus Facilities (3:2, 1200x800) - Real Premises Photos from des.org.in
+  FACILITY_SPORTS: "images/premises-sports-ground.webp?v=7",
+  FACILITY_SPORTS_640: "images/premises-sports-ground-640.webp?v=7",
+  FACILITY_SPORTS_ALT: "Aerial view of Dnyandeep English School campus sports ground and school building",
 
-  FACILITY_ARTS: "images/facility-arts.webp",
-  FACILITY_ARTS_640: "images/facility-arts-640.webp",
-  FACILITY_ARTS_ALT: "Illustration of school art and cultural room with easels, paint palettes, crafts display and musical instruments",
+  FACILITY_ARTS: "images/premises-campus-courtyard.webp?v=7",
+  FACILITY_ARTS_640: "images/premises-campus-courtyard-640.webp?v=7",
+  FACILITY_ARTS_ALT: "Dnyandeep English School campus courtyard and creative assembly space",
 
-  FACILITY_COMPUTER: "images/facility-computer.webp",
-  FACILITY_COMPUTER_640: "images/facility-computer-640.webp",
-  FACILITY_COMPUTER_ALT: "Illustration of modern computer lab with rows of desktop monitors and students working quietly",
+  FACILITY_COMPUTER: "images/premises-computer-lab.webp?v=7",
+  FACILITY_COMPUTER_640: "images/premises-computer-lab-640.webp?v=7",
+  FACILITY_COMPUTER_ALT: "Dnyandeep English School computer laboratory with desktop workstations",
 
-  FACILITY_SCIENCE: "images/facility-science.webp",
-  FACILITY_SCIENCE_640: "images/facility-science-640.webp",
-  FACILITY_SCIENCE_ALT: "Illustration of school science exhibition with working models on display in courtyard",
+  FACILITY_SCIENCE: "images/premises-science-courtyard.webp?v=7",
+  FACILITY_SCIENCE_640: "images/premises-science-courtyard-640.webp?v=7",
+  FACILITY_SCIENCE_ALT: "Dnyandeep English School academic corridor and science laboratory wing",
+
+  // Contact Section Campus Photo (Real premises from des.org.in)
+  CONTACT_CAMPUS: "images/premises-campus-entrance.webp?v=7",
+  CONTACT_CAMPUS_640: "images/premises-campus-entrance-640.webp?v=7",
+  CONTACT_CAMPUS_ALT: "Dnyandeep English School campus main entrance gate and school building",
+
+  // Gallery Tiles (Real premises photos + activities)
+  GALLERY_CAMPUS_MAIN: "images/premises-building-front.webp?v=7",
+  GALLERY_CAMPUS_AERIAL: "images/premises-sports-ground.webp?v=7",
+  GALLERY_CAMPUS_LAB: "images/premises-computer-lab.webp?v=7",
+  GALLERY_CAMPUS_ENTRANCE: "images/premises-campus-entrance.webp?v=7",
+  GALLERY_CAMPUS_SIDE: "images/premises-campus-building-side.webp?v=7",
+  GALLERY_CAMPUS_COURTYARD: "images/premises-campus-courtyard.webp?v=7",
 
   // Gallery Tiles (1:1, 900x900)
   GALLERY_CLASSROOM: "images/gallery-classroom.webp",

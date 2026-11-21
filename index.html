@@ -394,19 +394,33 @@
       <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Heritage Card (Clean Typographic Badge) -->
+          <!-- Heritage Card (Real School Premises Photo) -->
           <div class="lg:col-span-5 fade-up-init">
-            <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-8 shadow-lg text-center flex flex-col items-center justify-center min-h-[300px] space-y-4">
-              <div class="w-20 h-20 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0]">
-                <i data-lucide="award" class="w-10 h-10"></i>
+            <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-lg group">
+              <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                <img 
+                  src="images/premises-building-front.webp?v=7" 
+                  srcset="images/premises-building-front-640.webp?v=7 640w, images/premises-building-front.webp?v=7 1200w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+                  alt="Dnyandeep English School building facade and main campus entrance" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 right-4 text-white">
+                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#1F5A3A]/90 text-[11px] font-bold uppercase tracking-wider text-[#F2E3A0]">
+                    Established Since 1944
+                  </span>
+                  <p class="font-serif font-bold text-lg leading-tight mt-1">Dnyandeep English School</p>
+                </div>
               </div>
-              <div>
-                <p class="font-serif font-bold text-3xl sm:text-4xl text-[#123B26] dark:text-white">Est. 1944</p>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] mt-1">80+ Years of Educational Legacy</p>
+              <div class="p-6 text-center space-y-2">
+                <p class="font-serif font-bold text-2xl text-[#123B26] dark:text-white">Est. 1944</p>
+                <p class="text-xs font-semibold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">80+ Years of Educational Legacy</p>
+                <p class="text-xs text-[#55655B] dark:text-[#DDE5D8] max-w-xs mx-auto leading-relaxed">
+                  Dedicated to value-centric academic excellence, character building, and disciplined scholastic growth since 1944 in Manjari Khurd, Pune.
+                </p>
               </div>
-              <p class="text-xs text-[#55655B] dark:text-[#DDE5D8] max-w-xs leading-relaxed">
-                Dedicated to value-centric academic excellence, character building, and disciplined scholastic growth since 1944 in Manjari Khurd, Pune.
-              </p>
             </div>
           </div>
 
@@ -713,78 +727,126 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <!-- Facility 1: Sports -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0]">
-              <i data-lucide="trophy" class="w-7 h-7"></i>
+          <!-- Facility 1: Sports (Real Campus Sports Ground Photo) -->
+          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
+            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
+              <img 
+                src="images/premises-sports-ground.webp?v=7" 
+                srcset="images/premises-sports-ground-640.webp?v=7 640w, images/premises-sports-ground.webp?v=7 1200w"
+                sizes="(max-width: 640px) 100vw, 600px"
+                alt="Aerial view of Dnyandeep English School sports ground and campus"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
+                <i data-lucide="trophy" class="w-5 h-5"></i>
+              </div>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Athletics & Fitness</span>
-              <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Sports Facilities</h3>
-            </div>
-            <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Indoor and outdoor sports, regular sports periods, annual sports events, and inter-school competitions that foster discipline, team spirit, and physical health.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Outdoor Sports Ground</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Regular Sports Periods</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Sports Day</span>
-            </div>
-          </div>
-
-          <!-- Facility 2: Creative Art Spaces -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0]">
-              <i data-lucide="palette" class="w-7 h-7"></i>
-            </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Creative Expression</span>
-              <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Creative Art Spaces</h3>
-            </div>
-            <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Dedicated rooms and creative zones for drawing, painting, craftwork, and cultural preparation, encouraging students to explore visual arts and build self-expression.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Art & Craft Workshops</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Cultural Preparation</span>
+            <div class="p-6 sm:p-8 space-y-3">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Athletics & Fitness</span>
+                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Sports Facilities</h3>
+              </div>
+              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
+                Indoor and outdoor sports, regular sports periods, annual sports events, and inter-school competitions that foster discipline, team spirit, and physical health.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Outdoor Sports Ground</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Regular Sports Periods</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Sports Day</span>
+              </div>
             </div>
           </div>
 
-          <!-- Facility 3: Computer Lab -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0]">
-              <i data-lucide="monitor" class="w-7 h-7"></i>
+          <!-- Facility 2: Creative Art Spaces (Real Campus Courtyard Assembly Space) -->
+          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
+            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
+              <img 
+                src="images/premises-campus-courtyard.webp?v=7" 
+                srcset="images/premises-campus-courtyard-640.webp?v=7 640w, images/premises-campus-courtyard.webp?v=7 900w"
+                sizes="(max-width: 640px) 100vw, 600px"
+                alt="Dnyandeep English School campus courtyard and cultural space"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
+                <i data-lucide="palette" class="w-5 h-5"></i>
+              </div>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Digital Literacy</span>
-              <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Modern Computer Lab</h3>
-            </div>
-            <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Equipped with modern systems and educational software, training students in foundational computer skills, typing, and digital literacy.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Modern Systems</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Educational Software</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Learning</span>
+            <div class="p-6 sm:p-8 space-y-3">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Creative Expression</span>
+                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Creative Art Spaces</h3>
+              </div>
+              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
+                Dedicated rooms and creative zones for drawing, painting, craftwork, and cultural preparation, encouraging students to explore visual arts and build self-expression.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Art & Craft Workshops</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Cultural Preparation</span>
+              </div>
             </div>
           </div>
 
-          <!-- Facility 4: Science Exhibition -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0]">
-              <i data-lucide="microscope" class="w-7 h-7"></i>
+          <!-- Facility 3: Computer Lab (Real School Computer Lab Photo) -->
+          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
+            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
+              <img 
+                src="images/premises-computer-lab.webp?v=7" 
+                srcset="images/premises-computer-lab-640.webp?v=7 640w, images/premises-computer-lab.webp?v=7 1200w"
+                sizes="(max-width: 640px) 100vw, 600px"
+                alt="Dnyandeep English School modern computer lab with workstations"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
+                <i data-lucide="monitor" class="w-5 h-5"></i>
+              </div>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Practical Inquiry</span>
-              <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Science Exhibition & Labs</h3>
+            <div class="p-6 sm:p-8 space-y-3">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Digital Literacy</span>
+                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Modern Computer Lab</h3>
+              </div>
+              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
+                Equipped with modern systems and educational software, training students in foundational computer skills, typing, and digital literacy.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Modern Systems</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Educational Software</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Learning</span>
+              </div>
             </div>
-            <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Interactive science spaces encouraging experiment-driven learning, annual science exhibition projects, and hands-on analytical thinking.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Working Models</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Science Fair</span>
-              <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Demonstrations</span>
+          </div>
+
+          <!-- Facility 4: Science Exhibition (Real School Corridor / Lab Wing Photo) -->
+          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
+            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
+              <img 
+                src="images/premises-science-courtyard.webp?v=7" 
+                srcset="images/premises-science-courtyard-640.webp?v=7 640w, images/premises-science-courtyard.webp?v=7 1200w"
+                sizes="(max-width: 640px) 100vw, 600px"
+                alt="Dnyandeep English School academic corridor and science laboratory wing"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
+                <i data-lucide="microscope" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="p-6 sm:p-8 space-y-3">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Practical Inquiry</span>
+                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Science Exhibition & Labs</h3>
+              </div>
+              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
+                Interactive science spaces encouraging experiment-driven learning, annual science exhibition projects, and hands-on analytical thinking.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Working Models</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Science Fair</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Demonstrations</span>
+              </div>
             </div>
           </div>
 
@@ -957,6 +1019,23 @@
           
           <!-- Contact Trio Info Cards -->
           <div class="lg:col-span-5 space-y-4 fade-up-init">
+            <!-- Real Campus Entrance Photo Card -->
+            <div class="rounded-2xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] shadow-sm group">
+              <div class="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
+                <img 
+                  src="images/premises-campus-entrance.webp?v=7" 
+                  srcset="images/premises-campus-entrance-640.webp?v=7 640w, images/premises-campus-entrance.webp?v=7 1200w"
+                  sizes="(max-width: 640px) 100vw, 480px"
+                  alt="Dnyandeep English School campus main entrance gate" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">
+                  Campus Entrance • Manjari Khurd
+                </div>
+              </div>
+            </div>
+
             <!-- Address Card -->
             <div class="p-5 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] flex items-start gap-4">
               <div class="w-10 h-10 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center shrink-0 mt-0.5">
@@ -1001,7 +1080,7 @@
 
           <!-- Google Map Embed -->
           <div class="lg:col-span-7 fade-up-init">
-            <div class="rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] shadow-md h-[340px] bg-slate-100">
+            <div class="rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] shadow-md h-[460px] bg-slate-100">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.883726593539!2d73.98777177519198!3d18.534164582561514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c300067623d3%3A0xe5a30ae04791e846!2sDnyandeep%20English%20School%20Manjari%20Khurd!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                 width="100%" 
@@ -1099,7 +1178,7 @@
         <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
           <p>© 2026 Dnyandeep. All rights reserved.</p>
           <span class="hidden sm:inline">•</span>
-          <p class="text-[#EEF3EA]/60 italic">Images on this website are AI-generated for illustration.</p>
+          <p class="text-[#EEF3EA]/70 italic">Campus photographs are of Dnyandeep English School. Student and activity images are AI-generated for illustration.</p>
         </div>
         <div class="flex items-center gap-4">
           <span class="hover:text-[#F2E3A0] cursor-pointer">Privacy Policy</span>

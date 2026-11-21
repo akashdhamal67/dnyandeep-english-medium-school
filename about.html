@@ -5,6 +5,7 @@
     <!-- Favicon -->
   <link rel=icon type=image/png sizes=32x32 href=favicon.png>
   <link rel=icon type=image/x-icon href=favicon.ico>
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Dnyandeep English School, Manjari Khurd, Pune</title>
   <meta name="description" content="Discover Dnyandeep English School: established in 1944, providing quality SSC education with rich heritage, core values, experienced mentors, and holistic development.">
@@ -315,15 +316,38 @@
           <h2 class="text-3xl font-serif font-bold text-[#123B26] dark:text-white mt-1">Life at Dnyandeep School</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group">
-            <img src="images/classroom-activity.jpg" alt="Classrooms and Student Activities" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        <!-- Filter Tabs -->
+        <div class="flex items-center justify-center gap-3 mb-10">
+          <button class="gallery-tab-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-[#1F5A3A] text-[#F2E3A0] shadow-sm transition-all" data-filter="all">All Photos</button>
+          <button class="gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#142e20] text-[#123B26] dark:text-white hover:bg-[#EEF3EA] transition-all" data-filter="campus">Campus</button>
+          <button class="gallery-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-[#142e20] text-[#123B26] dark:text-white hover:bg-[#EEF3EA] transition-all" data-filter="activities">Activities</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+          <!-- Real Campus Photos from des.org.in -->
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group relative bg-slate-100" data-category="campus">
+            <img src="images/premises-building-front.webp?v=7" alt="Dnyandeep English School Building Front Facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">Building Front Facade</div>
           </div>
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group">
-            <img src="images/computer-lab.jpg" alt="Computer Lab Practical Learning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group relative bg-slate-100" data-category="campus">
+            <img src="images/premises-sports-ground.webp?v=7" alt="Campus Aerial View and Sports Grounds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">Aerial Campus & Sports Ground</div>
           </div>
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group">
-            <img src="images/sports-field.jpg" alt="Sports and Outdoor Ground" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group relative bg-slate-100" data-category="campus">
+            <img src="images/premises-computer-lab.webp?v=7" alt="Computer Lab Practical Learning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">Computer Laboratory</div>
+          </div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group relative bg-slate-100" data-category="campus">
+            <img src="images/premises-campus-entrance.webp?v=7" alt="School Main Entrance and Campus Gate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">Campus Entrance Gate</div>
+          </div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group relative bg-slate-100" data-category="campus">
+            <img src="images/premises-campus-courtyard.webp?v=7" alt="Campus Courtyard and Cultural Space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">Campus Courtyard</div>
+          </div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md group relative bg-slate-100" data-category="campus">
+            <img src="images/premises-campus-building-side.webp?v=7" alt="School Campus Grounds & Surrounding Trees" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">Campus Grounds</div>
           </div>
         </div>
       </div>
@@ -379,8 +403,9 @@
           </div>
         </div>
       </div>
-      <div class="pt-8 text-center text-xs text-[#55655B]">
-        © 2026 Dnyandeep. All rights reserved.
+      <div class="pt-8 text-center text-xs text-[#55655B] space-y-1">
+        <p>© 2026 Dnyandeep. All rights reserved.</p>
+        <p class="text-[#EEF3EA]/70 italic">Campus photographs are of Dnyandeep English School. Student and activity images are AI-generated for illustration.</p>
       </div>
     </div>
   </footer>
