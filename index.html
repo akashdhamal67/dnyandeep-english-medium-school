@@ -326,6 +326,9 @@
 </head>
 <body class="bg-[#FBFAF4] text-[#1B2A22] antialiased selection:bg-[#1F5A3A] selection:text-[#F2E3A0] dark:bg-[#08160e] dark:text-[#f1f7f3]">
 
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Full-Screen Logo Preloader Overlay -->
   <div id="preloader" role="status" aria-live="polite" aria-label="Loading Dnyandeep English School Website">
     <div class="preloader-logo-wrapper">
@@ -355,29 +358,30 @@
     <div class="max-w-[1360px] w-full mx-auto flex items-center justify-between gap-2">
       <!-- Left side: hours, phone, email -->
       <div class="flex items-center gap-3 sm:gap-4 whitespace-nowrap">
-        <span class="hidden md:inline-flex items-center gap-1.5 text-white/90">
+        <span class="hidden md:inline-flex items-center gap-1.5 text-white/90" title="School visiting hours: Monday to Friday 9:00 AM to 3:00 PM">
           <i data-lucide="clock" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
           <span>Mon–Fri 9:00 AM to 3:00 PM</span>
         </span>
         <span class="hidden md:inline text-[#1F5A3A]">|</span>
-        <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 text-white/95 hover:text-[#F2E3A0] transition-colors">
+        <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 text-white/95 hover:text-[#F2E3A0] transition-colors" title="Call Admissions Office at +91-8484844067" aria-label="Call Admissions Office at +91-8484844067">
           <i data-lucide="phone" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-          <span>+91-8484844067</span>
+          <span><span class="sr-only">Call: </span>+91-8484844067</span>
         </a>
         <span class="hidden sm:inline text-[#1F5A3A]">|</span>
-        <a href="mailto:info@des.org.in" class="hidden sm:inline-flex items-center gap-1.5 text-white/95 hover:text-[#F2E3A0] transition-colors">
+        <a href="mailto:info@des.org.in" class="hidden sm:inline-flex items-center gap-1.5 text-white/95 hover:text-[#F2E3A0] transition-colors" title="Send email to info@des.org.in" aria-label="Send email to info@des.org.in">
           <i data-lucide="mail" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-          <span>info@des.org.in</span>
+          <span><span class="sr-only">Email: </span>info@des.org.in</span>
         </a>
       </div>
 
       <!-- Right side: Student Parent Portal pill & dark-mode toggle -->
       <div class="flex items-center gap-3 sm:gap-4 whitespace-nowrap">
-        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="topbar-portal-pill hidden sm:inline-flex" title="Student Parent Portal">
+        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="topbar-portal-pill hidden sm:inline-flex items-center gap-1.5" title="Open Student Parent Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Portal on Neverskip (opens in a new tab)">
           <i data-lucide="user-check" class="portal-icon"></i>
           <span>Student Parent Portal</span>
+          <i data-lucide="arrow-up-right" class="w-3 h-3 text-[#F2E3A0]/80"></i>
         </a>
-        <button class="theme-toggle-btn p-1 text-[#EEF3EA] hover:text-[#F2E3A0] rounded-lg focus:outline-none" aria-label="Toggle Dark Mode">
+        <button class="theme-toggle-btn p-1 text-[#EEF3EA] hover:text-[#F2E3A0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F2E3A0]" aria-label="Switch to dark or light mode" title="Switch to dark or light mode">
           <i data-lucide="moon" class="w-3.5 h-3.5 dark:hidden"></i>
           <i data-lucide="sun" class="w-3.5 h-3.5 hidden dark:inline"></i>
         </button>
@@ -417,19 +421,22 @@
 
         <!-- CTA Button Desktop: APPLY ONLINE -->
         <div class="hidden lg:flex items-center shrink-0">
-          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online">
+          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online" title="Open official admission application form (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
             <i data-lucide="edit-3" class="btn-icon"></i>
             <span>Apply Online</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80 -ml-1"></i>
           </a>
         </div>
 
         <!-- Mobile Controls (Compact Apply Online + Hamburger) -->
         <div class="lg:hidden flex items-center gap-2 shrink-0">
-          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online-compact sm:inline-flex">
+          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online-compact sm:inline-flex" title="Apply Online for Admission (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
             <i data-lucide="edit-3" class="btn-icon"></i>
             <span>Apply Online</span>
+            <i data-lucide="arrow-up-right" class="w-3 h-3 text-[#123B26]/80 -ml-0.5"></i>
           </a>
-          <button id="mobile-menu-toggle" type="button" class="p-2 text-[#1B2A22] dark:text-[#d1ded7] rounded-lg hover:bg-[#EEF3EA] dark:hover:bg-slate-800" aria-expanded="false" aria-label="Open main menu">
+          <button id="mobile-menu-toggle" type="button" class="p-2 text-[#1B2A22] dark:text-[#d1ded7] rounded-lg hover:bg-[#EEF3EA] dark:hover:bg-slate-800 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]" aria-expanded="false" aria-label="Open main navigation menu" title="Open main navigation menu">
+            <span class="hidden sm:inline text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Menu</span>
             <i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i>
             <i id="mobile-menu-close" data-lucide="x" class="w-6 h-6 hidden"></i>
           </button>
@@ -448,13 +455,15 @@
       <a href="#contact" class="block px-3 py-2 rounded-lg font-medium text-[#1B2A22] dark:text-[#d1ded7] hover:bg-[#EEF3EA] dark:hover:bg-slate-800">Contact Us</a>
 
       <div class="pt-4 border-t border-[#DDE5D8] dark:border-[#1c3d2c] flex flex-col gap-2.5">
-        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-[#DDE5D8] dark:border-[#1c3d2c] font-semibold text-sm text-[#123B26] dark:text-white hover:bg-[#EEF3EA] dark:hover:bg-slate-800 transition-colors">
+        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-[#DDE5D8] dark:border-[#1c3d2c] font-semibold text-sm text-[#123B26] dark:text-white hover:bg-[#EEF3EA] dark:hover:bg-slate-800 transition-colors" title="Open Student Parent Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Portal on Neverskip (opens in a new tab)">
           <i data-lucide="user-check" class="w-4.5 h-4.5 text-[#1F5A3A] dark:text-[#F2E3A0]"></i>
           <span>Student Parent Portal</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#55655B]"></i>
         </a>
-        <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-[0.04em] uppercase shadow-sm transition-colors">
+        <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-[0.04em] uppercase shadow-sm transition-colors" title="Open official admission application form (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
           <i data-lucide="edit-3" class="w-4.5 h-4.5"></i>
           <span>Apply Online</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80"></i>
         </a>
       </div>
     </div>
@@ -526,9 +535,9 @@
 
             <!-- Single Primary Action Button -->
             <div class="pt-1 flex items-center justify-center lg:justify-start">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-11 sm:h-12 px-7 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm sm:text-base tracking-wide shadow-xl shadow-black/25 transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 whitespace-nowrap">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-11 sm:h-12 px-7 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm sm:text-base tracking-wide shadow-xl shadow-black/25 transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 whitespace-nowrap" title="Apply for Admission on official form (opens in a new tab)" aria-label="Apply for Admission on official form (opens in a new tab)">
                 <span>Apply for Admission</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#123B26]"></i>
               </a>
             </div>
           </div>
@@ -760,9 +769,9 @@
               </p>
             </div>
             <div class="mt-8 pt-4 border-t border-cream-border dark:border-[#1c3d2c]">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Apply for Pre-Primary admission online (opens in a new tab)" aria-label="Apply for Pre-Primary admission online (opens in a new tab)">
                 <span>Apply for Pre-Primary</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
@@ -780,9 +789,9 @@
               </p>
             </div>
             <div class="mt-8 pt-4 border-t border-cream-border dark:border-[#1c3d2c]">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Apply for Primary admission online (opens in a new tab)" aria-label="Apply for Primary admission online (opens in a new tab)">
                 <span>Apply for Primary</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
@@ -800,9 +809,9 @@
               </p>
             </div>
             <div class="mt-8 pt-4 border-t border-cream-border dark:border-[#1c3d2c]">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Apply for Secondary SSC admission online (opens in a new tab)" aria-label="Apply for Secondary SSC admission online (opens in a new tab)">
                 <span>Apply for Secondary</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
@@ -1178,9 +1187,9 @@
 
         <!-- Apply Online CTA Button -->
         <div class="text-center mb-16 fade-up-init">
-          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-12 px-8 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-wide shadow-md transition-all inline-flex items-center gap-2">
+          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-12 px-8 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-wide shadow-md transition-all inline-flex items-center gap-2" title="Open Online Admission Form (opens in a new tab)" aria-label="Open Online Admission Form (opens in a new tab)">
             <span>Open Online Admission Form</span>
-            <i data-lucide="external-link" class="w-4 h-4"></i>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#123B26]"></i>
           </a>
         </div>
 
@@ -1295,11 +1304,18 @@
               <div class="w-10 h-10 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center shrink-0 mt-0.5">
                 <i data-lucide="map-pin" class="w-5 h-5"></i>
               </div>
-              <div>
-                <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1">Campus Address</h4>
+              <div class="space-y-1">
+                <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-0.5">Campus Address</h4>
                 <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
                   Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham, Manjari Khurd, Pune, Maharashtra 412307
                 </p>
+                <div class="pt-1">
+                  <a href="https://maps.google.com/?q=Dnyandeep+English+School+Manjari+Khurd+Pune" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Get directions on Google Maps (opens in a new tab)" aria-label="Get directions to Dnyandeep English School on Google Maps (opens in a new tab)">
+                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                    <span>Get Directions on Google Maps</span>
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -1310,9 +1326,19 @@
               </div>
               <div>
                 <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1">Phone Numbers (Click-to-Call)</h4>
-                <div class="space-y-1 text-xs sm:text-sm">
-                  <p><a href="tel:+918484844067" class="text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline">+91-8484844067</a> (Admissions)</p>
-                  <p><a href="tel:+917276095235" class="text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline">+91-7276095235</a> (Office)</p>
+                <div class="space-y-1.5 text-xs sm:text-sm">
+                  <p>
+                    <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline" title="Call Admissions Office: +91-8484844067" aria-label="Call Admissions Office at +91-8484844067">
+                      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                      <span>Call Admissions: +91-8484844067</span>
+                    </a>
+                  </p>
+                  <p>
+                    <a href="tel:+917276095235" class="inline-flex items-center gap-1.5 text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline" title="Call School Office: +91-7276095235" aria-label="Call School Office at +91-7276095235">
+                      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                      <span>Call Office: +91-7276095235</span>
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -1325,9 +1351,15 @@
               <div>
                 <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1">Email & Office Hours</h4>
                 <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7]">
-                  <a href="mailto:info@des.org.in" class="text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline">info@des.org.in</a>
+                  <a href="mailto:info@des.org.in" class="inline-flex items-center gap-1.5 text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline" title="Send email to info@des.org.in" aria-label="Send email to info@des.org.in">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                    <span>Email Us: info@des.org.in</span>
+                  </a>
                 </p>
-                <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1">Monday – Friday: 9:00 AM – 3:00 PM</p>
+                <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1.5 flex items-center gap-1.5">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-[#1F5A3A] dark:text-[#F2E3A0]"></i>
+                  <span>Monday – Friday: 9:00 AM – 3:00 PM</span>
+                </p>
               </div>
             </div>
           </div>
@@ -1374,20 +1406,42 @@
           <p class="text-xs sm:text-sm text-[#EEF3EA] leading-relaxed max-w-md">
             Dnyandeep School is committed to nurturing young minds through quality education, strong values, and holistic development, empowering students to grow into confident and responsible individuals.
           </p>
-          <!-- Social Icons -->
-          <div class="flex items-center gap-3 pt-2">
-            <a href="https://www.facebook.com/share/17nXRhCchZ/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-[#1F5A3A] flex items-center justify-center text-white hover:text-[#F2E3A0] transition-colors" aria-label="Facebook">
-              <i data-lucide="facebook" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.instagram.com/dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-[#1F5A3A] flex items-center justify-center text-white hover:text-[#F2E3A0] transition-colors" aria-label="Instagram">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-            </a>
-            <a href="https://youtube.com/@dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-[#1F5A3A] flex items-center justify-center text-white hover:text-[#F2E3A0] transition-colors" aria-label="YouTube">
-              <i data-lucide="youtube" class="w-4 h-4"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/dnyandeep-school/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-[#1F5A3A] flex items-center justify-center text-white hover:text-[#F2E3A0] transition-colors" aria-label="LinkedIn">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-            </a>
+          <!-- Social Icons & Follow Us Section -->
+          <div class="pt-4 space-y-3">
+            <h4 class="text-sm font-bold uppercase tracking-[0.08em] text-[#F2E3A0]">Follow Us</h4>
+            <div class="grid grid-cols-2 gap-2.5 max-w-xs">
+              <a href="https://www.facebook.com/share/17nXRhCchZ/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our Facebook page (opens in a new tab)" aria-label="Dnyandeep English School on Facebook, opens in a new tab">
+                <span class="inline-flex items-center gap-2">
+                  <i data-lucide="facebook" class="social-icon"></i>
+                  <span>Facebook</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+              </a>
+
+              <a href="https://www.instagram.com/dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our Instagram page (opens in a new tab)" aria-label="Dnyandeep English School on Instagram, opens in a new tab">
+                <span class="inline-flex items-center gap-2">
+                  <i data-lucide="instagram" class="social-icon"></i>
+                  <span>Instagram</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+              </a>
+
+              <a href="https://youtube.com/@dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our YouTube channel (opens in a new tab)" aria-label="Dnyandeep English School on YouTube, opens in a new tab">
+                <span class="inline-flex items-center gap-2">
+                  <i data-lucide="youtube" class="social-icon"></i>
+                  <span>YouTube</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/company/dnyandeep-school/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our LinkedIn company page (opens in a new tab)" aria-label="Dnyandeep English School on LinkedIn, opens in a new tab">
+                <span class="inline-flex items-center gap-2">
+                  <i data-lucide="linkedin" class="social-icon"></i>
+                  <span>LinkedIn</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1409,19 +1463,27 @@
           <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#F2E3A0]">Official Portals</h4>
           <ul class="space-y-2 text-xs sm:text-sm text-[#EEF3EA]">
             <li>
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors flex items-center gap-1.5">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors inline-flex items-center gap-1.5" title="Open official admission application form (opens in a new tab)" aria-label="Online Admission Form (opens in a new tab)">
                 <i data-lucide="edit-3" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
                 <span>Online Admission Form</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#F2E3A0]/70"></i>
               </a>
             </li>
             <li>
-              <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors flex items-center gap-1.5">
+              <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors inline-flex items-center gap-1.5" title="Open Student Parent Login Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Login Portal on Neverskip (opens in a new tab)">
                 <i data-lucide="user-check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
                 <span>Student Parent Login Portal</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#F2E3A0]/70"></i>
               </a>
             </li>
             <li><a href="#admissions" class="hover:text-[#F2E3A0] transition-colors">Admission FAQs</a></li>
-            <li><a href="#contact" class="hover:text-[#F2E3A0] transition-colors">Campus Location Map</a></li>
+            <li>
+              <a href="https://maps.google.com/?q=Dnyandeep+English+School+Manjari+Khurd+Pune" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors inline-flex items-center gap-1.5" title="View Campus Location Map on Google Maps (opens in a new tab)" aria-label="Campus Location Map on Google Maps (opens in a new tab)">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
+                <span>Campus Location Map</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#F2E3A0]/70"></i>
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -1445,13 +1507,14 @@
 
   <!-- Sticky Mobile Bar with Call + Apply Online -->
   <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#123B26]/95 backdrop-blur-md border-t border-[#1F5A3A] p-2.5 flex items-center gap-2">
-    <a href="tel:+918484844067" class="flex-1 h-11 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2">
+    <a href="tel:+918484844067" class="flex-1 h-11 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2" title="Call Campus Admissions: +91-8484844067" aria-label="Call Campus Admissions at +91-8484844067">
       <i data-lucide="phone" class="w-4 h-4 text-[#F2E3A0]"></i>
       <span>Call Campus</span>
     </a>
-    <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="flex-1 h-11 rounded-xl bg-[#F2E3A0] text-[#123B26] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md flex items-center justify-center gap-1.5">
+    <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="flex-1 h-11 rounded-xl bg-[#F2E3A0] text-[#123B26] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md flex items-center justify-center gap-1.5" title="Apply Online for Admission (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
       <i data-lucide="edit-3" class="w-4 h-4"></i>
       <span>Apply Online</span>
+      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80 -ml-0.5"></i>
     </a>
   </div>
 

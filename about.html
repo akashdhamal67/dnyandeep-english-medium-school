@@ -92,6 +92,9 @@
   </script>
 </head>
 <body class="bg-[#FBFAF4] text-[#1B2A22] antialiased selection:bg-[#1F5A3A] selection:text-[#F2E3A0] dark:bg-[#08160e] dark:text-[#f1f7f3]">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
 
   <!-- Top Bar -->
   <div class="bg-[#123B26] text-[#EEF3EA] text-xs h-9 sm:h-10 px-4 border-b border-[#1F5A3A] flex items-center">
@@ -99,18 +102,18 @@
       <div class="flex flex-wrap items-center justify-center gap-4 text-center">
         <span class="inline-flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#F2E3A0]"></i> Mon–Fri 9:00 AM to 3:00 PM</span>
         <span class="hidden sm:inline text-[#1F5A3A]">|</span>
-        <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 hover:text-[#F2E3A0] transition-colors"><i data-lucide="phone" class="w-3.5 h-3.5 text-[#F2E3A0]"></i> +91-8484844067</a>
+        <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 hover:text-[#F2E3A0] transition-colors" title="Call Admissions: +91-8484844067" aria-label="Call Admissions Office at +91-8484844067"><i data-lucide="phone" class="w-3.5 h-3.5 text-[#F2E3A0]"></i> +91-8484844067</a>
         <span class="hidden sm:inline text-[#1F5A3A]">|</span>
-        <a href="mailto:info@des.org.in" class="inline-flex items-center gap-1.5 hover:text-[#F2E3A0] transition-colors"><i data-lucide="mail" class="w-3.5 h-3.5 text-[#F2E3A0]"></i> info@des.org.in</a>
+        <a href="mailto:info@des.org.in" class="inline-flex items-center gap-1.5 hover:text-[#F2E3A0] transition-colors" title="Send email to info@des.org.in" aria-label="Send email to info@des.org.in"><i data-lucide="mail" class="w-3.5 h-3.5 text-[#F2E3A0]"></i> info@des.org.in</a>
       </div>
       <div class="flex items-center gap-4">
-        <div class="flex items-center gap-3">
-          <a href="https://www.facebook.com/share/17nXRhCchZ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-[#F2E3A0] transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-          <a href="https://www.instagram.com/dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-[#F2E3A0] transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-          <a href="https://youtube.com/@dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-[#F2E3A0] transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-          <a href="https://www.linkedin.com/company/dnyandeep-school/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-[#F2E3A0] transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        <div class="flex items-center gap-2">
+          <a href="https://www.facebook.com/share/17nXRhCchZ/" target="_blank" rel="noopener noreferrer" title="Visit our Facebook page (opens in a new tab)" aria-label="Dnyandeep English School on Facebook, opens in a new tab" class="p-1 text-white hover:text-[#F2E3A0] transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://www.instagram.com/dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" title="Visit our Instagram page (opens in a new tab)" aria-label="Dnyandeep English School on Instagram, opens in a new tab" class="p-1 text-white hover:text-[#F2E3A0] transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://youtube.com/@dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" title="Visit our YouTube channel (opens in a new tab)" aria-label="Dnyandeep English School on YouTube, opens in a new tab" class="p-1 text-white hover:text-[#F2E3A0] transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+          <a href="https://www.linkedin.com/company/dnyandeep-school/" target="_blank" rel="noopener noreferrer" title="Visit our LinkedIn page (opens in a new tab)" aria-label="Dnyandeep English School on LinkedIn, opens in a new tab" class="p-1 text-white hover:text-[#F2E3A0] transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
         </div>
-        <button class="theme-toggle-btn p-1.5 text-[#EEF3EA] hover:text-[#F2E3A0] rounded-lg focus:outline-none" aria-label="Toggle Dark Mode">
+        <button class="theme-toggle-btn p-1.5 text-[#EEF3EA] hover:text-[#F2E3A0] rounded-lg focus:outline-none" aria-label="Switch to dark or light mode" title="Switch to dark or light mode">
           <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
           <i data-lucide="sun" class="w-4 h-4 hidden dark:inline"></i>
         </button>
@@ -168,6 +171,7 @@
           <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online">
             <i data-lucide="edit-3" class="btn-icon"></i>
             <span>Apply Online</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80 -ml-1"></i>
           </a>
         </div>
 
@@ -190,7 +194,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Page Header Banner -->
     <section class="bg-gradient-to-b from-[#0c2719] via-[#123B26] to-[#0c2719] text-white py-16 sm:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -397,9 +401,9 @@
         <div class="lg:col-span-4 space-y-3">
           <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#F2E3A0]">School Campus</h4>
           <div class="space-y-2 text-xs sm:text-sm text-[#EEF3EA]">
-            <p>Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham, Manjari Khurd, Pune, Maharashtra 412307</p>
-            <p>Phones: +91-7276095235 / +91-8484844067</p>
-            <p>Email: info@des.org.in</p>
+            <p>Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham, Manjari Khurd, Pune, Maharashtra 412307 <a href="https://maps.google.com/?q=Dnyandeep+English+School+Manjari+Khurd+Pune" target="_blank" rel="noopener noreferrer" class="text-[#F2E3A0] underline inline-flex items-center gap-0.5 ml-1" title="View on Google Maps (opens in a new tab)" aria-label="View campus on Google Maps (opens in a new tab)">(Map <i data-lucide="arrow-up-right" class="w-3 h-3 inline"></i>)</a></p>
+            <p>Phones: <a href="tel:+917276095235" class="hover:text-[#F2E3A0] underline" title="Call +91-7276095235">+91-7276095235</a> / <a href="tel:+918484844067" class="hover:text-[#F2E3A0] underline" title="Call +91-8484844067">+91-8484844067</a></p>
+            <p>Email: <a href="mailto:info@des.org.in" class="hover:text-[#F2E3A0] underline" title="Email info@des.org.in">info@des.org.in</a></p>
           </div>
         </div>
       </div>

@@ -366,3 +366,99 @@ html.dark ::-webkit-scrollbar-track {
     transition: none !important;
   }
 }
+
+/* Accessibility: Skip to Main Content Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000000;
+  padding: 0.75rem 1.25rem;
+  background-color: #F2E3A0;
+  color: #123B26;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border: 2px solid #1F5A3A;
+  transition: top 0.2s ease-in-out;
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid #1F5A3A;
+  outline-offset: 2px;
+}
+
+/* Social Media Pill Buttons */
+.social-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 0.875rem;
+  background-color: rgba(31, 90, 58, 0.4);
+  color: #FBFAF4;
+  border: 1px solid rgba(242, 227, 160, 0.2);
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.social-pill-btn:hover {
+  background-color: #F2E3A0;
+  color: #123B26;
+  border-color: #F2E3A0;
+  transform: translateY(-1px);
+}
+
+.social-pill-btn:focus-visible {
+  outline: 2px solid #F2E3A0;
+  outline-offset: 2px;
+}
+
+.social-pill-btn .social-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: currentColor;
+  shrink: 0;
+}
+
+.social-pill-btn .external-arrow {
+  width: 0.75rem;
+  height: 0.75rem;
+  opacity: 0.75;
+  shrink: 0;
+}
+
+.social-pill-btn:hover .external-arrow {
+  opacity: 1;
+}
+
+/* Navigation active indicator */
+.nav-link.active {
+  color: #1F5A3A;
+  font-weight: 700;
+  position: relative;
+}
+html.dark .nav-link.active {
+  color: #F2E3A0;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #1F5A3A;
+  border-radius: 9999px;
+}
+html.dark .nav-link.active::after {
+  background-color: #F2E3A0;
+}
