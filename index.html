@@ -396,8 +396,17 @@
           
           <!-- Illustrated Image Card -->
           <div class="lg:col-span-5 fade-up-init">
-            <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-lg p-3">
-              <img data-config-img="ABOUT_CARD" src="images/about-illustration.webp" alt="Dnyandeep School Heritage" class="w-full aspect-[4/3] object-cover rounded-2xl" loading="lazy" />
+            <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-lg p-3 group hover-card">
+              <div class="overflow-hidden rounded-2xl img-placeholder-bg">
+                <img data-config-img="ABOUT_CARD" 
+                     src="images/about-heritage.webp" 
+                     srcset="images/about-heritage-640.webp 640w, images/about-heritage.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, 480px"
+                     width="1200" height="900"
+                     alt="Illustration of Dnyandeep English School heritage building with central archway and courtyard" 
+                     class="w-full aspect-[4/3] object-cover img-hover-zoom" 
+                     loading="lazy" decoding="async" />
+              </div>
               <div class="p-4 text-center">
                 <p class="font-serif font-bold text-[#123B26] dark:text-white text-base">Established Since 1944</p>
                 <p class="text-xs text-[#55655B] dark:text-[#DDE5D8]">Over 80 years of excellence in student character and values</p>
@@ -438,8 +447,15 @@
       <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto rounded-3xl bg-cream-50 dark:bg-[#142e20]/50 border border-cream-border dark:border-[#1c3d2c] p-6 sm:p-10 shadow-md fade-up-init">
           <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0 border-2 border-[#1F5A3A]/30">
-              <img data-config-img="LEADERSHIP_AVATAR" src="images/leadership-avatar.webp" alt="Dnyandeep English School Leadership" class="w-full h-full object-cover" loading="lazy" />
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0 border-2 border-[#1F5A3A]/30 img-placeholder-bg">
+              <img data-config-img="LEADERSHIP_AVATAR" 
+                   src="images/leadership-avatar.webp" 
+                   srcset="images/leadership-avatar-640.webp 640w, images/leadership-avatar.webp 600w"
+                   sizes="(max-width: 640px) 96px, 128px"
+                   width="600" height="600"
+                   alt="Neutral stylised educator icon avatar in deep forest green and warm cream" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <div class="space-y-2 text-center sm:text-left">
               <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">School Leadership</span>
@@ -475,9 +491,16 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Program 1: Pre-Primary -->
-          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col fade-up-init">
-            <div class="h-48 overflow-hidden">
-              <img data-config-img="PROGRAM_PRE_PRIMARY" src="images/program-pre-primary.webp" alt="Pre-Primary Program" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col fade-up-init group hover-card">
+            <div class="h-52 overflow-hidden img-placeholder-bg">
+              <img data-config-img="PROGRAM_PRE_PRIMARY" 
+                   src="images/programs-pre-primary.webp" 
+                   srcset="images/programs-pre-primary-640.webp 640w, images/programs-pre-primary.webp 1520w"
+                   sizes="(max-width: 768px) 100vw, 420px"
+                   width="1520" height="770"
+                   alt="Illustration of nursery classroom scene with wooden blocks, picture books and rainbow rug" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
@@ -497,9 +520,16 @@
           </div>
 
           <!-- Program 2: Primary -->
-          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col fade-up-init">
-            <div class="h-48 overflow-hidden">
-              <img data-config-img="PROGRAM_PRIMARY" src="images/program-primary.webp" alt="Primary School Program" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col fade-up-init group hover-card">
+            <div class="h-52 overflow-hidden img-placeholder-bg">
+              <img data-config-img="PROGRAM_PRIMARY" 
+                   src="images/programs-primary.webp" 
+                   srcset="images/programs-primary-640.webp 640w, images/programs-primary.webp 1520w"
+                   sizes="(max-width: 768px) 100vw, 420px"
+                   width="1520" height="770"
+                   alt="Illustration of primary school classroom with teacher at chalkboard, seated children, globe and bookshelf" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
@@ -519,9 +549,16 @@
           </div>
 
           <!-- Program 3: Secondary -->
-          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col fade-up-init">
-            <div class="h-48 overflow-hidden">
-              <img data-config-img="PROGRAM_SECONDARY" src="images/program-secondary.webp" alt="Secondary SSC Program" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col fade-up-init group hover-card">
+            <div class="h-52 overflow-hidden img-placeholder-bg">
+              <img data-config-img="PROGRAM_SECONDARY" 
+                   src="images/programs-secondary.webp" 
+                   srcset="images/programs-secondary-640.webp 640w, images/programs-secondary.webp 1520w"
+                   sizes="(max-width: 768px) 100vw, 420px"
+                   width="1520" height="770"
+                   alt="Illustration of secondary school science lab with microscope, beakers, solar system model and teacher guiding students" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
@@ -649,45 +686,80 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           
           <!-- Activity 1 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5">
-              <img data-config-img="ACTIVITY_SPORTS" src="images/activity-sports.webp" alt="Sports & Physical Education" class="w-full h-full object-cover" loading="lazy" />
+          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center group hover-card">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5 img-placeholder-bg">
+              <img data-config-img="ACTIVITY_SPORTS" 
+                   src="images/gallery-sports.webp" 
+                   srcset="images/gallery-sports-640.webp 640w, images/gallery-sports.webp 900w"
+                   sizes="64px"
+                   width="900" height="900"
+                   alt="Sports & Physical Education at Dnyandeep" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1.5">Sports & Physical Education</h3>
             <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Indoor and outdoor sports, regular sports periods, annual sports events, inter-school competitions.</p>
           </div>
 
           <!-- Activity 2 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5">
-              <img data-config-img="ACTIVITY_ARTS" src="images/activity-arts.webp" alt="Arts, Drawing & Craft" class="w-full h-full object-cover" loading="lazy" />
+          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center group hover-card">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5 img-placeholder-bg">
+              <img data-config-img="ACTIVITY_ARTS" 
+                   src="images/facility-arts.webp" 
+                   srcset="images/facility-arts-640.webp 640w, images/facility-arts.webp 1200w"
+                   sizes="64px"
+                   width="1200" height="800"
+                   alt="Arts, Drawing & Craft" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1.5">Arts, Drawing & Craft</h3>
             <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Drawing competitions, creative crafts, and visual art fostering creative expression.</p>
           </div>
 
           <!-- Activity 3 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5">
-              <img data-config-img="ACTIVITY_MUSIC" src="images/activity-music.webp" alt="Music & Cultural Activities" class="w-full h-full object-cover" loading="lazy" />
+          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center group hover-card">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5 img-placeholder-bg">
+              <img data-config-img="ACTIVITY_MUSIC" 
+                   src="images/gallery-cultural.webp" 
+                   srcset="images/gallery-cultural-640.webp 640w, images/gallery-cultural.webp 900w"
+                   sizes="64px"
+                   width="900" height="900"
+                   alt="Music & Cultural Activities" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1.5">Music & Cultural Activities</h3>
             <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Traditional festivals, annual gatherings, stage drama, and vocal celebrations.</p>
           </div>
 
           <!-- Activity 4 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5">
-              <img data-config-img="ACTIVITY_COMPUTER" src="images/activity-computer.webp" alt="Computer Lab & Practical Learning" class="w-full h-full object-cover" loading="lazy" />
+          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center group hover-card">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5 img-placeholder-bg">
+              <img data-config-img="ACTIVITY_COMPUTER" 
+                   src="images/facility-computer.webp" 
+                   srcset="images/facility-computer-640.webp 640w, images/facility-computer.webp 1200w"
+                   sizes="64px"
+                   width="1200" height="800"
+                   alt="Computer Lab & Practical Learning" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1.5">Computer Lab & Practical Learning</h3>
             <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Modern systems, educational software, basic computer skills, digital learning.</p>
           </div>
 
           <!-- Activity 5 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5">
-              <img data-config-img="ACTIVITY_SCIENCE" src="images/activity-science.webp" alt="Science Exhibitions & Skill-Based Activities" class="w-full h-full object-cover" loading="lazy" />
+          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-4 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center group hover-card">
+            <div class="w-16 h-16 rounded-2xl overflow-hidden mb-3.5 img-placeholder-bg">
+              <img data-config-img="ACTIVITY_SCIENCE" 
+                   src="images/facility-science.webp" 
+                   srcset="images/facility-science-640.webp 640w, images/facility-science.webp 1200w"
+                   sizes="64px"
+                   width="1200" height="800"
+                   alt="Science Exhibitions & Skill-Based Activities" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1.5">Science Exhibitions & Skill-Based Activities</h3>
             <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Hands-on experiments, annual science fairs, and analytical problem-solving projects.</p>
@@ -715,9 +787,16 @@
         <div class="space-y-12">
           
           <!-- Facility 1: Sports -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init">
-            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm">
-              <img data-config-img="FACILITY_SPORTS" src="images/facility-sports.webp" alt="Sports Facilities" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init group hover-card">
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm img-placeholder-bg">
+              <img data-config-img="FACILITY_SPORTS" 
+                   src="images/facility-sports.webp" 
+                   srcset="images/facility-sports-640.webp 640w, images/facility-sports.webp 1200w"
+                   sizes="(max-width: 1024px) 100vw, 500px"
+                   width="1200" height="800"
+                   alt="Illustration of school sports playground with football field and running track" 
+                   class="w-full h-56 sm:h-64 object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <div class="lg:col-span-7 space-y-3">
               <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Athletics & Fitness</span>
@@ -734,7 +813,7 @@
           </div>
 
           <!-- Facility 2: Creative Art Spaces -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init group hover-card">
             <div class="lg:col-span-7 space-y-3 order-2 lg:order-1">
               <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Creative Expression</span>
               <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white">Creative Art Spaces</h3>
@@ -746,15 +825,29 @@
                 <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Cultural Preparation</span>
               </div>
             </div>
-            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm order-1 lg:order-2">
-              <img data-config-img="FACILITY_ARTS" src="images/facility-arts.webp" alt="Creative Art Spaces" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm order-1 lg:order-2 img-placeholder-bg">
+              <img data-config-img="FACILITY_ARTS" 
+                   src="images/facility-arts.webp" 
+                   srcset="images/facility-arts-640.webp 640w, images/facility-arts.webp 1200w"
+                   sizes="(max-width: 1024px) 100vw, 500px"
+                   width="1200" height="800"
+                   alt="Illustration of school art and cultural room with easels, paint palettes, crafts display and musical instruments" 
+                   class="w-full h-56 sm:h-64 object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
           </div>
 
           <!-- Facility 3: Computer Lab -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init">
-            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm">
-              <img data-config-img="FACILITY_COMPUTER" src="images/facility-computer.webp" alt="Modern Computer Lab" class="w-full h-56 sm:h-64 object-cover" loading="lazy" />
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init group hover-card">
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm img-placeholder-bg">
+              <img data-config-img="FACILITY_COMPUTER" 
+                   src="images/facility-computer.webp" 
+                   srcset="images/facility-computer-640.webp 640w, images/facility-computer.webp 1200w"
+                   sizes="(max-width: 1024px) 100vw, 500px"
+                   width="1200" height="800"
+                   alt="Illustration of modern computer lab with rows of desktop monitors and students working quietly" 
+                   class="w-full h-56 sm:h-64 object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
             </div>
             <div class="lg:col-span-7 space-y-3">
               <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Digital Literacy</span>
@@ -770,6 +863,125 @@
             </div>
           </div>
 
+          <!-- Facility 4: Science Exhibition -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl p-6 sm:p-8 border border-cream-border dark:border-[#1c3d2c] fade-up-init group hover-card">
+            <div class="lg:col-span-7 space-y-3 order-2 lg:order-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Practical Inquiry</span>
+              <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white">Science Exhibition & Labs</h3>
+              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
+                Interactive science spaces encouraging experiment-driven learning, annual science exhibition projects, and hands-on analytical thinking.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Working Models</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Science Fair</span>
+                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Demonstrations</span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-sm order-1 lg:order-2 img-placeholder-bg">
+              <img data-config-img="FACILITY_SCIENCE" 
+                   src="images/facility-science.webp" 
+                   srcset="images/facility-science-640.webp 640w, images/facility-science.webp 1200w"
+                   sizes="(max-width: 1024px) 100vw, 500px"
+                   width="1200" height="800"
+                   alt="Illustration of school science exhibition with working models on display in courtyard" 
+                   class="w-full h-56 sm:h-64 object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 10.5 CAMPUS LIFE & STUDENT GALLERY TILES -->
+    <section class="py-20 bg-cream-50 dark:bg-[#08160e] border-b border-cream-border dark:border-[#1c3d2c]">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14 fade-up-init">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
+            Campus Highlights
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
+            Life at Dnyandeep
+          </h2>
+          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
+            Glimpses into student collaboration, creative arts, athletic meets, and annual celebrations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Gallery Tile 1 -->
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-md transition-all fade-up-init group hover-card">
+            <div class="aspect-square overflow-hidden img-placeholder-bg">
+              <img data-config-img="GALLERY_CLASSROOM" 
+                   src="images/gallery-classroom.webp" 
+                   srcset="images/gallery-classroom-640.webp 640w, images/gallery-classroom.webp 900w"
+                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                   width="900" height="900"
+                   alt="Illustration of interactive classroom activities with students collaborating on origami crafts" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
+            </div>
+            <div class="p-4 text-center">
+              <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white">Classroom Activities</h3>
+              <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1">Interactive collaborative projects</p>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 2 -->
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-md transition-all fade-up-init group hover-card">
+            <div class="aspect-square overflow-hidden img-placeholder-bg">
+              <img data-config-img="GALLERY_CULTURAL" 
+                   src="images/gallery-cultural.webp" 
+                   srcset="images/gallery-cultural-640.webp 640w, images/gallery-cultural.webp 900w"
+                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                   width="900" height="900"
+                   alt="Illustration of students performing cultural folk dance on a flower-garlanded auditorium stage" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
+            </div>
+            <div class="p-4 text-center">
+              <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white">Cultural & Arts Programs</h3>
+              <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1">Festive and classical performances</p>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 3 -->
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-md transition-all fade-up-init group hover-card">
+            <div class="aspect-square overflow-hidden img-placeholder-bg">
+              <img data-config-img="GALLERY_SPORTS" 
+                   src="images/gallery-sports.webp" 
+                   srcset="images/gallery-sports-640.webp 640w, images/gallery-sports.webp 900w"
+                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                   width="900" height="900"
+                   alt="Illustration of annual sports day athletics race with students running on track and cheering classmates" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
+            </div>
+            <div class="p-4 text-center">
+              <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white">Sports & Athletic Meets</h3>
+              <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1">Track races and field athletics</p>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 4 -->
+          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-sm hover:shadow-md transition-all fade-up-init group hover-card">
+            <div class="aspect-square overflow-hidden img-placeholder-bg">
+              <img data-config-img="GALLERY_ANNUAL_FUNCTION" 
+                   src="images/gallery-annual-function.webp" 
+                   srcset="images/gallery-annual-function-640.webp 640w, images/gallery-annual-function.webp 900w"
+                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                   width="900" height="900"
+                   alt="Illustration of annual school function celebrations on decorated auditorium stage seen from audience" 
+                   class="w-full h-full object-cover img-hover-zoom" 
+                   loading="lazy" decoding="async" />
+            </div>
+            <div class="p-4 text-center">
+              <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white">Annual Celebrations</h3>
+              <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1">Honouring student milestones</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -777,8 +989,15 @@
     <!-- 10. QUOTE BAND (Full Old-Site Text) -->
     <section class="py-16 bg-[#123B26] text-white relative overflow-hidden">
       <!-- Background pattern -->
-      <div class="absolute inset-0 z-0">
-        <img data-config-img="QUOTE_BG" src="images/quote-bg.webp" alt="Educational Philosophy" class="w-full h-full object-cover opacity-20" loading="lazy" />
+      <div class="absolute inset-0 z-0 img-placeholder-bg">
+        <img data-config-img="QUOTE_BG" 
+             src="images/quote-bg.webp" 
+             srcset="images/quote-bg-640.webp 640w, images/quote-bg.webp 2000w"
+             sizes="100vw"
+             width="2000" height="860"
+             alt="Soft abstract green watercolour wash with faint plaid texture and cream highlights" 
+             class="w-full h-full object-cover opacity-25" 
+             loading="lazy" decoding="async" />
         <div class="absolute inset-0 bg-[#123B26]/85"></div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 fade-up-init">

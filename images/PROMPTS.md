@@ -1,72 +1,128 @@
 # AI Illustration Prompts for Dnyandeep English School
 
-This document specifies the exact prompt designs and visual system for all generated illustrations used across the Dnyandeep English School admission landing page.
-
-## Visual Design Palette & Guidelines
-- **Primary Color:** Forest Green `#1F5A3A`
-- **Secondary Dark:** Deep Royal Forest Navy `#123B26`
-- **Cream Accent:** Warm Golden Cream `#F2E3A0`
-- **Soft Background:** Ivory Cream `#FBFAF4`
-- **Style:** Clean, stylised flat-vector / soft 3D educational editorial illustration with elegant geometric curves, gentle gradients, and warm academic tones. Zero photorealistic human faces, zero fake architectural photos, maintaining prestigious scholastic integrity.
+This document specifies the exact prompt designs, visual parameters, aspect ratios, and implementation details for all AI-generated illustrations created for the Dnyandeep English School admission landing page.
 
 ---
 
-### 1. Hero Background Scene (`images/hero-illustration.webp`)
-- **Prompt:** `A wide, cinematic isometric flat vector illustration of an inspiring modern academic school campus, clean geometric buildings with large glass windows, green trees and garden grounds, subtle scholastic elements (books, graduation cap, rising sun), stylized in deep forest green #123B26, uniform green #1F5A3A and warm cream-gold #F2E3A0, elegant architectural lines, minimal clean background, soft lighting, high aesthetic modern vector art --ar 16:9 --no realistic humans`
-- **Location in Code:** Config entry `HERO_SCENE`
+## Visual Design System & Palette Guidelines
+- **Primary Color:** Deep Forest Green `#1F5A3A`
+- **Secondary Accent:** Dark Forest `#123B26` / Deep Emerald `#2F7A50`
+- **Cream Accent:** Warm Golden Cream `#F2E3A0`
+- **Soft Background:** Warm Ivory White `#FBFAF4`
+- **Style Direction:** Warm, semi-flat editorial illustration with soft shading and gentle textures in the authentic school palette. An Indian school setting. Children and teachers shown strictly from behind, in silhouette, or from a distance with **NO detailed or realistic faces**. No text, no logos, signs or letters inside any image. No watermarks. Calm and prestigious scholastic mood.
 
-### 2. About Us Heritage Card (`images/about-illustration.webp`)
-- **Prompt:** `Modern flat academic vector illustration symbolizing school heritage since 1944: an open antique-to-modern book blossoming into graduation laurels, knowledge branches, and warm sunlight, surrounded by clean geometry in deep forest green #1F5A3A and warm cream #F2E3A0 accents, white space, editorial minimalism --ar 4:3 --no realistic faces`
-- **Location in Code:** Config entry `ABOUT_CARD`
+---
 
-### 3. Leadership Neutral Avatar (`images/leadership-avatar.webp`)
-- **Prompt:** `A distinguished, neutral academic educator silhouette icon avatar, minimal stylized flat portrait with scholarly collar and gentle gradient background in forest green #123B26 and warm gold #F2E3A0 border ring, clean lines, professional and welcoming --ar 1:1 --no hyperrealistic face`
-- **Location in Code:** Config entry `LEADERSHIP_AVATAR`
+## Complete Image Inventory & Prompts
 
-### 4. Academic Programs: Pre-Primary (`images/program-pre-primary.webp`)
-- **Prompt:** `Stylized vector educational illustration of foundational early childhood learning: playful alphabet blocks (A, B, C), wooden counting beads, paper airplane, and blossoming green plants in forest green #1F5A3A, cream #F2E3A0, and warm white, soft shadows, delightful clean vector --ar 16:10`
-- **Location in Code:** Config entry `PROGRAM_PRE_PRIMARY`
+### 1. Pre-Primary Program Card
+- **File:** `images/programs-pre-primary.webp` & `images/programs-pre-primary-640.webp`
+- **Aspect Ratio:** 2:1 (1520x770)
+- **Code Slot:** `IMAGES.PROGRAM_PRE_PRIMARY` in `js/config.js`
+- **Prompt:**
+  > "Nursery classroom scene: colourful wooden blocks, picture books and a small rainbow rug on the floor, two small children seen from behind building a block tower, soft morning light through a window. Warm semi-flat editorial illustration with soft shading and gentle textures in deep forest green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. No realistic faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 5. Academic Programs: Primary Section (`images/program-primary.webp`)
-- **Prompt:** `Stylized vector educational illustration of primary school exploration: an open notebook with a magnifying glass, drawing compass, globe, and colorful pencils, in forest green #1F5A3A, deep emerald #123B26, and cream gold #F2E3A0, clean educational artwork --ar 16:10`
-- **Location in Code:** Config entry `PROGRAM_PRIMARY`
+### 2. Primary Section Card
+- **File:** `images/programs-primary.webp` & `images/programs-primary-640.webp`
+- **Aspect Ratio:** 2:1 (1520x770)
+- **Code Slot:** `IMAGES.PROGRAM_PRIMARY` in `js/config.js`
+- **Prompt:**
+  > "Primary classroom: a teacher at a green chalkboard with a simple maths shape and a plant drawing, children seated at desks seen from behind, a globe and bookshelf, warm light. Warm semi-flat editorial illustration with soft shading in deep forest green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. Indian school setting. No detailed or realistic faces, no text, no letters, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 6. Academic Programs: Secondary SSC Section (`images/program-secondary.webp`)
-- **Prompt:** `Stylized vector educational illustration of secondary school STEM & SSC board excellence: microscope, geometry set square, scientific beaker, diploma scroll, structured in deep forest green #123B26 and warm gold #F2E3A0, intellectual, modern and clean --ar 16:10`
-- **Location in Code:** Config entry `PROGRAM_SECONDARY`
+### 3. Secondary SSC Section Card
+- **File:** `images/programs-secondary.webp` & `images/programs-secondary-640.webp`
+- **Aspect Ratio:** 2:1 (1520x770)
+- **Code Slot:** `IMAGES.PROGRAM_SECONDARY` in `js/config.js`
+- **Prompt:**
+  > "Secondary school science lab: students seen from behind at a lab table with a microscope, beakers and a model of the solar system on the wall, a teacher guiding, focused and calm mood. Warm semi-flat editorial illustration with soft shading in deep forest green #1F5A3A, sage green #2F7A50, cream #F2E3A0, warm white #FBFAF4. Indian school setting. No faces, no text, no letters, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 7. Activity 1: Sports & Physical Education (`images/activity-sports.webp`)
-- **Prompt:** `Vector illustration of school athletics: football, cricket bat, running track curves, and victory trophy, stylized minimal flat vector in emerald green #1F5A3A and cream gold #F2E3A0 --ar 1:1`
-- **Location in Code:** Config entry `ACTIVITY_SPORTS`
+### 4. About Us Heritage Card
+- **File:** `images/about-heritage.webp` & `images/about-heritage-640.webp`
+- **Aspect Ratio:** 4:3 (1200x900)
+- **Code Slot:** `IMAGES.ABOUT_CARD` in `js/config.js`
+- **Prompt:**
+  > "A welcoming Indian school building with a central archway and a flagpole, a tree-lined entrance path, students in green plaid uniforms walking in the distance, golden morning light, heritage feel. Warm semi-flat editorial illustration with soft shading and gentle textures in deep green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. No detailed faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 8. Activity 2: Arts, Drawing & Craft (`images/activity-arts.webp`)
-- **Prompt:** `Vector illustration of student creative arts: painter palette with brushes, drawing pencils, origami crane, and vibrant sketchbook in dark green and gold cream palette, clean graphic style --ar 1:1`
-- **Location in Code:** Config entry `ACTIVITY_ARTS`
+### 5. Facility: Sports Playground
+- **File:** `images/facility-sports.webp` & `images/facility-sports-640.webp`
+- **Aspect Ratio:** 3:2 (1200x800)
+- **Code Slot:** `IMAGES.FACILITY_SPORTS` in `js/config.js`
+- **Prompt:**
+  > "School playground with a football field and a running track, students playing seen from a distance, bright sky. Warm semi-flat editorial illustration with soft shading in deep forest green #1F5A3A, sage #2F7A50, cream #F2E3A0, ivory #FBFAF4. Indian school setting. No detailed faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 9. Activity 3: Music & Cultural Activities (`images/activity-music.webp`)
-- **Prompt:** `Vector illustration of Indian classical & school cultural celebrations: tabla drums, acoustic sitar silhouette, musical notes, and festival garland ribbon in warm forest green #123B26 and cream #F2E3A0 --ar 1:1`
-- **Location in Code:** Config entry `ACTIVITY_MUSIC`
+### 6. Facility: Creative Art Spaces
+- **File:** `images/facility-arts.webp` & `images/facility-arts-640.webp`
+- **Aspect Ratio:** 3:2 (1200x800)
+- **Code Slot:** `IMAGES.FACILITY_ARTS` in `js/config.js`
+- **Prompt:**
+  > "Art room: easels, paint palettes, a handmade craft display and a small stage with a musical instrument, students seen from behind. Warm semi-flat editorial illustration with soft shading in deep green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. Indian school setting. No faces, no text, no logos, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 10. Activity 4: Computer Lab & Practical Learning (`images/activity-computer.webp`)
-- **Prompt:** `Vector illustration of digital technology learning: modern slim desktop monitor displaying educational code brackets, keyboard, glowing data nodes in forest green and warm cream gold --ar 1:1`
-- **Location in Code:** Config entry `ACTIVITY_COMPUTER`
+### 7. Facility: Modern Computer Lab
+- **File:** `images/facility-computer.webp` & `images/facility-computer-640.webp`
+- **Aspect Ratio:** 3:2 (1200x800)
+- **Code Slot:** `IMAGES.FACILITY_COMPUTER` in `js/config.js`
+- **Prompt:**
+  > "Modern computer lab with rows of desktop monitors and students seen from behind, soft green lighting. Warm semi-flat editorial illustration with soft shading in deep forest green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. Indian school setting. No faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 11. Activity 5: Science Exhibitions & Skill-Based Activities (`images/activity-science.webp`)
-- **Prompt:** `Vector illustration of science fair project: atom orbital rings, laboratory flask with bubbles, solar system planet model, clean stylized educational design in green #1F5A3A and warm cream #F2E3A0 --ar 1:1`
-- **Location in Code:** Config entry `ACTIVITY_SCIENCE`
+### 8. Facility: Science Exhibition
+- **File:** `images/facility-science.webp` & `images/facility-science-640.webp`
+- **Aspect Ratio:** 3:2 (1200x800)
+- **Code Slot:** `IMAGES.FACILITY_SCIENCE` in `js/config.js`
+- **Prompt:**
+  > "School science exhibition with student-made working models on tables, parents and students seen from a distance. Warm semi-flat editorial illustration with soft shading in deep green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. Indian school setting. No faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 12. Facility 1: Sports Facilities (`images/facility-sports.webp`)
-- **Prompt:** `Architectural stylized illustration of school sports campus: wide outdoor green playground with football goalpost, running tracks, and indoor sports hall pavilion in deep green #123B26 and cream #F2E3A0 --ar 16:10`
-- **Location in Code:** Config entry `FACILITY_SPORTS`
+### 9. Gallery Tile 1: Classroom Activities
+- **File:** `images/gallery-classroom.webp` & `images/gallery-classroom-640.webp`
+- **Aspect Ratio:** 1:1 (900x900)
+- **Code Slot:** `IMAGES.GALLERY_CLASSROOM` in `js/config.js`
+- **Prompt:**
+  > "Indian school classroom activities: students in uniform working in small groups around desks with notebooks, building geometric origami crafts, seen from behind from a gentle high angle, bright window light. Warm semi-flat editorial illustration with soft shading in deep forest green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. No faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 13. Facility 2: Creative Art Spaces (`images/facility-arts.webp`)
-- **Prompt:** `Stylized architectural illustration of school creative art studio: bright natural light windows, easels, craft tables, and sculpture displays in academic green and cream uniform palette --ar 16:10`
-- **Location in Code:** Config entry `FACILITY_ARTS`
+### 10. Gallery Tile 2: Cultural & Art Programs
+- **File:** `images/gallery-cultural.webp` & `images/gallery-cultural-640.webp`
+- **Aspect Ratio:** 1:1 (900x900)
+- **Code Slot:** `IMAGES.GALLERY_CULTURAL` in `js/config.js`
+- **Prompt:**
+  > "School cultural and art programs in India: students performing traditional folk dance on an auditorium floor, colorful traditional Indian attire, marigold flower garlands, seen from behind from audience perspective, soft festive stage lighting. Warm semi-flat editorial illustration with soft shading in deep green #1F5A3A, golden cream #F2E3A0. No faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 14. Facility 3: Modern Computer Lab (`images/facility-computer.webp`)
-- **Prompt:** `Stylized architectural illustration of state-of-the-art school computer lab: clean ergonomic workstations with computers, interactive smart presentation board, in deep forest green and cream gold --ar 16:10`
-- **Location in Code:** Config entry `FACILITY_COMPUTER`
+### 11. Gallery Tile 3: Sports Events
+- **File:** `images/gallery-sports.webp` & `images/gallery-sports-640.webp`
+- **Aspect Ratio:** 1:1 (900x900)
+- **Code Slot:** `IMAGES.GALLERY_SPORTS` in `js/config.js`
+- **Prompt:**
+  > "School sports day events in India: students in athletic vests running on a red track with white lane ribbons, classmates cheering from green lawn sidelines seen from a distance with silhouettes, sunny outdoor sports day celebration. Warm semi-flat editorial illustration with soft shading in deep forest green #1F5A3A, cream #F2E3A0, warm white #FBFAF4. No faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
 
-### 15. Quote Band Background (`images/quote-bg.webp`)
-- **Prompt:** `Subtle abstract academic background wallpaper: faint mathematical curves, delicate constellation knowledge motifs, in deep forest green #0c2719 to #123B26 gradient with gentle golden cream dust particles --ar 21:9`
-- **Location in Code:** Config entry `QUOTE_BG`
+### 12. Gallery Tile 4: Annual Function & Celebrations
+- **File:** `images/gallery-annual-function.webp` & `images/gallery-annual-function-640.webp`
+- **Aspect Ratio:** 1:1 (900x900)
+- **Code Slot:** `IMAGES.GALLERY_ANNUAL_FUNCTION` in `js/config.js`
+- **Prompt:**
+  > "Annual school function and celebrations in India: an elegant decorated school stage with fresh flower garlands, soft warm spotlights, students receiving a scroll or performing from a distance, seen from the rear audience seating perspective with head silhouettes, celebratory and proud atmosphere. Warm semi-flat editorial illustration with soft shading in deep emerald green #123B26, gold cream #F2E3A0. No faces, no text, no watermarks."
+- **Status:** **Generated & Installed**
+
+### 13. Quote-Band Background
+- **File:** `images/quote-bg.webp` & `images/quote-bg-640.webp`
+- **Aspect Ratio:** 21:9 (2000x860)
+- **Code Slot:** `IMAGES.QUOTE_BG` in `js/config.js`
+- **Prompt:**
+  > "Soft abstract green watercolour wash with faint plaid texture and cream highlights, very low contrast so overlaid text stays readable. Minimalist scholastic texture in deep forest green #123B26 and uniform green #1F5A3A blended with soft cream #F2E3A0. No shapes, no text, no watermarks."
+- **Status:** **Generated & Installed**
+
+### 14. Leadership Avatar (Principal's Message Placeholder)
+- **File:** `images/leadership-avatar.webp` & `images/leadership-avatar-640.webp`
+- **Aspect Ratio:** 1:1 (600x600)
+- **Code Slot:** `IMAGES.LEADERSHIP_AVATAR` in `js/config.js`
+- **Prompt:**
+  > "Neutral stylised avatar in green and cream with no face for the Principal's message placeholder: circular composition, minimalist scholastic silhouette with academic blazer collar, gentle gradient background with thin golden rim, no facial features, no mouth, no eyes, calm distinguished and professional, warm semi-flat editorial illustration. No text, no letters, no watermarks."
+- **Status:** **Maintained existing clean vector avatar** *(Generation subagent encountered API capacity 429 quota exhaustion; clean, compliant placeholder avatar active at 600x600 and 640w)*

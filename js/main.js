@@ -209,15 +209,22 @@ function initMediaConfig() {
     }
   }
 
-  // Bind remaining data-config-img attributes
+  // Bind remaining data-config-img attributes (supporting both src and srcset)
   const configImgs = document.querySelectorAll('[data-config-img]');
   configImgs.forEach(el => {
     const key = el.getAttribute('data-config-img');
-    if (SCHOOL_MEDIA_CONFIG[key]) {
-      el.src = SCHOOL_MEDIA_CONFIG[key];
+    const mediaSource = typeof IMAGES !== 'undefined' && IMAGES[key] ? IMAGES[key] : (SCHOOL_MEDIA_CONFIG && SCHOOL_MEDIA_CONFIG[key]);
+    if (mediaSource) {
+      el.src = mediaSource;
+      const key640 = key + '_640';
+      const media640 = typeof IMAGES !== 'undefined' && IMAGES[key640] ? IMAGES[key640] : (SCHOOL_MEDIA_CONFIG && SCHOOL_MEDIA_CONFIG[key640]);
+      if (media640) {
+        el.srcset = `${media640} 640w, ${mediaSource} 1200w`;
+      }
       const altKey = key + '_ALT';
-      if (SCHOOL_MEDIA_CONFIG[altKey] && !el.getAttribute('alt')) {
-        el.alt = SCHOOL_MEDIA_CONFIG[altKey];
+      const altText = typeof IMAGES !== 'undefined' && IMAGES[altKey] ? IMAGES[altKey] : (SCHOOL_MEDIA_CONFIG && SCHOOL_MEDIA_CONFIG[altKey]);
+      if (altText && (!el.getAttribute('alt') || el.getAttribute('alt').length < 5)) {
+        el.alt = altText;
       }
     }
   });
