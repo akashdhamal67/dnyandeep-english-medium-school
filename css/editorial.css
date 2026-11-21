@@ -1,47 +1,51 @@
 /* ==========================================================================
    DNYANDEEP ENGLISH MEDIUM SCHOOL & JR. COLLEGE — MANJARI KHURD, PUNE
-   Architectural & Editorial Design System
-   Crafted with refined restraint, timeless institutional elegance & authentic warmth
+   THE DOON SCHOOL INSPIRED BESPOKE INSTITUTIONAL DESIGN SYSTEM
+   Version 3.0 (Mashal Identity, Classical Editorial Typography, Hero Overlay)
    ========================================================================== */
 
-/* 1. CSS Custom Properties & Design Tokens */
-:root {
-  /* Institutional Color Palette */
-  --color-ivory: #FAF8F5;          /* Warm institutional off-white primary canvas */
-  --color-ivory-light: #FFFFFF;    /* Pure paper white for elevated planes */
-  --color-ivory-muted: #F3EFEA;    /* Soft stone beige for alternating panels */
-  --color-sand: #EAE3D8;           /* Delicate architectural dividers & borders */
-  
-  --color-forest: #143823;         /* Deepest collegiate heritage green */
-  --color-forest-rich: #1B4D31;    /* Signature primary forest green */
-  --color-forest-soft: #24633F;    /* Soft pine accent */
-  --color-forest-tint: #EEF4F0;    /* Ultra-light sage tint for callouts */
-  
-  --color-olive: #687A63;          /* Muted botanical olive accent */
-  --color-gold: #C29B38;           /* Refined heritage gold accent (not garish) */
-  --color-gold-light: #F7EFC8;     /* Soft warm champagne highlight */
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
-  --color-charcoal: #1E2421;       /* Primary editorial typography (ink charcoal) */
-  --color-slate: #4A5650;          /* Secondary typography & captions */
-  --color-stone: #78857E;          /* Muted metadata & microcopy */
-  
-  /* Typography Scale */
-  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  
-  /* Spatial System */
-  --max-w-content: 1320px;
-  --max-w-narrow: 880px;
-  --header-height: 84px;
-  --topbar-height: 38px;
-  
-  /* Shadows: Subtle & architectural, never generic bubbly dropshadows */
-  --shadow-subtle: 0 1px 3px rgba(20, 56, 35, 0.04), 0 4px 12px rgba(20, 56, 35, 0.03);
-  --shadow-elevated: 0 4px 20px rgba(20, 56, 35, 0.06), 0 1px 4px rgba(20, 56, 35, 0.03);
-  --shadow-framed: 0 12px 36px rgba(20, 56, 35, 0.08), 0 2px 6px rgba(20, 56, 35, 0.04);
+/* --- Root Variables & Design Tokens --- */
+:root {
+  /* Institutional Palette */
+  --c-forest-dark: #0F2A1A;
+  --c-forest: #143823;
+  --c-forest-mid: #1B4D31;
+  --c-forest-light: #245F3D;
+  --c-olive: #5B6E57;
+  --c-olive-light: #8A9D85;
+  --c-gold: #C29B38;
+  --c-gold-light: #E8D489;
+  --c-gold-dark: #8F6E1C;
+  --c-ivory: #FAF8F5;
+  --c-ivory-warm: #F4EFEB;
+  --c-sand: #EAE3D8;
+  --c-sand-light: #F0ECE4;
+  --c-white: #FFFFFF;
+  --c-charcoal: #1C2420;
+  --c-charcoal-muted: #4A5650;
+  --c-charcoal-light: #707E76;
+
+  /* Typography Stacks */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing & Layout */
+  --header-height: 92px;
+  --topbar-height: 42px;
+  --max-width: 1440px;
+  --container-pad: clamp(1.25rem, 5vw, 4rem);
+
+  /* Elevation & Shadows */
+  --shadow-subtle: 0 2px 8px rgba(20, 56, 35, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-elevated: 0 12px 32px rgba(15, 42, 26, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-overlay: 0 24px 64px rgba(10, 28, 17, 0.25);
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 2. Global Resets & Editorial Base */
+/* --- Base Reset & Typography --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -49,24 +53,23 @@
 }
 
 html {
-  font-family: var(--font-sans);
-  background-color: var(--color-ivory);
-  color: var(--color-charcoal);
+  font-size: 16px;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
+  background-color: var(--c-ivory);
+  color: var(--c-charcoal);
 }
 
 body {
+  font-family: var(--font-sans);
+  font-weight: 400;
   line-height: 1.65;
-  font-size: 1rem;
-  background-color: var(--color-ivory);
+  background-color: var(--c-ivory);
   overflow-x: hidden;
-  position: relative;
 }
 
-img, picture, video, canvas, svg {
+img, picture, svg, video {
   display: block;
   max-width: 100%;
 }
@@ -74,463 +77,498 @@ img, picture, video, canvas, svg {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: var(--transition-smooth);
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-  border: none;
-  background: none;
+/* --- Accessibility Skip Link --- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  background: var(--c-forest);
+  color: var(--c-ivory);
+  padding: 0.75rem 1.5rem;
+  z-index: 9999;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--c-gold);
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
 }
 
-/* 3. Editorial Typography */
-.font-serif {
+/* --- Core Layout Containers --- */
+.container-doon {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* --- Typography Classes (The Doon School Style) --- */
+.font-editorial-serif {
   font-family: var(--font-serif);
 }
 
-.font-sans {
-  font-family: var(--font-sans);
-}
-
-h1, h2, h3, h4, .serif-heading {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  color: var(--color-forest);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-}
-
-.hero-display {
-  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-}
-
-.section-display {
-  font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 600;
-  line-height: 1.15;
-}
-
-.subheading-editorial {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--color-slate);
-  font-weight: 400;
-}
-
-.eyebrow {
+.eyebrow-doon {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-forest-rich);
+  letter-spacing: 0.22em;
+  color: var(--c-gold);
 }
-
-.eyebrow::before {
+.eyebrow-doon::before {
   content: '';
   display: inline-block;
-  width: 1.25rem;
+  width: 24px;
   height: 1.5px;
-  background-color: var(--color-gold);
+  background-color: var(--c-gold);
 }
 
-/* 4. Structural Layout Containers */
-.container-institutional {
-  width: 100%;
-  max-width: var(--max-w-content);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: clamp(1rem, 3vw, 2.5rem);
-  padding-right: clamp(1rem, 3vw, 2.5rem);
+.hero-display-doon {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
 }
 
-.container-narrow {
-  width: 100%;
-  max-width: var(--max-w-narrow);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.section-title-doon {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+  color: var(--c-forest);
 }
 
-/* 5. Institutional Top Bar & Header */
-.top-institutional-bar {
-  background-color: var(--color-forest);
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.78125rem;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.lead-p-doon {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--c-charcoal-muted);
 }
 
-.site-header {
+/* --- The Doon School Style Header & Navigation --- */
+.top-utility-bar {
+  background-color: var(--c-forest-dark);
+  color: var(--c-ivory);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(194, 155, 56, 0.2);
+  position: relative;
+  z-index: 40;
+}
+
+.site-header-doon {
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 50;
-  background-color: rgba(250, 248, 245, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-sand);
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--c-white);
+  border-bottom: 1px solid var(--c-sand);
+  transition: var(--transition-smooth);
 }
 
-.site-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 4px 20px rgba(20, 56, 35, 0.05);
+.site-header-doon.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(15, 42, 26, 0.06);
+  border-bottom-color: rgba(194, 155, 56, 0.25);
 }
 
-.brand-monogram {
+/* Brand Monogram & Crest */
+.brand-anchor-doon {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.125rem;
+  text-decoration: none;
 }
 
-.brand-crest {
+.brand-crest-frame {
   width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-sand);
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 58px;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.brand-anchor-doon:hover .brand-crest-frame {
+  transform: translateY(-2px);
 }
 
-.brand-text-col {
+.brand-crest-frame svg {
+  width: 100%;
+  height: 100%;
+  object-contain: contain;
+}
+
+.brand-text-block {
   display: flex;
   flex-direction: column;
 }
 
-.brand-primary-name {
+.brand-title-doon {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.375rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--color-forest);
-  line-height: 1;
+  letter-spacing: 0.06em;
+  line-height: 1.05;
+  color: var(--c-forest);
 }
 
-.brand-sub-name {
+.brand-subtitle-doon {
   font-family: var(--font-sans);
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-slate);
-  margin-top: 3px;
+  letter-spacing: 0.12em;
+  color: var(--c-gold-dark);
+  margin-top: 0.25rem;
 }
 
-/* Navigation Links */
-.nav-institutional-list {
+/* Main Navigation Menu List */
+.nav-menu-doon {
   display: flex;
   align-items: center;
   gap: 2rem;
   list-style: none;
 }
 
-.nav-item-link {
+.nav-link-doon {
+  position: relative;
+  font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-charcoal);
-  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-charcoal);
   padding: 0.5rem 0;
-  position: relative;
+  transition: color 0.2s ease;
 }
 
-.nav-item-link::after {
+.nav-link-doon::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
+  width: 0%;
   height: 2px;
-  background-color: var(--color-forest);
-  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--c-gold);
+  transition: width 0.25s ease;
 }
 
-.nav-item-link:hover::after,
-.nav-item-link.active::after {
+.nav-link-doon:hover,
+.nav-link-doon.active {
+  color: var(--c-forest);
+}
+
+.nav-link-doon:hover::after,
+.nav-link-doon.active::after {
   width: 100%;
 }
 
-.nav-item-link.active {
-  color: var(--color-forest);
+/* Fullscreen Menu Drawer (Doon Overlay Style) */
+.doon-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 26, 17, 0.96);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
 }
 
-/* 6. Refined Action Buttons */
-.btn-institutional {
+.doon-drawer-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.doon-drawer-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem var(--container-pad);
+}
+
+.doon-drawer-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.doon-drawer-close:hover {
+  background-color: var(--c-gold);
+  color: var(--c-forest-dark);
+  border-color: var(--c-gold);
+}
+
+/* --- Institutional Buttons --- */
+.btn-doon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
-  padding: 0.8125rem 1.625rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
+  padding: 0.875rem 1.875rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
 }
 
-.btn-primary-forest {
-  background-color: var(--color-forest);
-  color: #FAF8F5;
-  border: 1px solid var(--color-forest);
+.btn-doon-gold {
+  background-color: var(--c-gold);
+  color: var(--c-forest-dark);
+  border-color: var(--c-gold);
+}
+.btn-doon-gold:hover {
+  background-color: #D6AB42;
+  border-color: #D6AB42;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(194, 155, 56, 0.3);
 }
 
-.btn-primary-forest:hover {
-  background-color: var(--color-forest-rich);
+.btn-doon-forest {
+  background-color: var(--c-forest);
   color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(20, 56, 35, 0.18);
-  transform: translateY(-1px);
+  border-color: var(--c-forest);
+}
+.btn-doon-forest:hover {
+  background-color: var(--c-forest-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(20, 56, 35, 0.25);
 }
 
-.btn-outline-forest {
+.btn-doon-outline {
   background-color: transparent;
-  color: var(--color-forest);
-  border: 1px solid var(--color-forest);
+  color: var(--c-forest);
+  border-color: var(--c-forest);
 }
-
-.btn-outline-forest:hover {
-  background-color: var(--color-forest-tint);
-  border-color: var(--color-forest);
-}
-
-.btn-gold-accent {
-  background-color: var(--color-forest);
+.btn-doon-outline:hover {
+  background-color: var(--c-forest);
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-gold-accent:hover {
-  background-color: var(--color-forest-rich);
-  transform: translateY(-1px);
+.btn-doon-outline-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.btn-doon-outline-white:hover {
+  background-color: #FFFFFF;
+  color: var(--c-forest);
+  border-color: #FFFFFF;
 }
 
-/* 7. Editorial Photography Display */
-.editorial-photo-frame {
+/* --- Hero Section (Doon Full-Bleed Atmosphere) --- */
+.hero-doon-section {
   position: relative;
+  min-height: 86vh;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--c-forest-dark);
   overflow: hidden;
-  border-radius: 6px;
-  background-color: var(--color-ivory-muted);
+  padding-bottom: clamp(3rem, 7vw, 6.5rem);
 }
 
-.editorial-photo-frame img {
+.hero-backdrop-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-backdrop-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  object-position: center 28%;
 }
 
-.editorial-photo-frame:hover img {
-  transform: scale(1.025);
+.hero-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 28, 17, 0.45) 0%,
+    rgba(10, 28, 17, 0.25) 35%,
+    rgba(10, 28, 17, 0.75) 75%,
+    rgba(10, 28, 17, 0.94) 100%
+  );
+  z-index: 2;
 }
 
-.photo-caption-subtle {
-  font-size: 0.8125rem;
-  color: var(--color-stone);
-  font-style: italic;
-  margin-top: 0.625rem;
+.hero-content-doon {
+  position: relative;
+  z-index: 3;
+  width: 100%;
 }
 
-/* 8. Institutional Credibility Badge & Heritage Marker */
-.heritage-seal {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--color-ivory-muted);
-  border: 1px solid var(--color-sand);
-  border-radius: 4px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--color-forest);
-  letter-spacing: 0.04em;
+/* --- The Doon Notice & Announcements Strip --- */
+.ticker-strip-doon {
+  background-color: var(--c-forest);
+  border-top: 1px solid rgba(194, 155, 56, 0.3);
+  border-bottom: 1px solid rgba(194, 155, 56, 0.3);
+  padding: 0.875rem 0;
+  color: #FFFFFF;
 }
 
-.heritage-year-number {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-gold);
-}
-
-/* 9. Refined Grid Formats (No repetitive 3-box templates) */
-.editorial-split-grid {
+/* --- Editorial Layout Grid & Splits --- */
+.editorial-grid-2col {
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(2.5rem, 5vw, 5rem);
   align-items: center;
 }
-
 @media (min-width: 992px) {
-  .editorial-split-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+  .editorial-grid-2col {
+    grid-template-columns: 1.15fr 0.85fr;
   }
-  .editorial-split-grid.reverse {
-    grid-template-columns: 0.9fr 1.1fr;
+  .editorial-grid-2col.reverse-desktop {
+    grid-template-columns: 0.85fr 1.15fr;
   }
 }
 
-.program-levels-linear {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--color-sand);
+.doon-photo-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--c-sand);
+  box-shadow: var(--shadow-elevated);
+}
+.doon-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.doon-photo-frame:hover img {
+  transform: scale(1.025);
 }
 
-.program-level-row {
-  display: grid;
-  grid-template-columns: 1fr;
+/* --- Mashal Watermark / Insignia Highlight --- */
+.mashal-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(194, 155, 56, 0.12);
+  border: 1px solid rgba(194, 155, 56, 0.3);
+  border-radius: 2px;
+}
+.mashal-badge-inline svg {
+  width: 22px;
+  height: 28px;
+}
+.mashal-badge-text {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-forest);
+}
+
+/* --- Linear Program Rows (No Bubbly Cards) --- */
+.linear-program-tier {
+  border-top: 1px solid var(--c-sand);
   padding: 2.25rem 0;
-  border-bottom: 1px solid var(--color-sand);
   transition: background-color 0.25s ease;
 }
-
-@media (min-width: 768px) {
-  .program-level-row {
-    grid-template-columns: 240px 1fr auto;
-    align-items: baseline;
-    gap: 2rem;
-  }
+.linear-program-tier:last-child {
+  border-bottom: 1px solid var(--c-sand);
+}
+.linear-program-tier:hover {
+  background-color: rgba(244, 239, 235, 0.4);
 }
 
-.program-level-row:hover {
-  background-color: rgba(20, 56, 35, 0.015);
+/* --- Institutional Footer (Doon Multi-Tier Layout) --- */
+.doon-footer {
+  background-color: var(--c-forest-dark);
+  color: var(--c-ivory);
+  border-top: 4px solid var(--c-gold);
 }
 
-/* 10. Clean Form & Interactive Elements */
-.editorial-input-group {
-  margin-bottom: 1.25rem;
-}
-
-.editorial-label {
-  display: block;
-  font-size: 0.8125rem;
+.footer-nav-col h4 {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--c-gold);
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-forest);
-  margin-bottom: 0.375rem;
 }
 
-.editorial-input, .editorial-select, .editorial-textarea {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  color: var(--color-charcoal);
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-sand);
-  border-radius: 4px;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+.footer-nav-col ul {
+  list-style: none;
+  space-y: 0.625rem;
 }
 
-.editorial-input:focus, .editorial-select:focus, .editorial-textarea:focus {
-  border-color: var(--color-forest);
-  box-shadow: 0 0 0 3px rgba(20, 56, 35, 0.08);
+.footer-link-doon {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.75);
+  display: block;
+  padding: 0.25rem 0;
+  transition: all 0.2s ease;
+}
+.footer-link-doon:hover {
+  color: var(--c-gold);
+  transform: translateX(3px);
 }
 
-/* 11. Subtle Animation & Motion Controls */
-.fade-in-viewport {
+.footer-bottom-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.75rem 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* --- Animations & Reveal --- */
+.fade-in-observe {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(18px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
 }
-
-.fade-in-viewport.visible {
+.fade-in-observe.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .fade-in-viewport {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 80px;
+    --container-pad: 1.25rem;
   }
-  .editorial-photo-frame:hover img {
-    transform: none !important;
+  .brand-title-doon {
+    font-size: 1.125rem;
   }
-}
-
-/* 12. Institutional Footer */
-.institutional-footer {
-  background-color: var(--color-forest);
-  color: rgba(255, 255, 255, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: clamp(3.5rem, 6vw, 5.5rem);
-  padding-bottom: 2.5rem;
-}
-
-.footer-heading {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-gold);
-  margin-bottom: 1.25rem;
-}
-
-.footer-nav-link {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.875rem;
-  transition: color 0.2s ease;
-  display: inline-block;
-  padding: 0.25rem 0;
-}
-
-.footer-nav-link:hover {
-  color: #FFFFFF;
-}
-
-.footer-legal-bar {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-@media (min-width: 768px) {
-  .footer-legal-bar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .brand-subtitle-doon {
+    font-size: 0.5625rem;
   }
-}
-
-/* 13. Accessibility Skip Link */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 1.5rem;
-  z-index: 999999;
-  background-color: var(--color-forest);
-  color: #FFFFFF;
-  padding: 0.75rem 1.25rem;
-  font-weight: 700;
-  font-size: 0.875rem;
-  border-radius: 4px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transition: top 0.2s ease;
-}
-
-.skip-link:focus {
-  top: 1rem;
-  outline: 2px solid var(--color-gold);
+  .hero-doon-section {
+    min-height: 78vh;
+    padding-bottom: 2.5rem;
+  }
 }
