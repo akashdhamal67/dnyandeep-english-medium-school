@@ -139,15 +139,16 @@ a {
   background-color: var(--c-gold);
 }
 
-/* Landing Page Hero Heading */
+/* Landing Page Hero Heading — Refined ~18% smaller, medium weight, elegant */
 .hero-display-doon {
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 4.8vw, 3.875rem); /* approx 52-64px on desktop, 36-40px on mobile */
+  font-size: clamp(1.85rem, 3.8vw, 3.125rem); /* ~44-50px desktop, ~30-34px mobile */
   font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   color: #FFFFFF;
-  text-shadow: 0 2px 14px rgba(10, 30, 20, 0.45);
+  max-width: 22ch;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .section-title-doon {
@@ -464,23 +465,23 @@ a {
   object-position: center 28%;
 }
 
-/* Subtle, refined dark-green / charcoal overlay protecting readability */
+/* Subtle, natural neutral vignette overlay — NO heavy green tint */
 .hero-overlay-gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(15, 44, 31, 0.88) 0%,
-    rgba(15, 44, 31, 0.72) 42%,
-    rgba(15, 44, 31, 0.35) 75%,
-    rgba(15, 44, 31, 0.45) 100%
+    rgba(12, 18, 15, 0.68) 0%,
+    rgba(12, 18, 15, 0.48) 38%,
+    rgba(12, 18, 15, 0.12) 65%,
+    rgba(12, 18, 15, 0.04) 100%
   ),
   linear-gradient(
     180deg,
-    rgba(15, 44, 31, 0.45) 0%,
-    transparent 30%,
-    rgba(15, 44, 31, 0.7) 75%,
-    rgba(15, 44, 31, 0.95) 100%
+    rgba(12, 18, 15, 0.28) 0%,
+    transparent 28%,
+    rgba(12, 18, 15, 0.45) 75%,
+    rgba(12, 18, 15, 0.75) 100%
   );
   z-index: 2;
 }
@@ -721,8 +722,8 @@ a {
     padding-bottom: 2rem;
   }
   .hero-display-doon {
-    font-size: clamp(2rem, 7.5vw, 2.5rem); /* 32-40px on mobile */
-    line-height: 1.18;
+    font-size: clamp(1.75rem, 6.2vw, 2.125rem); /* ~28-34px on mobile */
+    line-height: 1.22;
   }
   .btn-header-apply {
     display: none !important;
