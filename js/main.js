@@ -92,24 +92,124 @@ function initStickyHeader() {
   handleScroll();
 }
 
-// 4. Media Config Binding (Allows easy replacement of all images via config.js)
+// 4. Media Config Binding and Hero Video Management
 function initMediaConfig() {
   if (typeof SCHOOL_MEDIA_CONFIG === 'undefined') return;
 
-  // Video flag control
+  // Video element and poster management
   const heroVideo = document.getElementById('hero-video-element');
-  const heroIllustration = document.getElementById('hero-illustration-bg');
-  if (heroVideo && heroIllustration) {
+  const heroFallback = document.getElementById('hero-illustration-bg');
+  const toggleBtn = document.getElementById('hero-video-toggle-btn');
+  const toggleIcon = document.getElementById('hero-video-toggle-icon');
+
+  if (heroVideo) {
     if (SCHOOL_MEDIA_CONFIG.HERO_VIDEO) {
-      heroVideo.classList.remove('hidden');
-      heroIllustration.classList.add('hidden');
+      // Set responsive video source
+      const isMobile = window.innerWidth < 768;
+      const videoSrc = isMobile && SCHOOL_MEDIA_CONFIG.HERO_VIDEO_MOBILE_SRC 
+        ? SCHOOL_MEDIA_CONFIG.HERO_VIDEO_MOBILE_SRC 
+        : SCHOOL_MEDIA_CONFIG.HERO_VIDEO_SRC;
+      
+      const sourceEl = heroVideo.querySelector('source');
+      if (sourceEl && videoSrc) {
+        sourceEl.src = videoSrc;
+      }
+      if (SCHOOL_MEDIA_CONFIG.HERO_VIDEO_POSTER) {
+        heroVideo.poster = SCHOOL_MEDIA_CONFIG.HERO_VIDEO_POSTER;
+      }
+
+      // Check reduced motion & mobile screen preference
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion || isMobile) {
+        heroVideo.pause();
+        heroVideo.classList.add('hidden');
+        if (heroFallback) heroFallback.classList.remove('hidden');
+      } else {
+        heroVideo.classList.remove('hidden');
+        if (heroFallback) heroFallback.classList.add('hidden');
+        heroVideo.load();
+        const playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Autoplay policy prevented playback, keep muted and retry on interaction
+            heroVideo.muted = true;
+          });
+        }
+      }
+
+      // Soft 0.4s cross-fade before loop jump (10s duration)
+      heroVideo.addEventListener('timeupdate', () => {
+        if (!heroVideo.duration) return;
+        const timeLeft = heroVideo.duration - heroVideo.currentTime;
+        if (timeLeft <= 0.4 && timeLeft > 0.05) {
+          heroVideo.classList.add('crossfading');
+        } else if (heroVideo.currentTime < 0.4) {
+          heroVideo.classList.remove('crossfading');
+        }
+      });
+
+      // Pause when hero is scrolled off-screen via IntersectionObserver
+      const heroSection = document.getElementById('hero');
+      if (heroSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (!heroVideo.pausedByUser && !prefersReducedMotion && window.innerWidth >= 768) {
+                heroVideo.play().catch(() => {});
+              }
+            } else {
+              heroVideo.pause();
+            }
+          });
+        }, { threshold: 0.1 });
+        observer.observe(heroSection);
+      }
+
+      // Pause when tab/page is hidden
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          heroVideo.pause();
+        } else if (!heroVideo.pausedByUser && !prefersReducedMotion && window.innerWidth >= 768) {
+          heroVideo.play().catch(() => {});
+        }
+      });
+
+      // Play/Pause button handler
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          if (heroVideo.paused) {
+            heroVideo.pausedByUser = false;
+            heroVideo.play().then(() => {
+              toggleBtn.setAttribute('aria-label', 'Pause background video');
+              toggleBtn.setAttribute('title', 'Pause background video');
+              if (toggleIcon) {
+                toggleIcon.setAttribute('data-lucide', 'pause');
+                if (window.lucide) window.lucide.createIcons();
+              }
+            }).catch(() => {});
+          } else {
+            heroVideo.pausedByUser = true;
+            heroVideo.pause();
+            toggleBtn.setAttribute('aria-label', 'Play background video');
+            toggleBtn.setAttribute('title', 'Play background video');
+            if (toggleIcon) {
+              toggleIcon.setAttribute('data-lucide', 'play');
+              if (window.lucide) window.lucide.createIcons();
+            }
+          }
+        });
+      }
+
     } else {
+      // HERO_VIDEO is false, show fallback illustration
+      heroVideo.pause();
       heroVideo.classList.add('hidden');
-      heroIllustration.classList.remove('hidden');
+      if (heroFallback) heroFallback.classList.remove('hidden');
+      if (toggleBtn) toggleBtn.classList.add('hidden');
     }
   }
 
-  // Bind all data-config-img attributes
+  // Bind remaining data-config-img attributes
   const configImgs = document.querySelectorAll('[data-config-img]');
   configImgs.forEach(el => {
     const key = el.getAttribute('data-config-img');

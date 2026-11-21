@@ -7,9 +7,10 @@
 
 const SCHOOL_MEDIA_CONFIG = {
   // Feature flags
-  HERO_VIDEO: false, // Old video is OFF by default pending senior confirmation
-  HERO_VIDEO_SRC: "videos/hero-bg.mp4",
-  HERO_VIDEO_POSTER: "videos/hero-poster.jpg",
+  HERO_VIDEO: true, // Enabled hero promo video background
+  HERO_VIDEO_SRC: "videos/hero.mp4",
+  HERO_VIDEO_MOBILE_SRC: "videos/hero-mobile.mp4",
+  HERO_VIDEO_POSTER: "images/hero-poster.webp",
 
   // Brand
   LOGO: "images/logo.png",
@@ -72,3 +73,4 @@ const SCHOOL_MEDIA_CONFIG = {
 if (typeof window !== 'undefined') {
   window.SCHOOL_MEDIA_CONFIG = SCHOOL_MEDIA_CONFIG;
 }
+
