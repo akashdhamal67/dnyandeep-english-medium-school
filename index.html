@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dnyandeep English School | Admissions 2026–27 | Manjari Khurd, Pune</title>
-  <meta name="description" content="Official admission portal for Dnyandeep English School, Manjari Khurd, Pune. Quality SSC education from Nursery to Class 10th with experienced teachers, affordable fees, and holistic development.">
-  <meta name="keywords" content="Dnyandeep English School, Manjari Khurd Pune, SSC School Pune, Admissions 2026-27, Nursery to 10th School Pune">
+  <title>Dnyandeep English Medium School & Jr. College | Manjari Khurd, Pune</title>
+  <meta name="description" content="Official website of Dnyandeep English Medium School & Jr. College, Manjari Khurd, Pune. Structured Maharashtra SSC Board education from Pre-Primary to Class 10th with strong moral values, qualified faculty, and holistic learning since 1944.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://des.org.in/">
 
@@ -13,1371 +12,707 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Open Graph / Social Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://des.org.in/">
-  <meta property="og:title" content="Dnyandeep English School | Admissions 2026–27">
-  <meta property="og:description" content="Quality SSC Education from Nursery to Class 10th with experienced teachers and holistic development. Apply online today.">
-  <meta property="og:image" content="https://des.org.in/images/about-illustration.webp">
-
-  <!-- Google Fonts -->
+  <!-- Typography: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN with Standalone Fallback -->
+  <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>window.tailwind || document.write('<script src="js/tailwind-cdn.js"><\/script>')</script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              DEFAULT: '#1F5A3A',
-              dark: '#123B26',
-              light: '#2F7A50'
-            },
-            accent: {
-              DEFAULT: '#F2E3A0',
-              dark: '#6B5A1E',
-              cream: '#F2E3A0'
-            },
-            cream: {
-              50: '#FBFAF4',
-              100: '#EEF3EA',
-              200: '#E2EBDD',
-              border: '#DDE5D8'
-            }
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Lucide Icons -->
-  <script src="js/lucide.min.js"></script>
-
-  <!-- Central Media Config -->
-  <script src="js/config.js?v=2"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=2">
-  <link rel="stylesheet" href="css/styles.css?v=2">
-
-  <!-- School Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "School",
-    "name": "Dnyandeep English School",
-    "alternateName": "DES Manjari",
-    "url": "https://des.org.in/",
-    "logo": "https://des.org.in/images/logo.png",
-    "foundingDate": "1944",
-    "description": "Quality SSC education from Nursery to Class 10th with experienced teachers and holistic development.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham",
-      "addressLocality": "Manjari Khurd",
-      "addressRegion": "Pune, Maharashtra",
-      "postalCode": "412307",
-      "addressCountry": "IN"
-    },
-    "telephone": ["+91-8484844067", "+91-7276095235"],
-    "email": "info@des.org.in"
-  }
-  </script>
-  <!-- Preloader Critical Inline Styles & Noscript Fallback -->
-  <style>
-    /* Preloader Full-Screen Container */
-    #preloader {
-      position: fixed;
-      inset: 0;
-      z-index: 999999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #FBFAF4;
-      background-image: 
-        linear-gradient(rgba(31, 90, 58, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(31, 90, 58, 0.04) 1px, transparent 1px),
-        linear-gradient(rgba(242, 227, 160, 0.04) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(242, 227, 160, 0.04) 2px, transparent 2px);
-      background-size: 24px 24px, 24px 24px, 72px 72px, 72px 72px;
-      opacity: 1;
-      visibility: visible;
-      will-change: opacity, transform;
-      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                  transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                  visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      -webkit-transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                          -webkit-transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                          visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: auto;
-      touch-action: none;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    /* Dismissing Exit Animation */
-    #preloader.preloader-hidden {
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-100%);
-      -webkit-transform: translateY(-100%);
-      pointer-events: none;
-    }
-
-    /* Body lock during preloader */
-    body.preloader-active {
-      overflow: hidden !important;
-      touch-action: none !important;
-    }
-
-    /* Preloader Logo Wrapper & Rotating Glow Ring */
-    .preloader-logo-wrapper {
-      position: relative;
-      width: 140px;
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .preloader-glow-ring {
-      position: absolute;
-      inset: -12px;
-      border-radius: 50%;
-      background: conic-gradient(from 0deg, rgba(242, 227, 160, 0.9), rgba(31, 90, 58, 0.3), rgba(242, 227, 160, 0.1), rgba(242, 227, 160, 0.9));
-      filter: blur(10px);
-      -webkit-filter: blur(10px);
-      opacity: 0.75;
-      animation: preloader-spin 7s linear infinite;
-      -webkit-animation: preloader-spin 7s linear infinite;
-    }
-
-    .preloader-logo-img {
-      position: relative;
-      z-index: 2;
-      width: 125px;
-      height: auto;
-      max-height: 110px;
-      object-fit: contain;
-      filter: drop-shadow(0 4px 12px rgba(18, 59, 38, 0.12));
-      -webkit-filter: drop-shadow(0 4px 12px rgba(18, 59, 38, 0.12));
-      animation: preloader-pulse 1.6s ease-in-out infinite;
-      -webkit-animation: preloader-pulse 1.6s ease-in-out infinite;
-    }
-
-    /* Typography */
-    .preloader-school-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      color: #123B26;
-      margin: 0;
-      text-align: center;
-    }
-
-    .preloader-school-sub {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 600;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #1F5A3A;
-      margin: 6px 0 0 0;
-      text-align: center;
-    }
-
-    /* Progress Track & Fill */
-    .preloader-bar-track {
-      width: 220px;
-      max-width: 80vw;
-      height: 4px;
-      background-color: #DDE5D8;
-      border-radius: 9999px;
-      overflow: hidden;
-      margin-top: 28px;
-      position: relative;
-    }
-
-    .preloader-bar-fill {
-      width: 0%;
-      height: 100%;
-      background: linear-gradient(90deg, #1F5A3A 0%, #2F7A50 60%, #F2E3A0 100%);
-      border-radius: 9999px;
-      transition: width 0.25s ease-out;
-      -webkit-transition: width 0.25s ease-out;
-      will-change: width;
-    }
-
-    /* Status Label */
-    .preloader-status {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: #55655B;
-      margin-top: 10px;
-      text-align: center;
-      min-height: 20px;
-      letter-spacing: 0.01em;
-    }
-
-    /* Animations */
-    @keyframes preloader-pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-    @-webkit-keyframes preloader-pulse {
-      0%, 100% {
-        -webkit-transform: scale(1);
-      }
-      50% {
-        -webkit-transform: scale(1.05);
-      }
-    }
-
-    @keyframes preloader-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    @-webkit-keyframes preloader-spin {
-      from {
-        -webkit-transform: rotate(0deg);
-      }
-      to {
-        -webkit-transform: rotate(360deg);
-      }
-    }
-
-    /* prefers-reduced-motion accessibility */
-    @media (prefers-reduced-motion: reduce) {
-      .preloader-glow-ring {
-        animation: none !important;
-        -webkit-animation: none !important;
-        opacity: 0.4 !important;
-      }
-      .preloader-logo-img {
-        animation: none !important;
-        -webkit-animation: none !important;
-        transform: none !important;
-      }
-      #preloader {
-        transition: opacity 0.3s ease !important;
-        -webkit-transition: opacity 0.3s ease !important;
-        transform: none !important;
-        -webkit-transform: none !important;
-      }
-      #preloader.preloader-hidden {
-        transform: none !important;
-        -webkit-transform: none !important;
-        opacity: 0 !important;
-      }
-    }
-  </style>
-
-  <!-- Noscript Fallback: keeps site immediately visible if JavaScript is disabled -->
-  <noscript>
-    <style>
-      #preloader {
-        display: none !important;
-        visibility: hidden !important;
-      }
-      body.preloader-active {
-        overflow: auto !important;
-      }
-    </style>
-  </noscript>
-
-  <!-- Instant Session Check: Skip preloader if already seen in this session -->
-  <script>
-    (function() {
-      try {
-        if (sessionStorage.getItem('des_preloader_seen') === '1') {
-          var s = document.createElement('style');
-          s.id = 'preloader-instant-skip';
-          s.innerHTML = '#preloader{display:none!important;visibility:hidden!important}';
-          document.head.appendChild(s);
-        } else {
-          document.documentElement.classList.add('preloader-pending');
-        }
-      } catch(e) {}
-    })();
-  </script>
+  <!-- Bespoke Editorial Design System -->
+  <link rel="stylesheet" href="css/editorial.css?v=10">
 </head>
-<body class="bg-[#FBFAF4] text-[#1B2A22] antialiased selection:bg-[#1F5A3A] selection:text-[#F2E3A0] dark:bg-[#08160e] dark:text-[#f1f7f3]">
+<body>
 
-  <!-- Accessibility Skip Link -->
+  <!-- Accessible Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Full-Screen Logo Preloader Overlay -->
-  <div id="preloader" role="status" aria-live="polite" aria-label="Loading Dnyandeep English School Website">
-    <div class="preloader-logo-wrapper">
-      <div class="preloader-glow-ring" aria-hidden="true"></div>
-      <img 
-        src="images/logo-preloader.webp" 
-        alt="Dnyandeep English School Official Logo" 
-        width="140" 
-        height="96" 
-        class="preloader-logo-img"
-        fetchpriority="high"
-      />
-    </div>
-
-    <h1 class="preloader-school-title">DNYANDEEP</h1>
-    <p class="preloader-school-sub">ENGLISH SCHOOL • MANJARI KHURD</p>
-
-    <div class="preloader-bar-track" aria-hidden="true">
-      <div id="preloader-progress" class="preloader-bar-fill"></div>
-    </div>
-
-    <div id="preloader-status-text" class="preloader-status">Loading...</div>
-  </div>
-
-  <!-- 1. TOP BAR (36px, Dark Green) -->
-  <div class="bg-[#123B26] text-[#EEF3EA] text-xs h-9 px-4 sm:px-6 lg:px-8 border-b border-[#1F5A3A] flex items-center">
-    <div class="max-w-[1360px] w-full mx-auto flex items-center justify-between gap-2">
-      <!-- Left side: hours, phone, email -->
-      <div class="flex items-center gap-3 sm:gap-4 whitespace-nowrap">
-        <span class="hidden md:inline-flex items-center gap-1.5 text-white/90" title="School visiting hours: Monday to Friday 9:00 AM to 3:00 PM">
-          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-          <span>Mon–Fri 9:00 AM to 3:00 PM</span>
+  <!-- Institutional Top Bar -->
+  <div class="top-institutional-bar py-2 px-4 sm:px-6">
+    <div class="container-institutional flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-4 text-xs font-medium text-white/80">
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#C29B38]"></i>
+          <span>Manjari Khurd, Pune 412307</span>
         </span>
-        <span class="hidden md:inline text-[#1F5A3A]">|</span>
-        <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 text-white/95 hover:text-[#F2E3A0] transition-colors" title="Call Admissions Office at +91-8484844067" aria-label="Call Admissions Office at +91-8484844067">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-          <span><span class="sr-only">Call: </span>+91-8484844067</span>
-        </a>
-        <span class="hidden sm:inline text-[#1F5A3A]">|</span>
-        <a href="mailto:info@des.org.in" class="hidden sm:inline-flex items-center gap-1.5 text-white/95 hover:text-[#F2E3A0] transition-colors" title="Send email to info@des.org.in" aria-label="Send email to info@des.org.in">
-          <i data-lucide="mail" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-          <span><span class="sr-only">Email: </span>info@des.org.in</span>
-        </a>
+        <span class="hidden md:inline text-white/30">|</span>
+        <span class="hidden md:inline-flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#C29B38]"></i>
+          <span>Mon–Fri 9:00 AM – 3:00 PM</span>
+        </span>
       </div>
 
-      <!-- Right side: Student Parent Portal pill & dark-mode toggle -->
-      <div class="flex items-center gap-3 sm:gap-4 whitespace-nowrap">
-        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="topbar-portal-pill hidden sm:inline-flex items-center gap-1.5" title="Open Student Parent Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Portal on Neverskip (opens in a new tab)">
-          <i data-lucide="user-check" class="portal-icon"></i>
-          <span>Student Parent Portal</span>
-          <i data-lucide="arrow-up-right" class="w-3 h-3 text-[#F2E3A0]/80"></i>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:+918484844067" class="hover:text-[#C29B38] transition-colors flex items-center gap-1.5" title="Call Admissions">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#C29B38]"></i>
+          <span>+91-8484844067</span>
         </a>
-        <button class="theme-toggle-btn p-1 text-[#EEF3EA] hover:text-[#F2E3A0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F2E3A0]" aria-label="Switch to dark or light mode" title="Switch to dark or light mode">
-          <i data-lucide="moon" class="w-3.5 h-3.5 dark:hidden"></i>
-          <i data-lucide="sun" class="w-3.5 h-3.5 hidden dark:inline"></i>
-        </button>
+        <span class="text-white/30">|</span>
+        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#C29B38] transition-colors flex items-center gap-1" title="Open Student Parent Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Portal (opens in a new tab)">
+          <i data-lucide="user-check" class="w-3.5 h-3.5 text-[#C29B38]"></i>
+          <span>Parent Portal</span>
+          <i data-lucide="arrow-up-right" class="w-3 h-3 text-[#C29B38]/70"></i>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- 2. STICKY HEADER (76px, max-w 1360px) -->
-  <header id="site-header" class="sticky top-0 z-50 bg-white/95 dark:bg-[#0e2218]/95 backdrop-blur-md border-b border-[#DDE5D8] dark:border-[#1c3d2c] transition-all duration-300">
-    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-[76px] gap-4">
+  <!-- Editorial Sticky Header -->
+  <header id="institutional-header" class="site-header">
+    <div class="container-institutional">
+      <div class="flex items-center justify-between h-[84px] gap-6">
         
-        <!-- Official Logo + School Name (No wrapping, exactly 2 lines) -->
-        <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0 whitespace-nowrap">
-          <div class="w-[52px] h-[52px] rounded-xl bg-white p-1 border border-[#DDE5D8] shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
-            <img src="images/logo.png" alt="Dnyandeep English School Official Logo" width="52" height="52" class="w-full h-full object-contain">
+        <!-- School Crest & Identity -->
+        <a href="index.html" class="brand-monogram group" aria-label="Dnyandeep English Medium School Homepage">
+          <div class="brand-crest">
+            <img src="images/rebuild/school-crest.webp" alt="Dnyandeep School Crest" width="48" height="33" class="w-full h-full object-contain">
           </div>
-          <div class="leading-tight">
-            <span class="block text-xl font-bold font-serif text-[#123B26] dark:text-white tracking-tight">
-              DNYANDEEP
-            </span>
-            <span class="block text-[11.5px] font-semibold uppercase tracking-[0.06em] text-[#1F5A3A] dark:text-[#F2E3A0]">
-              ENGLISH SCHOOL • MANJARI KHURD
-            </span>
+          <div class="brand-text-col">
+            <span class="brand-primary-name">DNYANDEEP</span>
+            <span class="brand-sub-name">English Medium School & Jr. College</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation: Centered (Home, About, Academics, Facilities, Admissions, Contact) -->
-        <nav class="hidden lg:flex header-nav" aria-label="Main Navigation">
-          <a href="#hero" class="nav-link active py-2 transition-colors">Home</a>
-          <a href="#about" class="nav-link py-2 hover:text-[#1F5A3A] dark:hover:text-[#F2E3A0] transition-colors">About</a>
-          <a href="#academics" class="nav-link py-2 hover:text-[#1F5A3A] dark:hover:text-[#F2E3A0] transition-colors">Academics</a>
-          <a href="#facilities" class="nav-link py-2 hover:text-[#1F5A3A] dark:hover:text-[#F2E3A0] transition-colors">Facilities</a>
-          <a href="#admissions" class="nav-link py-2 hover:text-[#1F5A3A] dark:hover:text-[#F2E3A0] transition-colors">Admissions</a>
-          <a href="#contact" class="nav-link py-2 hover:text-[#1F5A3A] dark:hover:text-[#F2E3A0] transition-colors">Contact</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:block" aria-label="Primary Navigation">
+          <ul class="nav-institutional-list">
+            <li><a href="index.html" class="nav-item-link active">Home</a></li>
+            <li><a href="about.html" class="nav-item-link">About & Heritage</a></li>
+            <li><a href="academics.html" class="nav-item-link">Academics</a></li>
+            <li><a href="admissions.html" class="nav-item-link">Admissions</a></li>
+            <li><a href="resources.html" class="nav-item-link">Resources</a></li>
+            <li><a href="contact.html" class="nav-item-link">Contact</a></li>
+          </ul>
         </nav>
 
-        <!-- CTA Button Desktop: APPLY ONLINE -->
-        <div class="hidden lg:flex items-center shrink-0">
-          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online" title="Open official admission application form (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
-            <i data-lucide="edit-3" class="btn-icon"></i>
+        <!-- CTA Action & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-institutional btn-primary-forest hidden sm:inline-flex" title="Open official admission application form (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
             <span>Apply Online</span>
-            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80 -ml-1"></i>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
           </a>
-        </div>
 
-        <!-- Mobile Controls (Compact Apply Online + Hamburger) -->
-        <div class="lg:hidden flex items-center gap-2 shrink-0">
-          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-apply-online-compact sm:inline-flex" title="Apply Online for Admission (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
-            <i data-lucide="edit-3" class="btn-icon"></i>
-            <span>Apply Online</span>
-            <i data-lucide="arrow-up-right" class="w-3 h-3 text-[#123B26]/80 -ml-0.5"></i>
-          </a>
-          <button id="mobile-menu-toggle" type="button" class="p-2 text-[#1B2A22] dark:text-[#d1ded7] rounded-lg hover:bg-[#EEF3EA] dark:hover:bg-slate-800 flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]" aria-expanded="false" aria-label="Open main navigation menu" title="Open main navigation menu">
-            <span class="hidden sm:inline text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Menu</span>
-            <i id="mobile-menu-icon" data-lucide="menu" class="w-6 h-6"></i>
-            <i id="mobile-menu-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-toggle" type="button" class="lg:hidden p-2.5 rounded text-[#143823] hover:bg-[#EAE3D8]/50 transition-colors" aria-expanded="false" aria-label="Toggle Navigation Menu">
+            <i id="menu-icon-svg" data-lucide="menu" class="w-6 h-6"></i>
+            <i id="close-icon-svg" data-lucide="x" class="w-6 h-6 hidden"></i>
           </button>
         </div>
 
       </div>
     </div>
 
-    <!-- Mobile Dropdown Navigation -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-[#0e2218] border-b border-[#DDE5D8] dark:border-[#1c3d2c] px-4 pt-3 pb-6 space-y-3">
-      <a href="#hero" class="block px-3 py-2 rounded-lg font-semibold text-[#1F5A3A] bg-[#EEF3EA]/50 dark:bg-[#142e20]">Home</a>
-      <a href="#about" class="block px-3 py-2 rounded-lg font-medium text-[#1B2A22] dark:text-[#d1ded7] hover:bg-[#EEF3EA] dark:hover:bg-slate-800">About Us</a>
-      <a href="#academics" class="block px-3 py-2 rounded-lg font-medium text-[#1B2A22] dark:text-[#d1ded7] hover:bg-[#EEF3EA] dark:hover:bg-slate-800">Academics</a>
-      <a href="#facilities" class="block px-3 py-2 rounded-lg font-medium text-[#1B2A22] dark:text-[#d1ded7] hover:bg-[#EEF3EA] dark:hover:bg-slate-800">Facilities</a>
-      <a href="#admissions" class="block px-3 py-2 rounded-lg font-medium text-[#1B2A22] dark:text-[#d1ded7] hover:bg-[#EEF3EA] dark:hover:bg-slate-800">Admissions</a>
-      <a href="#contact" class="block px-3 py-2 rounded-lg font-medium text-[#1B2A22] dark:text-[#d1ded7] hover:bg-[#EEF3EA] dark:hover:bg-slate-800">Contact Us</a>
-
-      <div class="pt-4 border-t border-[#DDE5D8] dark:border-[#1c3d2c] flex flex-col gap-2.5">
-        <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-[#DDE5D8] dark:border-[#1c3d2c] font-semibold text-sm text-[#123B26] dark:text-white hover:bg-[#EEF3EA] dark:hover:bg-slate-800 transition-colors" title="Open Student Parent Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Portal on Neverskip (opens in a new tab)">
-          <i data-lucide="user-check" class="w-4.5 h-4.5 text-[#1F5A3A] dark:text-[#F2E3A0]"></i>
-          <span>Student Parent Portal</span>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#55655B]"></i>
-        </a>
-        <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-[0.04em] uppercase shadow-sm transition-colors" title="Open official admission application form (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
-          <i data-lucide="edit-3" class="w-4.5 h-4.5"></i>
-          <span>Apply Online</span>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80"></i>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-institutional-nav" class="hidden lg:hidden bg-[#FAF8F5] border-t border-[#EAE3D8] px-6 py-6 space-y-4">
+      <nav class="flex flex-col space-y-3" aria-label="Mobile Navigation">
+        <a href="index.html" class="text-base font-semibold text-[#143823] py-1 border-b border-[#EAE3D8]/50">Home</a>
+        <a href="about.html" class="text-base font-medium text-[#4A5650] py-1 border-b border-[#EAE3D8]/50">About & Heritage</a>
+        <a href="academics.html" class="text-base font-medium text-[#4A5650] py-1 border-b border-[#EAE3D8]/50">Academics</a>
+        <a href="admissions.html" class="text-base font-medium text-[#4A5650] py-1 border-b border-[#EAE3D8]/50">Admissions 2026–27</a>
+        <a href="resources.html" class="text-base font-medium text-[#4A5650] py-1 border-b border-[#EAE3D8]/50">Resources Hub</a>
+        <a href="contact.html" class="text-base font-medium text-[#4A5650] py-1 border-b border-[#EAE3D8]/50">Contact Campus</a>
+      </nav>
+      <div class="pt-2">
+        <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-institutional btn-primary-forest w-full" aria-label="Apply Online for Admission (opens in a new tab)">
+          <span>Apply Online (2026–27)</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
         </a>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    
-    <!-- 3. HERO SECTION (Fits exactly in viewport on desktop, no scroll needed) -->
-    <section id="hero" class="hero-viewport relative text-white bg-[#123B26] overflow-hidden">
-      <!-- Background: Video / Poster Frame + Gradients -->
-      <div class="absolute inset-0 z-0 overflow-hidden">
-        <!-- Hero Video background (Controlled via HERO_VIDEO flag in config.js) -->
-        <video id="hero-video-element" class="hero-video-bg absolute inset-0 w-full h-full object-cover object-[center_45%]" autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.webp">
-          <source src="videos/hero.mp4" type="video/mp4">
-        </video>
-        
-        <!-- Mobile & Reduced Motion Poster Fallback / Illustration -->
-        <img id="hero-illustration-bg" src="images/hero-poster.webp" alt="Dnyandeep English School Campus Aerial View" class="hero-poster-fallback hidden absolute inset-0 w-full h-full object-cover object-[center_45%]" />
-        
-        <!-- Refined Left-to-Right & Bottom Gradients for Contrast -->
-        <div class="absolute inset-0 bg-gradient-to-r from-[#123B26]/85 via-[#123B26]/55 to-[#123B26]/12 pointer-events-none"></div>
-        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0c2719]/90 via-[#123B26]/40 to-transparent pointer-events-none"></div>
-      </div>
-      
-      <!-- Video Play/Pause Accessible Button (Bottom Right) -->
-      <div class="hero-video-controls absolute right-6 bottom-20 sm:bottom-16 z-25">
-        <button id="hero-video-toggle-btn" class="hero-video-toggle" type="button" aria-label="Pause background video" title="Pause background video">
-          <i id="hero-video-toggle-icon" data-lucide="pause" class="w-5 h-5 text-[#F2E3A0]"></i>
-        </button>
-      </div>
-      
-      <!-- Center Content Area: 2 Columns (Hero text on left, Enquiry Card on right) -->
-      <div class="relative z-10 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 my-auto pt-3 pb-2">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-8 items-center">
+
+    <!-- 1. HERO SECTION: Editorial Split-Layout with Natural Photography -->
+    <section class="py-12 lg:py-20 bg-[#FAF8F5] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          <!-- Left Column: Hero Text & Badges -->
-          <div class="lg:col-span-7 flex flex-col gap-3 sm:gap-3.5 text-center lg:text-left">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#123B26]/80 backdrop-blur-md border border-[#F2E3A0]/60 text-[#F2E3A0] text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] shadow-sm self-center lg:self-start">
-              <span class="w-2 h-2 rounded-full bg-[#F2E3A0]"></span>
-              <span>Admissions Open for Academic Year 2026–27</span>
+          <!-- Text Column (Col 7) -->
+          <div class="lg:col-span-7 space-y-6 fade-in-viewport">
+            
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="eyebrow">Admissions Open 2026–27</span>
+              <span class="heritage-seal">
+                <span>Established</span>
+                <span class="heritage-year-number">1944</span>
+              </span>
             </div>
 
-            <!-- Main Headline -->
-            <h1 class="hero-headline text-white">
-              Quality SSC Education with <span class="text-[#F2E3A0]">All-Round Development</span>
+            <h1 class="hero-display text-[#143823]">
+              A heritage of disciplined scholarship, character, and holistic growth.
             </h1>
 
-            <!-- Tagline with 3 Glass Pill Chips + Sentence -->
-            <div class="flex flex-col gap-2 max-w-[560px] mx-auto lg:mx-0">
-              <div class="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs font-medium">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-                  Nursery to Class 10th
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs font-medium">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-                  Experienced Teachers
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-white text-xs font-medium">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-                  Affordable Fees
-                </span>
+            <p class="subheading-editorial max-w-xl">
+              Providing structured Maharashtra SSC Board education from Pre-Primary through Secondary level in Manjari Khurd, Pune. We build strong academic foundations, moral values, and life skills in an encouraging, disciplined environment.
+            </p>
+
+            <!-- Key Indicators Strip -->
+            <div class="pt-2 pb-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-y border-[#EAE3D8]">
+              <div>
+                <p class="font-serif text-2xl font-bold text-[#143823]">Nursery–10th</p>
+                <p class="text-xs uppercase tracking-wider text-[#687A63] font-semibold mt-0.5">Classes Offered</p>
               </div>
-              <p class="hero-tagline-text">
-                Nurturing confident, responsible, and future-ready students.
-              </p>
+              <div>
+                <p class="font-serif text-2xl font-bold text-[#143823]">SSC Board</p>
+                <p class="text-xs uppercase tracking-wider text-[#687A63] font-semibold mt-0.5">Maharashtra Curriculum</p>
+              </div>
+              <div class="col-span-2 sm:col-span-1">
+                <p class="font-serif text-2xl font-bold text-[#143823]">80+ Years</p>
+                <p class="text-xs uppercase tracking-wider text-[#687A63] font-semibold mt-0.5">Educational Legacy</p>
+              </div>
             </div>
 
-            <!-- Single Primary Action Button -->
-            <div class="pt-1 flex items-center justify-center lg:justify-start">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-11 sm:h-12 px-7 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm sm:text-base tracking-wide shadow-xl shadow-black/25 transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 whitespace-nowrap" title="Apply for Admission on official form (opens in a new tab)" aria-label="Apply for Admission on official form (opens in a new tab)">
-                <span>Apply for Admission</span>
-                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#123B26]"></i>
+            <!-- Actions -->
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-institutional btn-primary-forest" title="Open online admission form (opens in a new tab)" aria-label="Open online admission form (opens in a new tab)">
+                <span>Online Admission Form</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+              <a href="#enquiry-section" class="btn-institutional btn-outline-forest">
+                <span>Submit an Enquiry</span>
               </a>
             </div>
+
           </div>
 
-          <!-- Right Column: Enquiry Card (Inspired by reference structure) -->
-          <div class="lg:col-span-5">
-            <div class="bg-white dark:bg-[#0e2218] text-[#1B2A22] dark:text-white rounded-2xl p-5 sm:p-6 shadow-2xl border border-cream-border dark:border-[#1c3d2c] max-w-md mx-auto relative backdrop-blur-md">
-              <div class="mb-3.5 text-center">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-2.5 py-0.5 rounded-full inline-block mb-1">
-                  Enquiry Form 2026–27
-                </span>
-                <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#123B26] dark:text-white">
-                  Enquire Now
-                </h3>
-              </div>
-
-              <form id="hero-enquiry-form" class="space-y-2.5" novalidate>
-                <!-- Web3Forms Access Key Placeholder -->
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New Admission Enquiry - Dnyandeep English School">
-                <input type="hidden" name="from_name" value="DES Admission Portal">
-
-                <!-- Parent Name -->
-                <div>
-                  <label for="enquiry-name" class="block text-xs font-semibold text-[#55655B] dark:text-[#d1ded7] mb-1">Parent / Guardian Name *</label>
-                  <input type="text" id="enquiry-name" name="parent_name" required placeholder="Enter your full name" class="w-full px-3 py-2 text-xs sm:text-sm rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-[#142e20] text-[#1B2A22] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]">
-                </div>
-
-                <!-- Mobile & Email in 2 columns -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  <div>
-                    <label for="enquiry-mobile" class="block text-xs font-semibold text-[#55655B] dark:text-[#d1ded7] mb-1">Mobile Number *</label>
-                    <input type="tel" id="enquiry-mobile" name="mobile" required maxlength="10" placeholder="10-digit mobile" class="w-full px-3 py-2 text-xs sm:text-sm rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-[#142e20] text-[#1B2A22] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]">
-                  </div>
-                  <div>
-                    <label for="enquiry-email" class="block text-xs font-semibold text-[#55655B] dark:text-[#d1ded7] mb-1">Email Address *</label>
-                    <input type="email" id="enquiry-email" name="email" required placeholder="name@example.com" class="w-full px-3 py-2 text-xs sm:text-sm rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-[#142e20] text-[#1B2A22] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]">
-                  </div>
-                </div>
-
-                <!-- Academic Year & Class -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  <div>
-                    <label for="enquiry-year" class="block text-xs font-semibold text-[#55655B] dark:text-[#d1ded7] mb-1">Academic Year</label>
-                    <select id="enquiry-year" name="academic_year" class="w-full px-3 py-2 text-xs sm:text-sm rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-[#142e20] text-[#1B2A22] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]">
-                      <option value="2026-27" selected>2026–27</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label for="enquiry-class" class="block text-xs font-semibold text-[#55655B] dark:text-[#d1ded7] mb-1">Select Class *</label>
-                    <select id="enquiry-class" name="student_class" required class="w-full px-3 py-2 text-xs sm:text-sm rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-[#142e20] text-[#1B2A22] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#1F5A3A]">
-                      <option value="" disabled selected>Select Grade</option>
-                      <option value="Nursery">Nursery</option>
-                      <option value="Junior KG">Junior KG</option>
-                      <option value="Senior KG">Senior KG</option>
-                      <option value="1st Standard">1st Standard</option>
-                      <option value="2nd Standard">2nd Standard</option>
-                      <option value="3rd Standard">3rd Standard</option>
-                      <option value="4th Standard">4th Standard</option>
-                      <option value="5th Standard">5th Standard</option>
-                      <option value="6th Standard">6th Standard</option>
-                      <option value="7th Standard">7th Standard</option>
-                      <option value="8th Standard">8th Standard</option>
-                      <option value="9th Standard">9th Standard</option>
-                      <option value="10th Standard (SSC)">10th Standard (SSC)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="w-full mt-2 py-2.5 px-4 rounded-xl bg-[#1F5A3A] hover:bg-[#123B26] text-[#F2E3A0] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2">
-                  <span>Enquire Now</span>
-                  <i data-lucide="send" class="w-4 h-4"></i>
-                </button>
-
-                <!-- Status Feedback -->
-                <div id="enquiry-form-status" class="hidden"></div>
-              </form>
+          <!-- Imagery Column (Col 5) -->
+          <div class="lg:col-span-5 fade-in-viewport">
+            <div class="editorial-photo-frame shadow-framed aspect-[4/5]">
+              <img 
+                src="images/rebuild/hero-campus-life.webp" 
+                alt="Students of Dnyandeep English Medium School in uniform walking across the school campus in morning sunlight"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
             </div>
+            <p class="photo-caption-subtle text-right">
+              Morning assembly and courtyard walk • Dnyandeep School, Manjari
+            </p>
           </div>
 
-        </div>
-      </div>
-
-      <!-- Stats Bar (Pinned inside bottom of hero) -->
-      <div class="relative z-10 w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pb-3 shrink-0">
-        <div class="bg-[#123B26]/75 backdrop-blur-[10px] border border-white/20 rounded-xl shadow-xl py-2 px-4 sm:px-6">
-          <div class="grid grid-cols-3 gap-2 sm:gap-6 divide-x divide-white/15 text-center sm:text-left">
-            <div class="flex items-center justify-center sm:justify-start gap-2.5 px-2 first:pl-0">
-              <i data-lucide="calendar" class="w-4 h-4 text-[#F2E3A0] shrink-0 hidden sm:inline"></i>
-              <div>
-                <p class="text-white font-serif font-bold text-base sm:text-lg lg:text-xl leading-none">1944</p>
-                <p class="text-[11px] text-white/80 font-medium mt-0.5">Founded</p>
-              </div>
-            </div>
-            <div class="flex items-center justify-center sm:justify-start gap-2.5 px-2">
-              <i data-lucide="award" class="w-4 h-4 text-[#F2E3A0] shrink-0 hidden sm:inline"></i>
-              <div>
-                <p class="text-white font-serif font-bold text-base sm:text-lg lg:text-xl leading-none">SSC Board</p>
-                <p class="text-[11px] text-white/80 font-medium mt-0.5">Maharashtra State</p>
-              </div>
-            </div>
-            <div class="flex items-center justify-center sm:justify-start gap-2.5 px-2">
-              <i data-lucide="graduation-cap" class="w-4 h-4 text-[#F2E3A0] shrink-0 hidden sm:inline"></i>
-              <div>
-                <p class="text-white font-serif font-bold text-base sm:text-lg lg:text-xl leading-none">Nursery–10th</p>
-                <p class="text-[11px] text-white/80 font-medium mt-0.5">Classes</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. WELCOME / ABOUT SECTION -->
-    <section id="about" class="py-20 bg-cream-50 dark:bg-[#08160e] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- 2. INSTITUTIONAL INTRODUCTION & PHILOSOPHY -->
+    <section class="py-16 lg:py-24 bg-[#FFFFFF] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
+        <div class="editorial-split-grid reverse">
           
-          <!-- Heritage Card (Real School Premises Photo) -->
-          <div class="lg:col-span-5 fade-up-init">
-            <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] overflow-hidden shadow-lg group">
-              <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                <img 
-                  src="images/premises-building-front.webp?v=7" 
-                  srcset="images/premises-building-front-640.webp?v=7 640w, images/premises-building-front.webp?v=7 1200w"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
-                  alt="Dnyandeep English School building facade and main campus entrance" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 right-4 text-white">
-                  <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#1F5A3A]/90 text-[11px] font-bold uppercase tracking-wider text-[#F2E3A0]">
-                    Established Since 1944
-                  </span>
-                  <p class="font-serif font-bold text-lg leading-tight mt-1">Dnyandeep English School</p>
-                </div>
-              </div>
-              <div class="p-6 text-center space-y-2">
-                <p class="font-serif font-bold text-2xl text-[#123B26] dark:text-white">Est. 1944</p>
-                <p class="text-xs font-semibold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">80+ Years of Educational Legacy</p>
-                <p class="text-xs text-[#55655B] dark:text-[#DDE5D8] max-w-xs mx-auto leading-relaxed">
-                  Dedicated to value-centric academic excellence, character building, and disciplined scholastic growth since 1944 in Manjari Khurd, Pune.
-                </p>
-              </div>
+          <!-- Image Frame -->
+          <div class="fade-in-viewport">
+            <div class="editorial-photo-frame aspect-[4/3] shadow-elevated">
+              <img 
+                src="images/rebuild/primary-classroom.webp" 
+                alt="Primary classroom learning with dedicated teacher guiding attentive students"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
+            <p class="photo-caption-subtle">
+              Classroom instruction with individual attention and conceptual clarity.
+            </p>
           </div>
 
-          <!-- Text Content (Exact Old Site Text) -->
-          <div class="lg:col-span-7 space-y-5 fade-up-init">
-            <div class="inline-block px-3.5 py-1.5 rounded-lg bg-[#EEF3EA] dark:bg-[#123B26] text-[#1F5A3A] border border-[#DDE5D8] dark:border-[#1F5A3A] dark:text-[#F2E3A0] text-xs font-bold uppercase tracking-wider">
-              About Dnyandeep English School
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white leading-tight">
-              A good education is a foundation for a better future
+          <!-- Editorial Narrative -->
+          <div class="space-y-6 fade-in-viewport">
+            <span class="eyebrow">Our Educational Foundation</span>
+            
+            <h2 class="section-display text-[#143823]">
+              A good education is the foundation for a better future.
             </h2>
-            <div class="space-y-4 text-[#55655B] dark:text-[#d1ded7] text-base leading-relaxed">
+
+            <div class="space-y-4 text-base text-[#4A5650] leading-relaxed">
               <p>
-                Established since 1944, it provides education from the primary level through higher secondary (Junior College) with a strong reputation for academic excellence and student discipline. The school features well-equipped facilities including science and computer laboratories, a comprehensive library, and sports grounds.
+                Established since 1944, Dnyandeep English Medium School provides education from the primary level through secondary school with a strong reputation for academic excellence and student discipline. The school features well-equipped facilities including science and computer laboratories, a comprehensive library, and sports grounds.
               </p>
               <p>
-                Dnyandeep School is committed to providing quality education that builds strong academic foundations, moral values, and life skills in students. With a team of experienced and dedicated teachers, the school focuses on the holistic development of every child, encouraging excellence not only in academics but also in sports, arts, and extracurricular activities.
+                We believe that education is an important aspect of every person’s life. It plays a vital role in shaping character, building knowledge, and developing skills that prepare individuals for future challenges. With a team of experienced and dedicated teachers, the school focuses on the holistic development of every child, encouraging excellence not only in academics but also in sports, arts, and extracurricular activities.
               </p>
             </div>
+
             <div class="pt-2">
-              <a href="about.html" class="inline-flex items-center gap-2 text-[#1F5A3A] dark:text-[#F2E3A0] font-bold text-sm hover:underline">
-                <span>Read Full School Heritage & Vision</span>
+              <a href="about.html" class="inline-flex items-center gap-2 text-sm font-bold text-[#143823] hover:text-[#24633F] transition-colors underline underline-offset-4">
+                <span>Read Full School Heritage & Core Values</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
             </div>
+
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 5. LEADERSHIP SECTION (Principal's Message Placeholder) -->
-    <section class="py-16 bg-white dark:bg-[#0e2218] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto rounded-3xl bg-cream-50 dark:bg-[#142e20]/50 border border-cream-border dark:border-[#1c3d2c] p-6 sm:p-10 shadow-md fade-up-init">
-          <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#123B26] border-2 border-[#1F5A3A] flex items-center justify-center text-[#F2E3A0] shrink-0">
-              <i data-lucide="user-check" class="w-10 h-10"></i>
-            </div>
-            <div class="space-y-2 text-center sm:text-left">
-              <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">School Leadership</span>
-              <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white">Principal's Message</h3>
-              <!-- Explicit Placeholder per instructions: no invented names or text -->
-              <p class="text-sm sm:text-base text-[#55655B] dark:text-[#9cb5a7] italic leading-relaxed">
-                "Name and message to be provided by the school."
-              </p>
-              <p class="text-xs text-[#55655B] dark:text-[#d1ded7] font-semibold pt-1">
-                Office of the Principal • Dnyandeep English School
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. CURRICULA / ACADEMIC PROGRAMS -->
-    <section id="academics" class="py-20 bg-cream-50 dark:bg-[#08160e] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14 fade-up-init">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
-            Academics
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
-            Academic Programs
+    <!-- 3. ACADEMIC DIVISIONS: Structured Linear Showcase -->
+    <section class="py-16 lg:py-24 bg-[#FAF8F5] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
+        
+        <div class="max-w-2xl mb-12 space-y-3 fade-in-viewport">
+          <span class="eyebrow">Academic Curriculum</span>
+          <h2 class="section-display text-[#143823]">
+            Structured learning tailored to each stage of childhood.
           </h2>
-          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
-            Providing structured learning, character building, and individual academic care across every stage.
+          <p class="text-base text-[#4A5650]">
+            Our curriculum aligns with the Maharashtra State SSC Board, balancing foundational cognitive skills, language mastery, and analytical thinking.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="program-levels-linear fade-in-viewport">
           
-          <!-- Program 1: Pre-Primary -->
-          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-7 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between fade-up-init">
+          <!-- Level 1: Pre-Primary -->
+          <div class="program-level-row">
             <div>
-              <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-5">
-                <i data-lucide="baby" class="w-7 h-7"></i>
-              </div>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#EEF3EA] dark:bg-[#142e20] text-[#1F5A3A] dark:text-[#F2E3A0]">Nursery – Sr. KG</span>
-              <h3 class="text-2xl font-serif font-bold text-[#123B26] dark:text-white mt-3 mb-2">Pre-Primary</h3>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Focuses on foundational learning, cognitive development, motor skills, social interaction and joyful curiosity in a nurturing environment.
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Foundational Stage</span>
+              <h3 class="font-serif text-2xl font-bold text-[#143823] mt-1">Pre-Primary Section</h3>
+              <p class="text-xs text-[#78857E] mt-1">Nursery • Jr. KG • Sr. KG</p>
+            </div>
+            <div>
+              <p class="text-sm text-[#4A5650] leading-relaxed">
+                Focuses on joyful foundational learning, cognitive development, motor skills, social interaction, and early curiosity in a nurturing, caring environment designed for young children aged 3 to 5 years.
               </p>
             </div>
-            <div class="mt-8 pt-4 border-t border-cream-border dark:border-[#1c3d2c]">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Apply for Pre-Primary admission online (opens in a new tab)" aria-label="Apply for Pre-Primary admission online (opens in a new tab)">
-                <span>Apply for Pre-Primary</span>
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            <div class="pt-2 sm:pt-0">
+              <a href="pre-primary.html" class="text-xs font-bold uppercase tracking-wider text-[#143823] hover:text-[#C29B38] transition-colors inline-flex items-center gap-1.5">
+                <span>Explore Section</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </div>
 
-          <!-- Program 2: Primary -->
-          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-7 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between fade-up-init">
+          <!-- Level 2: Primary -->
+          <div class="program-level-row">
             <div>
-              <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-5">
-                <i data-lucide="book-open" class="w-7 h-7"></i>
-              </div>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#EEF3EA] dark:bg-[#142e20] text-[#1F5A3A] dark:text-[#F2E3A0]">Std 1 – 4</span>
-              <h3 class="text-2xl font-serif font-bold text-[#123B26] dark:text-white mt-3 mb-2">Primary Section</h3>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Building strong fundamentals in languages, mathematics and environmental science through activity-based learning and conceptual clarity.
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Primary Stage</span>
+              <h3 class="font-serif text-2xl font-bold text-[#143823] mt-1">Primary Section</h3>
+              <p class="text-xs text-[#78857E] mt-1">Class 1st to Class 4th</p>
+            </div>
+            <div>
+              <p class="text-sm text-[#4A5650] leading-relaxed">
+                Builds core fundamentals in languages (English, Marathi, Hindi), Mathematics, and Environmental Science through activity-based learning, structured study habits, and clear conceptual understanding.
               </p>
             </div>
-            <div class="mt-8 pt-4 border-t border-cream-border dark:border-[#1c3d2c]">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Apply for Primary admission online (opens in a new tab)" aria-label="Apply for Primary admission online (opens in a new tab)">
-                <span>Apply for Primary</span>
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            <div class="pt-2 sm:pt-0">
+              <a href="primary.html" class="text-xs font-bold uppercase tracking-wider text-[#143823] hover:text-[#C29B38] transition-colors inline-flex items-center gap-1.5">
+                <span>Explore Section</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </div>
 
-          <!-- Program 3: Secondary -->
-          <div class="rounded-3xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-7 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between fade-up-init">
+          <!-- Level 3: Secondary -->
+          <div class="program-level-row">
             <div>
-              <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-5">
-                <i data-lucide="graduation-cap" class="w-7 h-7"></i>
-              </div>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-[#EEF3EA] dark:bg-[#142e20] text-[#1F5A3A] dark:text-[#F2E3A0]">SSC Std 5 – 10</span>
-              <h3 class="text-2xl font-serif font-bold text-[#123B26] dark:text-white mt-3 mb-2">Secondary SSC</h3>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Rigorous academic curriculum with dedicated teachers, board-exam preparation, practical science lab sessions, and balanced sports participation.
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Secondary Stage</span>
+              <h3 class="font-serif text-2xl font-bold text-[#143823] mt-1">Secondary SSC</h3>
+              <p class="text-xs text-[#78857E] mt-1">Class 5th to Class 10th (SSC)</p>
+            </div>
+            <div>
+              <p class="text-sm text-[#4A5650] leading-relaxed">
+                Rigorous Maharashtra State SSC Board curriculum preparation with experienced subject teachers, regular assessment schedules, science laboratory demonstrations, and comprehensive academic mentoring.
               </p>
             </div>
-            <div class="mt-8 pt-4 border-t border-cream-border dark:border-[#1c3d2c]">
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Apply for Secondary SSC admission online (opens in a new tab)" aria-label="Apply for Secondary SSC admission online (opens in a new tab)">
-                <span>Apply for Secondary</span>
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            <div class="pt-2 sm:pt-0">
+              <a href="secondary.html" class="text-xs font-bold uppercase tracking-wider text-[#143823] hover:text-[#C29B38] transition-colors inline-flex items-center gap-1.5">
+                <span>Explore Section</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- 7. WHY CHOOSE DNYANDEEP (6 Old-Site Cards) -->
-    <section class="py-20 bg-white dark:bg-[#0e2218] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14 fade-up-init">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
-            Our Key Advantages
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
-            Why Choose Dnyandeep
+    <!-- 4. CAMPUS ENVIRONMENT & FACILITIES: Authentic Documentary Grid -->
+    <section class="py-16 lg:py-24 bg-[#FFFFFF] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
+        
+        <div class="max-w-2xl mb-14 space-y-3 fade-in-viewport">
+          <span class="eyebrow">Learning Environment</span>
+          <h2 class="section-display text-[#143823]">
+            Dedicated facilities that foster inquiry, discipline, and creativity.
           </h2>
-          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
-            Providing value-centric and disciplined education with strong academic integrity.
+          <p class="text-base text-[#4A5650]">
+            Spaces thoughtfully maintained to support practical learning, physical education, and extracurricular exploration.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Asymmetrical Editorial 4-Block Facility Showcase -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
           
-          <!-- Card 1 -->
-          <div class="p-6 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] shadow-xs fade-up-init">
-            <div class="w-11 h-11 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center mb-4">
-              <i data-lucide="book-open" class="w-5 h-5"></i>
+          <!-- Facility 1: Computer Lab (7 cols) -->
+          <div class="md:col-span-7 space-y-3 fade-in-viewport">
+            <div class="editorial-photo-frame aspect-[16/10] shadow-elevated">
+              <img 
+                src="images/rebuild/computer-lab.webp" 
+                alt="Students in the modern computer lab practicing digital skills"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
-            <h3 class="font-serif font-bold text-lg text-[#123B26] dark:text-white mb-2">SSC Board Curriculum</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Structured learning as per the Maharashtra State Board, ensuring thorough syllabus coverage and solid academic preparedness.
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Digital Literacy</span>
+              <h3 class="font-serif text-xl font-bold text-[#143823] mt-0.5">Modern Computer Laboratory</h3>
+              <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                Equipped with desktop systems and educational software, training students in foundational computer skills, typing, and safe digital literacy from the primary stage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility 2: Science Laboratory (5 cols) -->
+          <div class="md:col-span-5 space-y-3 fade-in-viewport">
+            <div class="editorial-photo-frame aspect-[16/10] md:aspect-auto md:h-[calc(100%-80px)] shadow-elevated">
+              <img 
+                src="images/rebuild/science-laboratory.webp" 
+                alt="Students conducting practical science experiments with lab equipment"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Practical Inquiry</span>
+              <h3 class="font-serif text-xl font-bold text-[#143823] mt-0.5">Science Laboratory & Fairs</h3>
+              <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                Dedicated spaces for hands-on experiments, working models, and annual science exhibitions that encourage scientific curiosity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility 3: Sports Ground (5 cols) -->
+          <div class="md:col-span-5 space-y-3 fade-in-viewport">
+            <div class="editorial-photo-frame aspect-[16/10] shadow-elevated">
+              <img 
+                src="images/rebuild/sports-athletics.webp" 
+                alt="Students participating in athletic drills on the school sports ground"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Athletics & Physical Education</span>
+              <h3 class="font-serif text-xl font-bold text-[#143823] mt-0.5">Outdoor Sports Grounds</h3>
+              <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                Spacious open-air playground supporting athletics, team games, regular physical education periods, and our annual Sports Day events.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility 4: Library & Reading (7 cols) -->
+          <div class="md:col-span-7 space-y-3 fade-in-viewport">
+            <div class="editorial-photo-frame aspect-[16/10] shadow-elevated">
+              <img 
+                src="images/rebuild/library-reading.webp" 
+                alt="Students studying and reading reference literature in the quiet school library"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#687A63]">Scholastic Resources</span>
+              <h3 class="font-serif text-xl font-bold text-[#143823] mt-0.5">School Library & Reference Stacks</h3>
+              <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                A quiet scholastic repository of books, periodicals, and academic reference materials that instill disciplined reading habits and research skills.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. TEACHING METHODOLOGY: Clean Institutional Cards -->
+    <section class="py-16 lg:py-24 bg-[#FAF8F5] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3 fade-in-viewport">
+          <span class="eyebrow justify-center">Student-Centric Approach</span>
+          <h2 class="section-display text-[#143823]">
+            How Dnyandeep supports student success.
+          </h2>
+          <p class="text-base text-[#4A5650]">
+            Our educators combine structured curriculum pacing with personal care to ensure no child is left behind.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-6 bg-[#FFFFFF] border border-[#EAE3D8] rounded-sm space-y-3 shadow-subtle fade-in-viewport">
+            <div class="w-10 h-10 rounded bg-[#EEF4F0] flex items-center justify-center text-[#143823]">
+              <i data-lucide="book-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-[#143823]">Concept Clarity</h3>
+            <p class="text-xs text-[#4A5650] leading-relaxed">
+              Step-by-step teaching focused on deep conceptual understanding rather than rote memorization.
             </p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="p-6 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] shadow-xs fade-up-init">
-            <div class="w-11 h-11 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center mb-4">
+          <div class="p-6 bg-[#FFFFFF] border border-[#EAE3D8] rounded-sm space-y-3 shadow-subtle fade-in-viewport">
+            <div class="w-10 h-10 rounded bg-[#EEF4F0] flex items-center justify-center text-[#143823]">
               <i data-lucide="users" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-serif font-bold text-lg text-[#123B26] dark:text-white mb-2">Experienced & Dedicated Teachers</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Personal attention and care for every child's progress, fostering a warm mentor-student bond and clear conceptual learning.
+            <h3 class="font-serif text-lg font-bold text-[#143823]">Individual Attention</h3>
+            <p class="text-xs text-[#4A5650] leading-relaxed">
+              Continuous monitoring by class teachers to identify individual learning paces and provide personalized guidance.
             </p>
           </div>
 
-          <!-- Card 3 -->
-          <div class="p-6 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] shadow-xs fade-up-init">
-            <div class="w-11 h-11 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center mb-4">
-              <i data-lucide="sparkles" class="w-5 h-5"></i>
+          <div class="p-6 bg-[#FFFFFF] border border-[#EAE3D8] rounded-sm space-y-3 shadow-subtle fade-in-viewport">
+            <div class="w-10 h-10 rounded bg-[#EEF4F0] flex items-center justify-center text-[#143823]">
+              <i data-lucide="clipboard-check" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-serif font-bold text-lg text-[#123B26] dark:text-white mb-2">All-Round Student Development</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              A balance of academics, sports, arts and practical learning for confident personalities.
+            <h3 class="font-serif text-lg font-bold text-[#143823]">Regular Assessments</h3>
+            <p class="text-xs text-[#4A5650] leading-relaxed">
+              Periodic tests, class reviews, and constructive feedback loops to gauge progress ahead of board examinations.
             </p>
           </div>
 
-          <!-- Card 4 -->
-          <div class="p-6 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] shadow-xs fade-up-init">
-            <div class="w-11 h-11 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center mb-4">
-              <i data-lucide="award" class="w-5 h-5"></i>
+          <div class="p-6 bg-[#FFFFFF] border border-[#EAE3D8] rounded-sm space-y-3 shadow-subtle fade-in-viewport">
+            <div class="w-10 h-10 rounded bg-[#EEF4F0] flex items-center justify-center text-[#143823]">
+              <i data-lucide="help-circle" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-serif font-bold text-lg text-[#123B26] dark:text-white mb-2">Affordable & Transparent Fees</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Quality education accessible to every family without hidden costs, delivering high value for your child's educational journey.
-            </p>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="p-6 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] shadow-xs fade-up-init">
-            <div class="w-11 h-11 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center mb-4">
-              <i data-lucide="shield-check" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-serif font-bold text-lg text-[#123B26] dark:text-white mb-2">Safe, Disciplined Campus</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              A secure, supportive environment that nurtures values, discipline and respect.
-            </p>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="p-6 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] shadow-xs fade-up-init">
-            <div class="w-11 h-11 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center mb-4">
-              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-serif font-bold text-lg text-[#123B26] dark:text-white mb-2">Strong Community & Parent Trust</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Years of trust from parents and local community support.
+            <h3 class="font-serif text-lg font-bold text-[#143823]">Doubt Clearing</h3>
+            <p class="text-xs text-[#4A5650] leading-relaxed">
+              Dedicated clarification sessions and revision periods to help students resolve academic challenges with confidence.
             </p>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- 8. ACTIVITIES (5 Old-Site Activities) -->
-    <section class="py-20 bg-cream-50 dark:bg-[#08160e] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14 fade-up-init">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
-            Beyond the Classroom
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
-            Co-Curricular Activities
-          </h2>
-          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
-            Encouraging talent, creativity, and teamwork through structured activities.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          
-          <!-- Activity 1 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-6 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-4">
-              <i data-lucide="trophy" class="w-7 h-7"></i>
-            </div>
-            <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-2">Sports & Physical Education</h3>
-            <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Indoor and outdoor sports, regular sports periods, annual sports events, inter-school competitions.</p>
-          </div>
-
-          <!-- Activity 2 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-6 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-4">
-              <i data-lucide="palette" class="w-7 h-7"></i>
-            </div>
-            <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-2">Arts, Drawing & Craft</h3>
-            <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Drawing competitions, creative crafts, and visual art fostering creative expression.</p>
-          </div>
-
-          <!-- Activity 3 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-6 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-4">
-              <i data-lucide="music" class="w-7 h-7"></i>
-            </div>
-            <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-2">Music & Cultural Activities</h3>
-            <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Traditional festivals, annual gatherings, stage drama, and vocal celebrations.</p>
-          </div>
-
-          <!-- Activity 4 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-6 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-4">
-              <i data-lucide="laptop" class="w-7 h-7"></i>
-            </div>
-            <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-2">Computer Lab & Practical Learning</h3>
-            <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Modern systems, educational software, basic computer skills, digital learning.</p>
-          </div>
-
-          <!-- Activity 5 -->
-          <div class="rounded-2xl bg-white dark:bg-[#0e2218] border border-cream-border dark:border-[#1c3d2c] p-6 text-center hover:shadow-md transition-shadow fade-up-init flex flex-col items-center">
-            <div class="w-14 h-14 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] border border-[#DDE5D8] dark:border-[#1F5A3A] flex items-center justify-center text-[#1F5A3A] dark:text-[#F2E3A0] mb-4">
-              <i data-lucide="atom" class="w-7 h-7"></i>
-            </div>
-            <h3 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-2">Science Exhibitions & Skill-Based Activities</h3>
-            <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">Hands-on experiments, annual science fairs, and analytical problem-solving projects.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. INFRASTRUCTURE / FACILITIES (3 Rows) -->
-    <section id="facilities" class="py-20 bg-white dark:bg-[#0e2218] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-16 fade-up-init">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
-            Campus Infrastructure
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
-            Infrastructure & Facilities
-          </h2>
-          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
-            Well-maintained spaces designed to support academic and extra-curricular growth.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Facility 1: Sports (Real Campus Sports Ground Photo) -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
-            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
-              <img 
-                src="images/premises-sports-ground.webp?v=7" 
-                srcset="images/premises-sports-ground-640.webp?v=7 640w, images/premises-sports-ground.webp?v=7 1200w"
-                sizes="(max-width: 640px) 100vw, 600px"
-                alt="Aerial view of Dnyandeep English School sports ground and campus"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
-                <i data-lucide="trophy" class="w-5 h-5"></i>
-              </div>
-            </div>
-            <div class="p-6 sm:p-8 space-y-3">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Athletics & Fitness</span>
-                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Sports Facilities</h3>
-              </div>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Indoor and outdoor sports, regular sports periods, annual sports events, and inter-school competitions that foster discipline, team spirit, and physical health.
-              </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Outdoor Sports Ground</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Regular Sports Periods</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Sports Day</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Facility 2: Creative Art Spaces (Real Campus Courtyard Assembly Space) -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
-            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
-              <img 
-                src="images/premises-campus-courtyard.webp?v=7" 
-                srcset="images/premises-campus-courtyard-640.webp?v=7 640w, images/premises-campus-courtyard.webp?v=7 900w"
-                sizes="(max-width: 640px) 100vw, 600px"
-                alt="Dnyandeep English School campus courtyard and cultural space"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
-                <i data-lucide="palette" class="w-5 h-5"></i>
-              </div>
-            </div>
-            <div class="p-6 sm:p-8 space-y-3">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Creative Expression</span>
-                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Creative Art Spaces</h3>
-              </div>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Dedicated rooms and creative zones for drawing, painting, craftwork, and cultural preparation, encouraging students to explore visual arts and build self-expression.
-              </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Art & Craft Workshops</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Cultural Preparation</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Facility 3: Computer Lab (Real School Computer Lab Photo) -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
-            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
-              <img 
-                src="images/premises-computer-lab.webp?v=7" 
-                srcset="images/premises-computer-lab-640.webp?v=7 640w, images/premises-computer-lab.webp?v=7 1200w"
-                sizes="(max-width: 640px) 100vw, 600px"
-                alt="Dnyandeep English School modern computer lab with workstations"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
-                <i data-lucide="monitor" class="w-5 h-5"></i>
-              </div>
-            </div>
-            <div class="p-6 sm:p-8 space-y-3">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Digital Literacy</span>
-                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Modern Computer Lab</h3>
-              </div>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Equipped with modern systems and educational software, training students in foundational computer skills, typing, and digital literacy.
-              </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Modern Systems</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Educational Software</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Learning</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Facility 4: Science Exhibition (Real School Corridor / Lab Wing Photo) -->
-          <div class="bg-cream-50 dark:bg-[#142e20]/40 rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] fade-up-init group">
-            <div class="relative aspect-[3/2] w-full overflow-hidden bg-slate-100">
-              <img 
-                src="images/premises-science-courtyard.webp?v=7" 
-                srcset="images/premises-science-courtyard-640.webp?v=7 640w, images/premises-science-courtyard.webp?v=7 1200w"
-                sizes="(max-width: 640px) 100vw, 600px"
-                alt="Dnyandeep English School academic corridor and science laboratory wing"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-              <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm text-[#1F5A3A] flex items-center justify-center shadow-md">
-                <i data-lucide="microscope" class="w-5 h-5"></i>
-              </div>
-            </div>
-            <div class="p-6 sm:p-8 space-y-3">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-[#1F5A3A] dark:text-[#F2E3A0]">Practical Inquiry</span>
-                <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white mt-1">Science Exhibition & Labs</h3>
-              </div>
-              <p class="text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                Interactive science spaces encouraging experiment-driven learning, annual science exhibition projects, and hands-on analytical thinking.
-              </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Working Models</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Annual Science Fair</span>
-                <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-700 text-xs font-medium text-[#123B26] dark:text-white">Practical Demonstrations</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. QUOTE BAND (Full Old-Site Text) -->
-    <section class="py-16 bg-[#123B26] text-white relative overflow-hidden">
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 fade-up-init">
-        <i data-lucide="quote" class="w-8 h-8 text-[#F2E3A0] mx-auto"></i>
-        <blockquote class="font-serif italic text-xl sm:text-2xl lg:text-3xl text-white leading-relaxed">
-          "We believe that education is an important aspect in every person's life. It plays a vital role in shaping character, building knowledge, and developing skills that prepare individuals for future challenges."
-        </blockquote>
-        <p class="text-xs sm:text-sm uppercase tracking-widest text-[#F2E3A0] font-semibold pt-2">
-          — Dnyandeep Educational Philosophy
-        </p>
-      </div>
-    </section>
-
-    <!-- 11. ADMISSIONS (3-Step Process + FAQ Accordion) -->
-    <section id="admissions" class="py-20 bg-cream-50 dark:bg-[#08160e] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 6. ADMISSION PROCESS & CRITERIA: Parent-Friendly Overview -->
+    <section class="py-16 lg:py-24 bg-[#FFFFFF] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
         
-        <!-- Section Header -->
-        <div class="text-center max-w-2xl mx-auto mb-14 fade-up-init">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
-            Admissions 2026–27
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
-            Admission Process
-          </h2>
-          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
-            Simple, transparent, and guided three-step enrollment process.
-          </p>
-        </div>
-
-        <!-- 3-Step Process Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="editorial-split-grid">
           
-          <!-- Step 1 -->
-          <div class="bg-white dark:bg-[#0e2218] p-6 rounded-3xl border border-cream-border dark:border-[#1c3d2c] shadow-xs text-center fade-up-init relative">
-            <div class="w-12 h-12 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] text-[#1F5A3A] dark:text-[#F2E3A0] font-serif font-bold text-xl flex items-center justify-center mx-auto mb-4">
-              1
-            </div>
-            <h3 class="font-serif font-bold text-xl text-[#123B26] dark:text-white mb-2">Enquire</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Fill out the online enquiry form or visit the school campus to explore curriculum, age criteria, and grade availability.
-            </p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="bg-white dark:bg-[#0e2218] p-6 rounded-3xl border border-cream-border dark:border-[#1c3d2c] shadow-xs text-center fade-up-init relative">
-            <div class="w-12 h-12 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] text-[#1F5A3A] dark:text-[#F2E3A0] font-serif font-bold text-xl flex items-center justify-center mx-auto mb-4">
-              2
-            </div>
-            <h3 class="font-serif font-bold text-xl text-[#123B26] dark:text-white mb-2">Apply Online</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Complete the official school admission application form with student details and mandatory academic documents.
-            </p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="bg-white dark:bg-[#0e2218] p-6 rounded-3xl border border-cream-border dark:border-[#1c3d2c] shadow-xs text-center fade-up-init relative">
-            <div class="w-12 h-12 rounded-2xl bg-[#EEF3EA] dark:bg-[#142e20] text-[#1F5A3A] dark:text-[#F2E3A0] font-serif font-bold text-xl flex items-center justify-center mx-auto mb-4">
-              3
-            </div>
-            <h3 class="font-serif font-bold text-xl text-[#123B26] dark:text-white mb-2">Confirmation</h3>
-            <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-              Document verification and enrollment confirmation by the school administration desk. Welcome to Dnyandeep!
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Apply Online CTA Button -->
-        <div class="text-center mb-16 fade-up-init">
-          <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="h-12 px-8 rounded-xl bg-[#F2E3A0] hover:bg-[#e5d487] text-[#123B26] font-bold text-sm tracking-wide shadow-md transition-all inline-flex items-center gap-2" title="Open Online Admission Form (opens in a new tab)" aria-label="Open Online Admission Form (opens in a new tab)">
-            <span>Open Online Admission Form</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#123B26]"></i>
-          </a>
-        </div>
-
-        <!-- FAQ Accordion (5 Exact Old-Site FAQs) -->
-        <div class="max-w-3xl mx-auto">
-          <h3 class="font-serif font-bold text-2xl text-[#123B26] dark:text-white text-center mb-8 fade-up-init">
-            Frequently Asked Questions
-          </h3>
-
-          <div class="space-y-4">
-            
-            <!-- FAQ 1 -->
-            <div class="faq-item border border-cream-border dark:border-[#1c3d2c] rounded-2xl bg-white dark:bg-[#142e20]/40 overflow-hidden fade-up-init">
-              <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-[#123B26] dark:text-white flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
-                <span class="text-base sm:text-lg">What classes does the school offer?</span>
-                <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#1F5A3A] shrink-0 transition-transform duration-200"></i>
-              </button>
-              <div class="accordion-content px-6 pb-4 text-[#55655B] dark:text-[#9cb5a7] text-sm leading-relaxed">
-                Nursery to Secondary (SSC), focusing on academic excellence, character building and overall personality development.
-              </div>
+          <!-- Left: 3-Step Process -->
+          <div class="space-y-8 fade-in-viewport">
+            <div>
+              <span class="eyebrow">Admissions 2026–27</span>
+              <h2 class="section-display text-[#143823] mt-2">
+                A transparent, accessible three-step admission journey.
+              </h2>
+              <p class="text-base text-[#4A5650] mt-3">
+                We believe in simple, parent-friendly enrollment with clear guidelines and personal assistance at every stage.
+              </p>
             </div>
 
-            <!-- FAQ 2 -->
-            <div class="faq-item border border-cream-border dark:border-[#1c3d2c] rounded-2xl bg-white dark:bg-[#142e20]/40 overflow-hidden fade-up-init">
-              <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-[#123B26] dark:text-white flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
-                <span class="text-base sm:text-lg">What is the age criteria for Nursery admission?</span>
-                <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#1F5A3A] shrink-0 transition-transform duration-200"></i>
-              </button>
-              <div class="accordion-content px-6 pb-4 text-[#55655B] dark:text-[#9cb5a7] text-sm leading-relaxed">
-                Children aged 3 to 5 years are eligible.
-              </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="faq-item border border-cream-border dark:border-[#1c3d2c] rounded-2xl bg-white dark:bg-[#142e20]/40 overflow-hidden fade-up-init">
-              <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-[#123B26] dark:text-white flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
-                <span class="text-base sm:text-lg">Which board does the school follow?</span>
-                <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#1F5A3A] shrink-0 transition-transform duration-200"></i>
-              </button>
-              <div class="accordion-content px-6 pb-4 text-[#55655B] dark:text-[#9cb5a7] text-sm leading-relaxed">
-                The SSC Board curriculum, ensuring a strong academic foundation and exam-oriented preparation.
-              </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="faq-item border border-cream-border dark:border-[#1c3d2c] rounded-2xl bg-white dark:bg-[#142e20]/40 overflow-hidden fade-up-init">
-              <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-[#123B26] dark:text-white flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
-                <span class="text-base sm:text-lg">What teaching methodology does the school use?</span>
-                <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#1F5A3A] shrink-0 transition-transform duration-200"></i>
-              </button>
-              <div class="accordion-content px-6 pb-4 text-[#55655B] dark:text-[#9cb5a7] text-sm leading-relaxed">
-                A concept-based, student-centric approach combining classroom learning, practical activities and creative methods.
-              </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="faq-item border border-cream-border dark:border-[#1c3d2c] rounded-2xl bg-white dark:bg-[#142e20]/40 overflow-hidden fade-up-init">
-              <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-[#123B26] dark:text-white flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
-                <span class="text-base sm:text-lg">How does the school support students academically?</span>
-                <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-[#1F5A3A] shrink-0 transition-transform duration-200"></i>
-              </button>
-              <div class="accordion-content px-6 pb-4 text-[#55655B] dark:text-[#9cb5a7] text-sm leading-relaxed">
-                Individual attention, regular assessments, doubt-clearing sessions and revision programs.
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 12. CONTACT (Address, Phone, Email Trio & Map Embed) -->
-    <section id="contact" class="py-20 bg-white dark:bg-[#0e2218] border-b border-cream-border dark:border-[#1c3d2c]">
-      <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-14 fade-up-init">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1F5A3A] dark:text-[#F2E3A0] bg-[#EEF3EA] dark:bg-[#142e20] px-3 py-1 rounded-full">
-            Get In Touch
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#123B26] dark:text-white mt-3">
-            Contact Dnyandeep English School
-          </h2>
-          <p class="text-[#55655B] dark:text-[#DDE5D8] mt-2 text-sm sm:text-base">
-            Visit our campus or connect with our admissions office for enquiries and guidance.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          <!-- Contact Trio Info Cards -->
-          <div class="lg:col-span-5 space-y-4 fade-up-init">
-            <!-- Real Campus Entrance Photo Card -->
-            <div class="rounded-2xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] shadow-sm group">
-              <div class="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
-                <img 
-                  src="images/premises-campus-entrance.webp?v=7" 
-                  srcset="images/premises-campus-entrance-640.webp?v=7 640w, images/premises-campus-entrance.webp?v=7 1200w"
-                  sizes="(max-width: 640px) 100vw, 480px"
-                  alt="Dnyandeep English School campus main entrance gate" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div class="absolute bottom-2 left-3 px-2 py-0.5 rounded bg-black/60 text-[11px] font-medium text-[#F2E3A0]">
-                  Campus Entrance • Manjari Khurd
-                </div>
-              </div>
-            </div>
-
-            <!-- Address Card -->
-            <div class="p-5 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
-              </div>
-              <div class="space-y-1">
-                <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-0.5">Campus Address</h4>
-                <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7] leading-relaxed">
-                  Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham, Manjari Khurd, Pune, Maharashtra 412307
-                </p>
-                <div class="pt-1">
-                  <a href="https://maps.google.com/?q=Dnyandeep+English+School+Manjari+Khurd+Pune" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1F5A3A] dark:text-[#F2E3A0] hover:underline" title="Get directions on Google Maps (opens in a new tab)" aria-label="Get directions to Dnyandeep English School on Google Maps (opens in a new tab)">
-                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
-                    <span>Get Directions on Google Maps</span>
-                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Phone Card -->
-            <div class="p-5 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="phone-call" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1">Phone Numbers (Click-to-Call)</h4>
-                <div class="space-y-1.5 text-xs sm:text-sm">
-                  <p>
-                    <a href="tel:+918484844067" class="inline-flex items-center gap-1.5 text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline" title="Call Admissions Office: +91-8484844067" aria-label="Call Admissions Office at +91-8484844067">
-                      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
-                      <span>Call Admissions: +91-8484844067</span>
-                    </a>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <span class="font-serif text-2xl font-bold text-[#C29B38] w-8 shrink-0">01</span>
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-[#143823]">Enquiry & Guidance</h3>
+                  <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                    Connect with our admissions desk online or visit the school campus to explore curriculum, age criteria, and grade availability.
                   </p>
-                  <p>
-                    <a href="tel:+917276095235" class="inline-flex items-center gap-1.5 text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline" title="Call School Office: +91-7276095235" aria-label="Call School Office at +91-7276095235">
-                      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
-                      <span>Call Office: +91-7276095235</span>
-                    </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="font-serif text-2xl font-bold text-[#C29B38] w-8 shrink-0">02</span>
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-[#143823]">Online Application</h3>
+                  <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                    Complete the official online registration form with student and parent details, grade applied for, and requisite documents.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="font-serif text-2xl font-bold text-[#C29B38] w-8 shrink-0">03</span>
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-[#143823]">Document Verification & Confirmation</h3>
+                  <p class="text-sm text-[#4A5650] mt-1 leading-relaxed">
+                    Submit verified certificates at the school administration office, finalize enrollment formalities, and welcome your child to Dnyandeep.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Email & Hours Card -->
-            <div class="p-5 rounded-2xl bg-cream-50 dark:bg-[#142e20]/60 border border-cream-border dark:border-[#1c3d2c] flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-[#1F5A3A] text-[#F2E3A0] flex items-center justify-center shrink-0 mt-0.5">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="font-serif font-bold text-base text-[#123B26] dark:text-white mb-1">Email & Office Hours</h4>
-                <p class="text-xs sm:text-sm text-[#55655B] dark:text-[#9cb5a7]">
-                  <a href="mailto:info@des.org.in" class="inline-flex items-center gap-1.5 text-[#1F5A3A] dark:text-[#F2E3A0] font-semibold hover:underline" title="Send email to info@des.org.in" aria-label="Send email to info@des.org.in">
-                    <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-                    <span>Email Us: info@des.org.in</span>
-                  </a>
-                </p>
-                <p class="text-xs text-[#55655B] dark:text-[#9cb5a7] mt-1.5 flex items-center gap-1.5">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-[#1F5A3A] dark:text-[#F2E3A0]"></i>
-                  <span>Monday – Friday: 9:00 AM – 3:00 PM</span>
-                </p>
-              </div>
+            <div class="pt-2">
+              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="btn-institutional btn-primary-forest" title="Open online admission form (opens in a new tab)" aria-label="Open online admission form (opens in a new tab)">
+                <span>Open Official Admission Form</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
             </div>
           </div>
 
-          <!-- Google Map Embed -->
-          <div class="lg:col-span-7 fade-up-init">
-            <div class="rounded-3xl overflow-hidden border border-cream-border dark:border-[#1c3d2c] shadow-md h-[460px] bg-slate-100">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.883726593539!2d73.98777177519198!3d18.534164582561514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c300067623d3%3A0xe5a30ae04791e846!2sDnyandeep%20English%20School%20Manjari%20Khurd!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Dnyandeep English School Campus Location Map">
-              </iframe>
+          <!-- Right: Age Criteria & FAQs Panel -->
+          <div class="p-8 lg:p-10 bg-[#FAF8F5] border border-[#EAE3D8] rounded-sm space-y-6 fade-in-viewport">
+            <h3 class="font-serif text-2xl font-bold text-[#143823] border-b border-[#EAE3D8] pb-4">
+              Admission Norms & FAQs
+            </h3>
+
+            <!-- Accordion Items -->
+            <div class="space-y-4">
+              
+              <div class="border-b border-[#EAE3D8] pb-3">
+                <button class="editorial-accordion-btn flex items-center justify-between w-full text-left font-serif font-bold text-base text-[#143823] focus:outline-none" aria-expanded="false">
+                  <span>What is the Nursery age criteria?</span>
+                  <i data-lucide="chevron-down" class="chevron-indicator w-4 h-4 text-[#143823] transition-transform duration-200"></i>
+                </button>
+                <div class="hidden pt-2 text-xs text-[#4A5650] leading-relaxed">
+                  Children aged 3 to 5 years are eligible for Nursery admission in accordance with Maharashtra State Education Department norms.
+                </div>
+              </div>
+
+              <div class="border-b border-[#EAE3D8] pb-3">
+                <button class="editorial-accordion-btn flex items-center justify-between w-full text-left font-serif font-bold text-base text-[#143823] focus:outline-none" aria-expanded="false">
+                  <span>Which educational board is followed?</span>
+                  <i data-lucide="chevron-down" class="chevron-indicator w-4 h-4 text-[#143823] transition-transform duration-200"></i>
+                </button>
+                <div class="hidden pt-2 text-xs text-[#4A5650] leading-relaxed">
+                  The school follows the Maharashtra State Board (SSC) curriculum, ensuring balanced academic foundations and structured board exam preparation.
+                </div>
+              </div>
+
+              <div class="border-b border-[#EAE3D8] pb-3">
+                <button class="editorial-accordion-btn flex items-center justify-between w-full text-left font-serif font-bold text-base text-[#143823] focus:outline-none" aria-expanded="false">
+                  <span>What documents are required?</span>
+                  <i data-lucide="chevron-down" class="chevron-indicator w-4 h-4 text-[#143823] transition-transform duration-200"></i>
+                </button>
+                <div class="hidden pt-2 text-xs text-[#4A5650] leading-relaxed">
+                  Original birth certificate, previous school Leaving Certificate (LC), recent passport-size photographs, and student/parent Aadhaar cards.
+                </div>
+              </div>
+
+              <div class="border-b border-[#EAE3D8] pb-3">
+                <button class="editorial-accordion-btn flex items-center justify-between w-full text-left font-serif font-bold text-base text-[#143823] focus:outline-none" aria-expanded="false">
+                  <span>What is the school fee policy?</span>
+                  <i data-lucide="chevron-down" class="chevron-indicator w-4 h-4 text-[#143823] transition-transform duration-200"></i>
+                </button>
+                <div class="hidden pt-2 text-xs text-[#4A5650] leading-relaxed">
+                  Dnyandeep adheres to an affordable, transparent fee structure without hidden levies, ensuring high academic standards remain accessible to community families.
+                </div>
+              </div>
+
             </div>
+
+            <p class="text-xs text-[#78857E] italic pt-2">
+              For specific fee schedules or mid-term transfers, please visit the school office or contact our admissions desk.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. ENQUIRY & CONTACT SECTION: Authentic School Location & Office Details -->
+    <section id="enquiry-section" class="py-16 lg:py-24 bg-[#FAF8F5] border-b border-[#EAE3D8]">
+      <div class="container-institutional">
+        
+        <div class="editorial-split-grid reverse">
+          
+          <!-- Contact Details Column -->
+          <div class="space-y-6 fade-in-viewport">
+            <span class="eyebrow">Connect With Us</span>
+            <h2 class="section-display text-[#143823]">
+              We welcome prospective parents and visitors.
+            </h2>
+            <p class="text-base text-[#4A5650]">
+              Our administration office is open Monday to Friday from 9:00 AM to 3:00 PM for campus tours, syllabus counseling, and admission guidance.
+            </p>
+
+            <div class="space-y-5 pt-2">
+              
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded bg-[#FFFFFF] border border-[#EAE3D8] flex items-center justify-center text-[#143823] shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-[#C29B38]"></i>
+                </div>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#143823]">Campus Address</h3>
+                  <p class="text-sm text-[#4A5650] mt-0.5 leading-relaxed">
+                    Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham, Manjari Khurd, Pune, Maharashtra 412307
+                  </p>
+                  <div class="mt-1.5">
+                    <a href="https://maps.google.com/?q=Dnyandeep+English+School+Manjari+Khurd+Pune" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#143823] hover:text-[#C29B38] transition-colors inline-flex items-center gap-1">
+                      <span>Get Directions on Google Maps</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded bg-[#FFFFFF] border border-[#EAE3D8] flex items-center justify-center text-[#143823] shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5 text-[#C29B38]"></i>
+                </div>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#143823]">Admissions & Office Phones</h3>
+                  <div class="space-y-1 text-sm text-[#4A5650] mt-0.5">
+                    <p><a href="tel:+918484844067" class="hover:text-[#143823] font-semibold">+91-8484844067</a> (Admissions Desk)</p>
+                    <p><a href="tel:+917276095235" class="hover:text-[#143823] font-semibold">+91-7276095235</a> (School Office)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded bg-[#FFFFFF] border border-[#EAE3D8] flex items-center justify-center text-[#143823] shrink-0">
+                  <i data-lucide="mail" class="w-5 h-5 text-[#C29B38]"></i>
+                </div>
+                <div>
+                  <h3 class="font-serif text-lg font-bold text-[#143823]">Email Correspondence</h3>
+                  <p class="text-sm text-[#4A5650] mt-0.5">
+                    <a href="mailto:info@des.org.in" class="hover:text-[#143823] font-semibold underline">info@des.org.in</a>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Direct Enquiry Card -->
+          <div class="p-8 lg:p-10 bg-[#FFFFFF] border border-[#EAE3D8] rounded-sm shadow-subtle fade-in-viewport">
+            <h3 class="font-serif text-2xl font-bold text-[#143823] mb-1">
+              Admission Enquiry 2026–27
+            </h3>
+            <p class="text-xs text-[#78857E] mb-6">
+              Submit your inquiry and our school desk will get in touch with you.
+            </p>
+
+            <form action="mailto:info@des.org.in" method="get" class="space-y-4">
+              <div class="editorial-input-group">
+                <label for="parent-name" class="editorial-label">Parent / Guardian Name *</label>
+                <input type="text" id="parent-name" required placeholder="Enter your full name" class="editorial-input">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="editorial-input-group">
+                  <label for="contact-phone" class="editorial-label">Mobile Number *</label>
+                  <input type="tel" id="contact-phone" required placeholder="10-digit number" class="editorial-input">
+                </div>
+                <div class="editorial-input-group">
+                  <label for="grade-select" class="editorial-label">Class Required *</label>
+                  <select id="grade-select" required class="editorial-select">
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="Jr. KG">Junior KG</option>
+                    <option value="Sr. KG">Senior KG</option>
+                    <option value="Primary (Std 1-4)">Primary (Std 1–4)</option>
+                    <option value="Secondary (Std 5-10)">Secondary (Std 5–10)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="editorial-input-group">
+                <label for="enquiry-notes" class="editorial-label">Message or Question</label>
+                <textarea id="enquiry-notes" rows="3" placeholder="Any questions regarding admission, timings, or syllabus..." class="editorial-textarea"></textarea>
+              </div>
+
+              <button type="submit" class="btn-institutional btn-primary-forest w-full">
+                <span>Submit Admission Enquiry</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </form>
           </div>
 
         </div>
@@ -1387,148 +722,109 @@
 
   </main>
 
-  <!-- 13. FOOTER (Dark Green) -->
-  <footer class="bg-[#123B26] text-white pt-16 pb-24 lg:pb-12 border-t border-[#1F5A3A]">
-    <div class="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#1F5A3A]">
+  <!-- Institutional Editorial Footer -->
+  <footer class="institutional-footer">
+    <div class="container-institutional">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 pb-12">
         
-        <!-- School Info & Description -->
-        <div class="lg:col-span-5 space-y-4">
+        <!-- School Identity (5 cols) -->
+        <div class="md:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-xl bg-white p-1 flex items-center justify-center shrink-0">
-              <img src="images/logo.png" alt="Dnyandeep Logo" class="w-full h-full object-contain">
+            <div class="w-12 h-12 bg-white rounded p-1 flex items-center justify-center shrink-0">
+              <img src="images/rebuild/school-crest.webp" alt="Dnyandeep Logo" width="48" height="33" class="w-full h-full object-contain">
             </div>
             <div>
-              <span class="block text-lg font-bold font-serif leading-tight">DNYANDEEP</span>
-              <span class="block text-xs uppercase tracking-wider text-[#F2E3A0]">English School • Manjari Khurd</span>
+              <span class="block font-serif text-xl font-bold text-white leading-tight">DNYANDEEP</span>
+              <span class="block text-xs uppercase tracking-wider text-[#C29B38] font-semibold">English Medium School & Jr. College</span>
             </div>
           </div>
-          <p class="text-xs sm:text-sm text-[#EEF3EA] leading-relaxed max-w-md">
-            Dnyandeep School is committed to nurturing young minds through quality education, strong values, and holistic development, empowering students to grow into confident and responsible individuals.
+          <p class="text-xs text-white/70 leading-relaxed max-w-sm">
+            Committed to nurturing young minds through structured education, strong moral foundations, and disciplined scholastic growth since 1944 in Manjari Khurd, Pune.
           </p>
-          <!-- Social Icons & Follow Us Section -->
-          <div class="pt-4 space-y-3">
-            <h4 class="text-sm font-bold uppercase tracking-[0.08em] text-[#F2E3A0]">Follow Us</h4>
-            <div class="grid grid-cols-2 gap-2.5 max-w-xs">
-              <a href="https://www.facebook.com/share/17nXRhCchZ/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our Facebook page (opens in a new tab)" aria-label="Dnyandeep English School on Facebook, opens in a new tab">
-                <span class="inline-flex items-center gap-2">
-                  <i data-lucide="facebook" class="social-icon"></i>
-                  <span>Facebook</span>
-                </span>
-                <i data-lucide="arrow-up-right" class="external-arrow"></i>
-              </a>
 
-              <a href="https://www.instagram.com/dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our Instagram page (opens in a new tab)" aria-label="Dnyandeep English School on Instagram, opens in a new tab">
-                <span class="inline-flex items-center gap-2">
-                  <i data-lucide="instagram" class="social-icon"></i>
-                  <span>Instagram</span>
-                </span>
-                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+          <!-- Social Links with visible text labels -->
+          <div class="pt-2">
+            <p class="footer-heading">Follow Dnyandeep</p>
+            <div class="flex flex-wrap gap-2">
+              <a href="https://www.facebook.com/share/17nXRhCchZ/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-white/10 hover:bg-[#C29B38] hover:text-[#143823] text-white text-xs font-semibold inline-flex items-center gap-1.5 transition-colors" title="Facebook (opens in a new tab)" aria-label="Facebook (opens in a new tab)">
+                <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+                <span>Facebook</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3 opacity-70"></i>
               </a>
-
-              <a href="https://youtube.com/@dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our YouTube channel (opens in a new tab)" aria-label="Dnyandeep English School on YouTube, opens in a new tab">
-                <span class="inline-flex items-center gap-2">
-                  <i data-lucide="youtube" class="social-icon"></i>
-                  <span>YouTube</span>
-                </span>
-                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+              <a href="https://www.instagram.com/dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-white/10 hover:bg-[#C29B38] hover:text-[#143823] text-white text-xs font-semibold inline-flex items-center gap-1.5 transition-colors" title="Instagram (opens in a new tab)" aria-label="Instagram (opens in a new tab)">
+                <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+                <span>Instagram</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3 opacity-70"></i>
               </a>
-
-              <a href="https://www.linkedin.com/company/dnyandeep-school/" target="_blank" rel="noopener noreferrer" class="social-pill-btn" title="Visit our LinkedIn company page (opens in a new tab)" aria-label="Dnyandeep English School on LinkedIn, opens in a new tab">
-                <span class="inline-flex items-center gap-2">
-                  <i data-lucide="linkedin" class="social-icon"></i>
-                  <span>LinkedIn</span>
-                </span>
-                <i data-lucide="arrow-up-right" class="external-arrow"></i>
+              <a href="https://youtube.com/@dnyandeepenglishschool" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-white/10 hover:bg-[#C29B38] hover:text-[#143823] text-white text-xs font-semibold inline-flex items-center gap-1.5 transition-colors" title="YouTube (opens in a new tab)" aria-label="YouTube (opens in a new tab)">
+                <i data-lucide="youtube" class="w-3.5 h-3.5"></i>
+                <span>YouTube</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3 opacity-70"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/dnyandeep-school/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-white/10 hover:bg-[#C29B38] hover:text-[#143823] text-white text-xs font-semibold inline-flex items-center gap-1.5 transition-colors" title="LinkedIn (opens in a new tab)" aria-label="LinkedIn (opens in a new tab)">
+                <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+                <span>LinkedIn</span>
+                <i data-lucide="arrow-up-right" class="w-3 h-3 opacity-70"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="lg:col-span-3 space-y-3">
-          <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#F2E3A0]">Quick Navigation</h4>
-          <ul class="space-y-2 text-xs sm:text-sm text-[#EEF3EA]">
-            <li><a href="#hero" class="hover:text-[#F2E3A0] transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-[#F2E3A0] transition-colors">About Us</a></li>
-            <li><a href="#academics" class="hover:text-[#F2E3A0] transition-colors">Academic Programs</a></li>
-            <li><a href="#facilities" class="hover:text-[#F2E3A0] transition-colors">Campus Facilities</a></li>
-            <li><a href="#admissions" class="hover:text-[#F2E3A0] transition-colors">Admissions 2026–27</a></li>
-            <li><a href="#contact" class="hover:text-[#F2E3A0] transition-colors">Contact Campus</a></li>
+        <!-- Academic Divisions (3 cols) -->
+        <div class="md:col-span-3 space-y-2">
+          <p class="footer-heading">Academic Programs</p>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="pre-primary.html" class="footer-nav-link">Pre-Primary (Nursery–Sr. KG)</a></li>
+            <li><a href="primary.html" class="footer-nav-link">Primary Section (Std 1–4)</a></li>
+            <li><a href="secondary.html" class="footer-nav-link">Secondary SSC (Std 5–10)</a></li>
+            <li><a href="academics.html" class="footer-nav-link">Teaching Methodology</a></li>
+            <li><a href="admissions.html" class="footer-nav-link">Admissions Guidelines</a></li>
           </ul>
         </div>
 
-        <!-- Official Links -->
-        <div class="lg:col-span-4 space-y-3">
-          <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#F2E3A0]">Official Portals</h4>
-          <ul class="space-y-2 text-xs sm:text-sm text-[#EEF3EA]">
-            <li>
-              <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors inline-flex items-center gap-1.5" title="Open official admission application form (opens in a new tab)" aria-label="Online Admission Form (opens in a new tab)">
-                <i data-lucide="edit-3" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-                <span>Online Admission Form</span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#F2E3A0]/70"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors inline-flex items-center gap-1.5" title="Open Student Parent Login Portal on Neverskip (opens in a new tab)" aria-label="Student Parent Login Portal on Neverskip (opens in a new tab)">
-                <i data-lucide="user-check" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
+        <!-- Campus Contact (4 cols) -->
+        <div class="md:col-span-4 space-y-2">
+          <p class="footer-heading">Campus & Contact</p>
+          <div class="space-y-2 text-xs text-white/80">
+            <p class="leading-relaxed">
+              Shiv Tirth, Pawar Wasti Road, near Maher Vatsalyadham, Manjari Khurd, Pune, Maharashtra 412307
+            </p>
+            <p>
+              Phones: <a href="tel:+918484844067" class="hover:text-white underline">+91-8484844067</a> / <a href="tel:+917276095235" class="hover:text-white underline">+91-7276095235</a>
+            </p>
+            <p>
+              Email: <a href="mailto:info@des.org.in" class="hover:text-white underline">info@des.org.in</a>
+            </p>
+            <div class="pt-2">
+              <a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C29B38] hover:underline" aria-label="Student Parent Login Portal on Neverskip (opens in a new tab)">
+                <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
                 <span>Student Parent Login Portal</span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#F2E3A0]/70"></i>
+                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
               </a>
-            </li>
-            <li><a href="#admissions" class="hover:text-[#F2E3A0] transition-colors">Admission FAQs</a></li>
-            <li>
-              <a href="https://maps.google.com/?q=Dnyandeep+English+School+Manjari+Khurd+Pune" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2E3A0] transition-colors inline-flex items-center gap-1.5" title="View Campus Location Map on Google Maps (opens in a new tab)" aria-label="Campus Location Map on Google Maps (opens in a new tab)">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#F2E3A0]"></i>
-                <span>Campus Location Map</span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#F2E3A0]/70"></i>
-              </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <!-- Copyright & Privacy/Terms -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#EEF3EA]/70 gap-3 border-t border-[#1F5A3A]/60 mt-4">
-        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-          <p>© 2026 Dnyandeep. All rights reserved.</p>
-          <span class="hidden sm:inline">•</span>
-          <p class="text-[#EEF3EA]/70 italic">Campus photographs are of Dnyandeep English School. Student and activity images are AI-generated for illustration.</p>
+      <!-- Legal & Copyright Bar -->
+      <div class="footer-legal-bar">
+        <div>
+          <p>© 2026 Dnyandeep English Medium School & Jr. College. All rights reserved.</p>
         </div>
-        <div class="flex items-center gap-4">
-          <span class="hover:text-[#F2E3A0] cursor-pointer">Privacy Policy</span>
+        <div class="flex items-center gap-4 text-xs text-white/50">
+          <span>Manjari Khurd, Pune, Maharashtra</span>
           <span>•</span>
-          <span class="hover:text-[#F2E3A0] cursor-pointer">Terms & Conditions</span>
+          <span>SSC Affiliation</span>
         </div>
       </div>
+
     </div>
   </footer>
 
-  <!-- Sticky Mobile Bar with Call + Apply Online -->
-  <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#123B26]/95 backdrop-blur-md border-t border-[#1F5A3A] p-2.5 flex items-center gap-2">
-    <a href="tel:+918484844067" class="flex-1 h-11 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2" title="Call Campus Admissions: +91-8484844067" aria-label="Call Campus Admissions at +91-8484844067">
-      <i data-lucide="phone" class="w-4 h-4 text-[#F2E3A0]"></i>
-      <span>Call Campus</span>
-    </a>
-    <a href="https://des.org.in/online-admission-form/" target="_blank" rel="noopener noreferrer" class="flex-1 h-11 rounded-xl bg-[#F2E3A0] text-[#123B26] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md flex items-center justify-center gap-1.5" title="Apply Online for Admission (opens in a new tab)" aria-label="Apply Online for Admission (opens in a new tab)">
-      <i data-lucide="edit-3" class="w-4 h-4"></i>
-      <span>Apply Online</span>
-      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#123B26]/80 -ml-0.5"></i>
-    </a>
-  </div>
-
-  <!-- TODO BLOCK FOR ITEMS PENDING SCHOOL CONFIRMATION:
-       TODO:
-       1. Confirm 1944 founding heritage date with school administration.
-       2. Principal's verified name and custom welcome message.
-       3. Replace AI generated vector illustrations with real verified school campus photographs once approved via js/config.js.
-  -->
-
   <!-- Scripts -->
-  <script src="js/main.js?v=2"></script>
+  <script src="js/editorial.js?v=10"></script>
   <script>
-    // Initialize Lucide Icons
     if (window.lucide) {
       lucide.createIcons();
     }
