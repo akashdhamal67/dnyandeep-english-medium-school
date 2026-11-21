@@ -194,9 +194,12 @@ a {
 }
 
 .brand-crest-frame {
-  width: 48px;
-  height: 58px;
+  width: 68px;
+  height: 50px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease;
 }
 .brand-anchor-doon:hover .brand-crest-frame {
