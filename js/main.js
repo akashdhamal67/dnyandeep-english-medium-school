@@ -1,8 +1,11 @@
 /**
  * Dnyandeep English School - Interactive Scripts
- * Handles Dark Mode, Mobile Menu, Sticky Navigation,
+ * Handles Preloader, Dark Mode, Mobile Menu, Sticky Navigation,
  * Media Config bindings, Enquiry Form validation, FAQ Accordion, and Scroll Animations.
  */
+
+// Immediate execution for preloader to lock scroll and begin tracking
+initPreloader();
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -13,6 +16,136 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initScrollAnimations();
 });
+
+// 0. Website Preloader Management
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  // Check if previously seen in this session
+  try {
+    if (sessionStorage.getItem('des_preloader_seen') === '1') {
+      preloader.style.display = 'none';
+      preloader.setAttribute('aria-hidden', 'true');
+      return;
+    }
+  } catch(e) {}
+
+  // Lock body scrolling while preloader is visible
+  document.body.classList.add('preloader-active');
+
+  const progressBar = document.getElementById('preloader-progress');
+  const statusText = document.getElementById('preloader-status-text');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const minDisplayTime = prefersReducedMotion ? 400 : 700; // ms
+  const maxDisplayTime = 3000; // ms maximum safety timeout
+  const startTime = Date.now();
+
+  let targetProgress = 15;
+  let currentProgress = 0;
+  let isCompleted = false;
+
+  // Smooth progress animation loop
+  const progressInterval = setInterval(() => {
+    if (currentProgress < targetProgress) {
+      currentProgress = Math.min(targetProgress, currentProgress + 3);
+      if (progressBar) progressBar.style.width = currentProgress + '%';
+    }
+  }, 30);
+
+  // Critical assets list to track
+  const criticalUrls = [
+    'images/logo.png',
+    'images/logo-preloader.webp',
+    'images/hero-poster.webp'
+  ];
+
+  let loadedAssets = 0;
+  const totalAssets = criticalUrls.length + 1; // +1 for document.fonts
+
+  function updateAssetProgress() {
+    loadedAssets++;
+    // Calculate realistic progress from 25% up to 90%
+    const calculated = 25 + Math.round((loadedAssets / totalAssets) * 65);
+    targetProgress = Math.max(targetProgress, Math.min(90, calculated));
+  }
+
+  // Track image assets loading
+  criticalUrls.forEach(url => {
+    const img = new Image();
+    img.onload = updateAssetProgress;
+    img.onerror = updateAssetProgress; // Don't block if an image fails
+    img.src = url;
+  });
+
+  // Track fonts loading
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(updateAssetProgress).catch(updateAssetProgress);
+  } else {
+    updateAssetProgress();
+  }
+
+  // Dismiss preloader safely
+  function finishPreloader() {
+    if (isCompleted) return;
+    isCompleted = true;
+    clearInterval(progressInterval);
+
+    // Fill to 100%
+    if (progressBar) progressBar.style.width = '100%';
+    if (statusText) statusText.textContent = 'Welcome';
+
+    const elapsed = Date.now() - startTime;
+    const remainingTime = Math.max(0, minDisplayTime - elapsed);
+
+    setTimeout(() => {
+      // Begin exit transition
+      preloader.classList.add('preloader-hidden');
+      preloader.setAttribute('aria-hidden', 'true');
+
+      // Restore body scrolling
+      document.body.classList.remove('preloader-active');
+
+      // Record session flag
+      try {
+        sessionStorage.setItem('des_preloader_seen', '1');
+      } catch(e) {}
+
+      // Trigger hero section animations / reveal
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        const heroInits = heroSection.querySelectorAll('.fade-up-init');
+        heroInits.forEach(el => el.classList.add('fade-up-active'));
+      }
+
+      // Completely remove from layout flow after transition completes (500ms)
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, prefersReducedMotion ? 350 : 550);
+
+    }, remainingTime);
+  }
+
+  // Complete on window load
+  if (document.readyState === 'complete') {
+    targetProgress = 100;
+    finishPreloader();
+  } else {
+    window.addEventListener('load', () => {
+      targetProgress = 100;
+      finishPreloader();
+    });
+  }
+
+  // Maximum 3s safety fallback: dismiss regardless of slow network or hanging requests
+  setTimeout(() => {
+    if (!isCompleted) {
+      targetProgress = 100;
+      finishPreloader();
+    }
+  }, maxDisplayTime);
+}
 
 // 1. Dark Mode Management
 function initTheme() {

@@ -93,8 +93,262 @@
     "email": "info@des.org.in"
   }
   </script>
+  <!-- Preloader Critical Inline Styles & Noscript Fallback -->
+  <style>
+    /* Preloader Full-Screen Container */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #FBFAF4;
+      background-image: 
+        linear-gradient(rgba(31, 90, 58, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31, 90, 58, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(242, 227, 160, 0.04) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(242, 227, 160, 0.04) 2px, transparent 2px);
+      background-size: 24px 24px, 24px 24px, 72px 72px, 72px 72px;
+      opacity: 1;
+      visibility: visible;
+      will-change: opacity, transform;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                  visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      -webkit-transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                          -webkit-transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                          visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: auto;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Dismissing Exit Animation */
+    #preloader.preloader-hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      pointer-events: none;
+    }
+
+    /* Body lock during preloader */
+    body.preloader-active {
+      overflow: hidden !important;
+      touch-action: none !important;
+    }
+
+    /* Preloader Logo Wrapper & Rotating Glow Ring */
+    .preloader-logo-wrapper {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .preloader-glow-ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, rgba(242, 227, 160, 0.9), rgba(31, 90, 58, 0.3), rgba(242, 227, 160, 0.1), rgba(242, 227, 160, 0.9));
+      filter: blur(10px);
+      -webkit-filter: blur(10px);
+      opacity: 0.75;
+      animation: preloader-spin 7s linear infinite;
+      -webkit-animation: preloader-spin 7s linear infinite;
+    }
+
+    .preloader-logo-img {
+      position: relative;
+      z-index: 2;
+      width: 125px;
+      height: auto;
+      max-height: 110px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(18, 59, 38, 0.12));
+      -webkit-filter: drop-shadow(0 4px 12px rgba(18, 59, 38, 0.12));
+      animation: preloader-pulse 1.6s ease-in-out infinite;
+      -webkit-animation: preloader-pulse 1.6s ease-in-out infinite;
+    }
+
+    /* Typography */
+    .preloader-school-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #123B26;
+      margin: 0;
+      text-align: center;
+    }
+
+    .preloader-school-sub {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #1F5A3A;
+      margin: 6px 0 0 0;
+      text-align: center;
+    }
+
+    /* Progress Track & Fill */
+    .preloader-bar-track {
+      width: 220px;
+      max-width: 80vw;
+      height: 4px;
+      background-color: #DDE5D8;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-top: 28px;
+      position: relative;
+    }
+
+    .preloader-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #1F5A3A 0%, #2F7A50 60%, #F2E3A0 100%);
+      border-radius: 9999px;
+      transition: width 0.25s ease-out;
+      -webkit-transition: width 0.25s ease-out;
+      will-change: width;
+    }
+
+    /* Status Label */
+    .preloader-status {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #55655B;
+      margin-top: 10px;
+      text-align: center;
+      min-height: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Animations */
+    @keyframes preloader-pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    @-webkit-keyframes preloader-pulse {
+      0%, 100% {
+        -webkit-transform: scale(1);
+      }
+      50% {
+        -webkit-transform: scale(1.05);
+      }
+    }
+
+    @keyframes preloader-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes preloader-spin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    /* prefers-reduced-motion accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .preloader-glow-ring {
+        animation: none !important;
+        -webkit-animation: none !important;
+        opacity: 0.4 !important;
+      }
+      .preloader-logo-img {
+        animation: none !important;
+        -webkit-animation: none !important;
+        transform: none !important;
+      }
+      #preloader {
+        transition: opacity 0.3s ease !important;
+        -webkit-transition: opacity 0.3s ease !important;
+        transform: none !important;
+        -webkit-transform: none !important;
+      }
+      #preloader.preloader-hidden {
+        transform: none !important;
+        -webkit-transform: none !important;
+        opacity: 0 !important;
+      }
+    }
+  </style>
+
+  <!-- Noscript Fallback: keeps site immediately visible if JavaScript is disabled -->
+  <noscript>
+    <style>
+      #preloader {
+        display: none !important;
+        visibility: hidden !important;
+      }
+      body.preloader-active {
+        overflow: auto !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- Instant Session Check: Skip preloader if already seen in this session -->
+  <script>
+    (function() {
+      try {
+        if (sessionStorage.getItem('des_preloader_seen') === '1') {
+          var s = document.createElement('style');
+          s.id = 'preloader-instant-skip';
+          s.innerHTML = '#preloader{display:none!important;visibility:hidden!important}';
+          document.head.appendChild(s);
+        } else {
+          document.documentElement.classList.add('preloader-pending');
+        }
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body class="bg-[#FBFAF4] text-[#1B2A22] antialiased selection:bg-[#1F5A3A] selection:text-[#F2E3A0] dark:bg-[#08160e] dark:text-[#f1f7f3]">
+
+  <!-- Full-Screen Logo Preloader Overlay -->
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading Dnyandeep English School Website">
+    <div class="preloader-logo-wrapper">
+      <div class="preloader-glow-ring" aria-hidden="true"></div>
+      <img 
+        src="images/logo-preloader.webp" 
+        alt="Dnyandeep English School Official Logo" 
+        width="140" 
+        height="96" 
+        class="preloader-logo-img"
+        fetchpriority="high"
+      />
+    </div>
+
+    <h1 class="preloader-school-title">DNYANDEEP</h1>
+    <p class="preloader-school-sub">ENGLISH SCHOOL • MANJARI KHURD</p>
+
+    <div class="preloader-bar-track" aria-hidden="true">
+      <div id="preloader-progress" class="preloader-bar-fill"></div>
+    </div>
+
+    <div id="preloader-status-text" class="preloader-status">Loading...</div>
+  </div>
 
   <!-- 1. TOP BAR (36px, Dark Green) -->
   <div class="bg-[#123B26] text-[#EEF3EA] text-xs h-9 px-4 sm:px-6 lg:px-8 border-b border-[#1F5A3A] flex items-center">

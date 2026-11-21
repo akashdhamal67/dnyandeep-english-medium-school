@@ -51,3 +51,4 @@ All processed files are stored in `images/` along with 640px mobile variants (`-
 - `images/premises-campus-building-side-640.webp` (640x480, 70.3 KB)
 - `images/premises-campus-courtyard.webp` (900x675, 97.4 KB)
 - `images/premises-campus-courtyard-640.webp` (640x480, 52.2 KB)
+
