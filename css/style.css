@@ -1,0 +1,282 @@
+/* Dnyandeep English School - Design System & Styles */
+:root {
+  --primary-green: #1F5A3A;        /* Deep uniform green */
+  --primary-dark: #123B26;         /* Hero and footer background */
+  --primary-light: #2F7A50;        /* Hover states and tints */
+  --accent-cream: #F2E3A0;         /* Cream-yellow from the uniform blouse */
+  --accent-dark: #6B5A1E;          /* For text on cream */
+  --page-bg: #FBFAF4;              /* Warm white / ivory */
+  --tint-bg: #EEF3EA;              /* Very light green tint for alternating sections */
+  --card-surface: #FFFFFF;         /* Card surface */
+  --body-text: #1B2A22;            /* Body text */
+  --text-muted: #55655B;           /* Muted text */
+  --border-color: #DDE5D8;         /* Borders */
+
+  --top-bar-height: 36px;
+  --header-height: 76px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--body-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Subtle Plaid Pattern Motif */
+.plaid-motif {
+  background-color: #123B26;
+  background-image: 
+    linear-gradient(rgba(242, 227, 160, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 227, 160, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+  background-size: 24px 24px, 24px 24px, 72px 72px, 72px 72px;
+}
+
+/* Dark Mode Overrides */
+html.dark body {
+  background-color: #08160e !important;
+  color: #f1f7f3 !important;
+}
+
+html.dark .bg-cream-50,
+html.dark .bg-\[#FBFAF4\] {
+  background-color: #0b1c13 !important;
+}
+
+html.dark .bg-white {
+  background-color: #0e2218 !important;
+}
+
+html.dark .border-cream-border,
+html.dark .border-\[#DDE5D8\] {
+  border-color: #1c3d2c !important;
+}
+
+html.dark .text-\[#123B26\] {
+  color: #f1f7f3 !important;
+}
+
+html.dark .text-\[#55655B\] {
+  color: #9cb5a7 !important;
+}
+
+/* Navigation & Underline */
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 30px;
+}
+
+.header-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.header-nav .nav-link.active {
+  color: var(--primary-green) !important;
+  font-weight: 600;
+}
+
+.header-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-green);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+html.dark .header-nav .nav-link.active {
+  color: #F2E3A0 !important;
+}
+
+html.dark .header-nav .nav-link.active::after {
+  background-color: #F2E3A0;
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .header-nav {
+    gap: 20px;
+  }
+  .header-nav .nav-link {
+    font-size: 14px;
+  }
+}
+
+/* Button Styles */
+.btn-apply-online {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  height: 46px;
+  line-height: 1;
+  padding: 0 26px;
+  border-radius: 12px;
+  background-color: #F2E3A0;
+  color: #123B26;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.btn-apply-online:hover {
+  background-color: #e5d487;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn-apply-online-compact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  height: 38px;
+  line-height: 1;
+  padding: 0 14px;
+  border-radius: 10px;
+  background-color: #F2E3A0;
+  color: #123B26;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.topbar-portal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  line-height: 1;
+  padding: 0 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.topbar-portal-pill:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: #F2E3A0;
+  color: #F2E3A0;
+}
+
+/* Exact Viewport Hero Sizing */
+.hero-viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 112px);
+  height: calc(100dvh - 112px);
+  min-height: 560px;
+  max-height: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+  .hero-viewport {
+    height: auto;
+    min-height: calc(100svh - 108px);
+    max-height: none;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.hero-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2rem, min(3.8vw, 6vh), 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hero-tagline-text {
+  font-size: clamp(0.95rem, 1.8vh, 1.1rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Accordion Smooth Expand */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.25s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}
+
+/* Scroll Animations */
+.fade-up-init {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tint-bg);
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #08160e;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
