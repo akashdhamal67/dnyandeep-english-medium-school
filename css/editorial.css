@@ -139,16 +139,16 @@ a {
   background-color: var(--c-gold);
 }
 
-/* Landing Page Hero Heading — Refined ~18% smaller, medium weight, elegant */
+/* Landing Page Hero Heading — Refined ~18% further: ~38-46px desktop, ~27-31px mobile */
 .hero-display-doon {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 3.8vw, 3.125rem); /* ~44-50px desktop, ~30-34px mobile */
+  font-size: clamp(1.7rem, 2.9vw, 2.625rem); /* 27-32px mobile, 38-44px desktop */
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.22;
   letter-spacing: -0.01em;
   color: #FFFFFF;
-  max-width: 22ch;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  max-width: 20ch;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .section-title-doon {
@@ -494,9 +494,9 @@ a {
 
 .hero-content-doon p {
   font-family: var(--font-sans);
-  font-size: clamp(1.0625rem, 1.35vw, 1.25rem); /* 17-20px desktop */
-  line-height: 1.68;
-  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(0.875rem, 1.1vw, 1.03125rem); /* 14-15px mobile, 15.5-16.5px desktop */
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* --- The Doon Notice & Announcements Strip --- */
@@ -722,8 +722,8 @@ a {
     padding-bottom: 2rem;
   }
   .hero-display-doon {
-    font-size: clamp(1.75rem, 6.2vw, 2.125rem); /* ~28-34px on mobile */
-    line-height: 1.22;
+    font-size: clamp(1.625rem, 5.8vw, 1.95rem); /* ~26-31px on mobile */
+    line-height: 1.24;
   }
   .btn-header-apply {
     display: none !important;
