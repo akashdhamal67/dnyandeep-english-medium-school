@@ -264,8 +264,8 @@ p {
 
 .site-header-doon .container-doon {
   max-width: 100%;
-  padding-left: clamp(16px, 2vw, 40px);
-  padding-right: clamp(16px, 2vw, 40px);
+  padding-left: clamp(12px, 1.5vw, 32px);
+  padding-right: clamp(12px, 1.5vw, 32px);
 }
 
 .site-header-doon.scrolled {
@@ -279,25 +279,27 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 100%;
-  height: 80px;
-  gap: 16px;
+  height: clamp(68px, 6vw, 84px);
+  gap: clamp(8px, 1vw, 20px);
   min-width: 0;
 }
 
-/* 1. Logo Block — Strictly Capped & Non-Scaling */
+/* 1. Logo Block — Fluid Non-Scaling Block */
 .brand-anchor-doon {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(6px, 0.8vw, 10px);
   text-decoration: none;
+  flex: 0 1 auto;
   flex-shrink: 0;
   min-width: 0;
 }
 
 .brand-crest-frame {
-  height: 48px;
-  max-height: 48px;
+  height: clamp(36px, 3.4vw, 56px);
+  max-height: 56px;
   width: auto;
   aspect-ratio: 72 / 44;
   flex-shrink: 0;
@@ -310,7 +312,7 @@ p {
 .brand-crest-frame svg {
   width: auto;
   height: 100%;
-  max-height: 48px;
+  max-height: 56px;
   object-fit: contain;
 }
 
@@ -324,7 +326,7 @@ p {
 
 .brand-title-doon {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: clamp(16px, 1.5vw, 24px);
   font-weight: 700;
   letter-spacing: 0.03em;
   line-height: 1.1;
@@ -334,10 +336,10 @@ p {
 
 .brand-subtitle-doon {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: clamp(7.5px, 0.65vw, 10.5px);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: var(--gold-text, #C26A12);
   margin-top: 0.15rem;
   white-space: nowrap;
@@ -356,7 +358,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.1vw, 22px);
+  gap: clamp(8px, 1vw, 22px);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -366,8 +368,8 @@ p {
 .nav-link-doon {
   position: relative;
   font-family: var(--font-sans);
-  font-size: 12.5px;
-  letter-spacing: 0.03em;
+  font-size: clamp(10.5px, 0.88vw, 14px);
+  letter-spacing: 0.02em;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text);
@@ -398,21 +400,28 @@ p {
   width: 100%;
 }
 
-/* 3. Action Buttons Group — Flex 0 0 auto, Never Overlaps */
+/* 3. Action Buttons Group (Admissions Enquiry + MENU) — Flex 0 0 auto, Never Overlaps */
 .header-action-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex: 0 0 auto;
   flex-shrink: 0;
 }
 
 .btn-header-apply {
-  padding: 10px 16px !important;
-  font-size: 12.5px !important;
+  padding: clamp(7px, 0.7vw, 11px) clamp(10px, 1.1vw, 18px) !important;
+  font-size: clamp(10.5px, 0.85vw, 13.5px) !important;
   letter-spacing: 0.04em !important;
   white-space: nowrap;
   border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.btn-header-apply svg,
+.btn-header-apply i {
+  width: clamp(12px, 0.9vw, 16px);
+  height: clamp(12px, 0.9vw, 16px);
   flex-shrink: 0;
 }
 
@@ -420,8 +429,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 9px 14px;
-  font-size: 12px;
+  padding: clamp(7px, 0.7vw, 11px) clamp(10px, 1vw, 16px);
+  font-size: clamp(10.5px, 0.85vw, 13.5px);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -433,6 +442,13 @@ p {
   flex-shrink: 0;
   white-space: nowrap;
   transition: all 0.2s ease;
+}
+.btn-header-menu svg,
+.btn-header-menu i {
+  font-size: 1.2em;
+  width: 1.2em;
+  height: 1.2em;
+  flex-shrink: 0;
 }
 .btn-header-menu:hover {
   background-color: var(--cream);
@@ -755,53 +771,10 @@ main > section:first-child {
 
 /* --- Explicit Breakpoints System --- */
 
-/* 1. At 1441px and above:
-   Larger sizes: nav links 14px, logo max-height 56px, subtitle 11px, header gap 24px */
-@media (min-width: 1441px) {
-  .site-primary-nav {
-    display: flex !important;
-  }
-  .btn-header-apply {
-    display: inline-flex !important;
-    font-size: 13px !important;
-    padding: 10px 18px !important;
-  }
-  .btn-header-menu {
-    display: none !important;
-  }
-  .brand-crest-frame {
-    height: 52px;
-    max-height: 56px;
-  }
-  .brand-crest-frame img,
-  .brand-crest-frame svg {
-    max-height: 56px;
-  }
-  .brand-title-doon {
-    font-size: clamp(22px, 1.8vw, 26px);
-  }
-  .brand-subtitle-doon {
-    font-size: 11px;
-    letter-spacing: 0.08em;
-  }
-  .nav-link-doon {
-    font-size: 14px;
-    letter-spacing: 0.04em;
-    padding: 0.5rem 0.15rem;
-  }
-  .nav-menu-doon {
-    gap: clamp(14px, 1.4vw, 28px);
-  }
-  .site-header-row {
-    height: 84px;
-    gap: 24px;
-  }
-}
-
-/* 2. Between 1100px and 1440px:
-   Full layout: Logo, all 7 nav links, and Admissions Enquiry button.
-   Hide MENU button. Tightened sizes applied. */
-@media (min-width: 1100px) and (max-width: 1440px) {
+/* 1. At 1100px and above:
+   Full layout: Logo, all 7 nav links, Admissions Enquiry button, AND the MENU (hamburger) button.
+   All fit on one row with fluid clamp sizes. */
+@media (min-width: 1100px) {
   .site-primary-nav {
     display: flex !important;
   }
@@ -809,32 +782,40 @@ main > section:first-child {
     display: inline-flex !important;
   }
   .btn-header-menu {
-    display: none !important;
+    display: inline-flex !important;
   }
 }
 
-/* 3. Between 1100px and 1250px:
-   Hide only subtitle "ENGLISH MEDIUM SCHOOL & JR. COLLEGE" under school name so row never crowds.
-   Never hide nav links here. */
-@media (min-width: 1100px) and (max-width: 1250px) {
+/* 2. Safety Rule: Between 1100px and 1280px:
+   Hide ONLY the subtitle "ENGLISH MEDIUM SCHOOL & JR. COLLEGE" under school name,
+   and reduce arrow icon inside Admissions Enquiry button.
+   Never hide any nav link, Admissions Enquiry button or MENU button here. */
+@media (min-width: 1100px) and (max-width: 1280px) {
   .brand-subtitle-doon {
     display: none !important;
   }
+  .btn-header-apply svg,
+  .btn-header-apply i {
+    width: 11px !important;
+    height: 11px !important;
+  }
 }
 
-/* 4. Below 1100px (from 600px to 1099px):
-   Hide 7 nav links. Show logo, Admissions Enquiry button and MENU button on one row, all fully visible. */
+/* 3. Below 1100px (from 600px to 1099px):
+   Hide 7 nav links. Show logo, compact Admissions Enquiry button and MENU button on one row, all fully visible. */
 @media (max-width: 1099px) {
   .site-primary-nav {
     display: none !important;
   }
   .btn-header-apply {
     display: inline-flex !important;
-    padding: 8px 14px !important;
-    font-size: 12px !important;
+    padding: 8px 12px !important;
+    font-size: 11.5px !important;
   }
   .btn-header-menu {
     display: inline-flex !important;
+    padding: 8px 12px !important;
+    font-size: 11.5px !important;
   }
   /* Top info bar: on tablets/smaller screens hide office hours */
   .top-bar-hours,
@@ -843,8 +824,8 @@ main > section:first-child {
   }
 }
 
-/* 5. Below 600px (Mobile Screens):
-   Hide logo subtitle. Put Admissions Enquiry button inside menu panel (hide in header).
+/* 4. Below 600px (Mobile Screens):
+   Hide logo subtitle. Move Admissions Enquiry into menu panel (hide in header).
    Header shows only logo and hamburger icon. */
 @media (max-width: 599px) {
   .brand-subtitle-doon {
@@ -852,13 +833,13 @@ main > section:first-child {
   }
   .site-header-row {
     height: 64px;
-    gap: 12px;
+    gap: 10px;
   }
   .brand-crest-frame {
-    height: 44px;
+    height: 40px;
   }
   .brand-title-doon {
-    font-size: 20px;
+    font-size: 19px;
   }
   .btn-header-apply {
     display: none !important; /* Moved into menu panel */
