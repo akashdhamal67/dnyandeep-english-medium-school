@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=37">
+  <link rel="stylesheet" href="css/editorial.css?v=38">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -220,27 +220,27 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Vision -->
-          <div class="p-8 bg-white border border-[#E6DEC8] rounded-xs space-y-3 fade-in-observe">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Vision</span>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Our Vision</h3>
+          <div class="choate-card p-8 fade-in-observe">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#A14C03]">Vision</span>
+            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B] mt-2 mb-3">Our Vision</h3>
             <p class="text-sm text-[#3B4B42] leading-relaxed">
               To be a premier educational institution in eastern Pune that empowers every child with foundational literacy, scientific inquiry, ethical leadership, and self-discipline to contribute meaningfully to society.
             </p>
           </div>
 
           <!-- Mission -->
-          <div class="p-8 bg-white border border-[#E6DEC8] rounded-xs space-y-3 fade-in-observe">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Mission</span>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Our Mission</h3>
+          <div class="choate-card p-8 fade-in-observe">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#A14C03]">Mission</span>
+            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B] mt-2 mb-3">Our Mission</h3>
             <p class="text-sm text-[#3B4B42] leading-relaxed">
               To deliver structured Maharashtra SSC Board education combined with affordable fees, modern laboratories, physical training, and individual attention, ensuring all students achieve their fullest scholastic potential.
             </p>
           </div>
 
           <!-- Ethos -->
-          <div class="p-8 bg-white border border-[#E6DEC8] rounded-xs space-y-3 fade-in-observe">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Values</span>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Our Core Values</h3>
+          <div class="choate-card p-8 fade-in-observe">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#A14C03]">Values</span>
+            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B] mt-2 mb-3">Our Core Values</h3>
             <p class="text-sm text-[#3B4B42] leading-relaxed">
               Integrity, respect, discipline, curiosity, and inclusivity. We instill in our students a spirit of mutual support, cultural appreciation, and community responsibility.
             </p>
@@ -322,7 +322,27 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=37"></script>
+  <!-- Choate-Style Sticky Bottom Quick Access Bar for Mobile -->
+  <nav class="choate-mobile-quickbar" aria-label="Mobile Quick Action Bar">
+    <a href="academics.html">
+      <i data-lucide="book-open"></i>
+      <span>Academics</span>
+    </a>
+    <a href="facilities.html">
+      <i data-lucide="building"></i>
+      <span>Campus</span>
+    </a>
+    <a href="contact.html">
+      <i data-lucide="phone"></i>
+      <span>Contact</span>
+    </a>
+    <a href="admission-enquiry.html" class="highlight">
+      <i data-lucide="sparkles"></i>
+      <span>Enquire</span>
+    </a>
+  </nav>
+
+  <script src="js/editorial.js?v=38"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

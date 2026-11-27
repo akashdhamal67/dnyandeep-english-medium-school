@@ -747,17 +747,264 @@ main > section:first-child {
   border-color: rgba(197, 161, 90, 0.4);
 }
 
-/* --- Linear Program Rows --- */
+/* --- Choate-Style Linear Tier Modernization --- */
 .linear-program-tier {
-  border-top: 1px solid var(--c-sand);
-  padding: 2.25rem 0;
-  transition: background-color 0.25s ease;
+  border-top: 1px solid var(--border-subtle);
+  padding: 2.25rem 1.5rem;
+  margin: 0 -1.5rem;
+  border-radius: 4px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .linear-program-tier:last-child {
-  border-bottom: 1px solid var(--c-sand);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .linear-program-tier:hover {
-  background-color: rgba(239, 232, 218, 0.5);
+  background-color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(59, 31, 20, 0.06);
+  transform: translateY(-2px);
+}
+
+/* --- Choate-Style Floating Quick Pathways Bar --- */
+.hero-pathways-bar {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(59, 31, 20, 0.08);
+  position: relative;
+  z-index: 20;
+}
+
+.hero-pathway-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-right: 1px solid var(--border-subtle);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--primary);
+}
+.hero-pathway-item:last-child {
+  border-right: none;
+}
+.hero-pathway-item:hover {
+  background-color: var(--cream);
+  color: var(--accent);
+  padding-left: 1.75rem;
+}
+.hero-pathway-item i,
+.hero-pathway-item svg {
+  color: var(--accent);
+  transition: transform 0.25s ease;
+}
+.hero-pathway-item:hover i,
+.hero-pathway-item:hover svg {
+  transform: translateX(4px);
+}
+
+/* --- Choate-Style Editorial Card --- */
+.choate-card {
+  background: var(--white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 12px rgba(59, 31, 20, 0.04);
+  position: relative;
+}
+.choate-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.choate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(59, 31, 20, 0.12);
+  border-color: var(--border-subtle);
+}
+.choate-card:hover::after {
+  opacity: 1;
+}
+
+.choate-card-media {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--border-subtle);
+}
+.choate-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.choate-card:hover .choate-card-media img {
+  transform: scale(1.05);
+}
+
+.choate-card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(59, 31, 20, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--accent-light);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2px;
+  border: 1px solid rgba(245, 169, 64, 0.4);
+}
+
+.choate-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.choate-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: auto;
+  padding-top: 1rem;
+  transition: all 0.2s ease;
+}
+.choate-card-link i,
+.choate-card-link svg {
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+.choate-card:hover .choate-card-link {
+  color: var(--accent);
+}
+.choate-card:hover .choate-card-link i,
+.choate-card:hover .choate-card-link svg {
+  transform: translateX(4px);
+}
+
+/* --- Choate-Style Stat Block with Accent Borders --- */
+.choate-stat-box {
+  background: var(--white);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(59, 31, 20, 0.03);
+}
+.choate-stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(59, 31, 20, 0.09);
+  border-color: var(--accent);
+}
+.choate-stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(36px, 3.5vw, 48px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* --- Choate-Style Mobile Bottom Quick-Access Bar --- */
+@media (max-width: 768px) {
+  .choate-mobile-quickbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(59, 31, 20, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 12px;
+    z-index: 49;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+  }
+  .choate-mobile-quickbar a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    color: var(--text-on-dark);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 4px 8px;
+    text-decoration: none;
+  }
+  .choate-mobile-quickbar a svg,
+  .choate-mobile-quickbar a i {
+    color: var(--accent-light);
+    width: 18px;
+    height: 18px;
+  }
+  .choate-mobile-quickbar a.highlight {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: #1A1512;
+    border-radius: 3px;
+    padding: 6px 14px;
+    font-weight: 700;
+  }
+  .choate-mobile-quickbar a.highlight svg,
+  .choate-mobile-quickbar a.highlight i {
+    color: #1A1512;
+  }
+}
+@media (min-width: 769px) {
+  .choate-mobile-quickbar {
+    display: none !important;
+  }
+}
+
+/* Refined Image Hover Overlay */
+.choate-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--white);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.choate-gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(59, 31, 20, 0.12);
+  border-color: var(--accent);
+}
+.choate-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.choate-gallery-item:hover img {
+  transform: scale(1.06);
 }
 
 /* --- Institutional Footer --- */

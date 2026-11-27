@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=37">
+  <link rel="stylesheet" href="css/editorial.css?v=38">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -268,24 +268,30 @@
       <div class="container-doon">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
-          <div class="p-8 bg-white border border-[#E6DEC8] rounded-xs space-y-4 shadow-subtle">
-            <div class="aspect-[16/9] overflow-hidden bg-[#E6DEC8] rounded-xs">
+          <div class="choate-card fade-in-observe">
+            <div class="choate-card-media aspect-[16/9]">
               <img src="images/rebuild/library-reading.webp" alt="School library reading room" class="w-full h-full object-cover" loading="lazy">
+              <span class="choate-card-badge">Scholastic Resource</span>
             </div>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">School Library &amp; Reading Room</h3>
-            <p class="text-xs sm:text-sm text-[#3B4B42] leading-relaxed">
-              A serene repository of curriculum textbooks, Marathi and English literature, encyclopedias, and moral narratives designed to nurture silent reading habits and inquiry.
-            </p>
+            <div class="choate-card-body">
+              <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">School Library &amp; Reading Room</h3>
+              <p class="text-xs sm:text-sm text-[#3B4B42] leading-relaxed mt-2">
+                A serene repository of curriculum textbooks, Marathi and English literature, encyclopedias, and moral narratives designed to nurture silent reading habits and inquiry.
+              </p>
+            </div>
           </div>
 
-          <div class="p-8 bg-white border border-[#E6DEC8] rounded-xs space-y-4 shadow-subtle">
-            <div class="aspect-[16/9] overflow-hidden bg-[#E6DEC8] rounded-xs">
+          <div class="choate-card fade-in-observe">
+            <div class="choate-card-media aspect-[16/9]">
               <img src="images/premises-sports-ground.webp" alt="School outdoor sports ground" class="w-full h-full object-cover" loading="lazy">
+              <span class="choate-card-badge">Athletics & Fitness</span>
             </div>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Sports Ground &amp; Athletics</h3>
-            <p class="text-xs sm:text-sm text-[#3B4B42] leading-relaxed">
-              Outdoor playing grounds equipped for physical training, kho-kho, kabaddi, cricket, athletics, and annual sports days fostering camaraderie and endurance.
-            </p>
+            <div class="choate-card-body">
+              <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Sports Ground &amp; Athletics</h3>
+              <p class="text-xs sm:text-sm text-[#3B4B42] leading-relaxed mt-2">
+                Outdoor playing grounds equipped for physical training, kho-kho, kabaddi, cricket, athletics, and annual sports days fostering camaraderie and endurance.
+              </p>
+            </div>
           </div>
 
         </div>
@@ -361,7 +367,27 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=37"></script>
+  <!-- Choate-Style Sticky Bottom Quick Access Bar for Mobile -->
+  <nav class="choate-mobile-quickbar" aria-label="Mobile Quick Action Bar">
+    <a href="academics.html">
+      <i data-lucide="book-open"></i>
+      <span>Academics</span>
+    </a>
+    <a href="facilities.html">
+      <i data-lucide="building"></i>
+      <span>Campus</span>
+    </a>
+    <a href="contact.html">
+      <i data-lucide="phone"></i>
+      <span>Contact</span>
+    </a>
+    <a href="admission-enquiry.html" class="highlight">
+      <i data-lucide="sparkles"></i>
+      <span>Enquire</span>
+    </a>
+  </nav>
+
+  <script src="js/editorial.js?v=38"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

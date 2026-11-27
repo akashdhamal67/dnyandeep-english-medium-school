@@ -20,7 +20,7 @@
   <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=37">
+  <link rel="stylesheet" href="css/editorial.css?v=38">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -216,9 +216,45 @@
     </section>
 
     <!-- ==========================================
-         4. Institutional Ticker / High-Priority Notice Strip
-         (Modeled after The Doon School announcements band)
+         4. Choate-Inspired Quick Pathways & Announcement Bar
+         Direct access to primary school journeys: Academics, Admissions, Facilities & Campus Tour
          ========================================== -->
+    <div class="hero-pathways-bar hidden md:block">
+      <div class="container-doon">
+        <div class="grid grid-cols-4">
+          <a href="#academics" class="hero-pathway-item">
+            <div>
+              <span class="block text-xs uppercase tracking-widest text-[#A14C03] font-bold">Continuum</span>
+              <span class="font-editorial-serif text-lg font-bold text-[#153D2B]">Academics</span>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#admissions" class="hero-pathway-item">
+            <div>
+              <span class="block text-xs uppercase tracking-widest text-[#A14C03] font-bold">2026–27 Open</span>
+              <span class="font-editorial-serif text-lg font-bold text-[#153D2B]">Admissions</span>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#facilities" class="hero-pathway-item">
+            <div>
+              <span class="block text-xs uppercase tracking-widest text-[#A14C03] font-bold">Campus Life</span>
+              <span class="font-editorial-serif text-lg font-bold text-[#153D2B]">Facilities</span>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#gallery" class="hero-pathway-item">
+            <div>
+              <span class="block text-xs uppercase tracking-widest text-[#A14C03] font-bold">Photographs</span>
+              <span class="font-editorial-serif text-lg font-bold text-[#153D2B]">Campus Tour</span>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Institutional Ticker / High-Priority Notice Strip -->
     <div class="ticker-strip-doon">
       <div class="container-doon flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
         <div class="flex items-center gap-3">
@@ -463,58 +499,74 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           <!-- Facility 1: Science Lab -->
-          <div class="space-y-4 fade-in-observe">
-            <div class="doon-photo-frame aspect-[4/3] rounded-xs">
+          <div class="choate-card fade-in-observe">
+            <div class="choate-card-media aspect-[4/3]">
               <img src="images/rebuild/science-laboratory.webp" alt="Secondary school science laboratory with students" loading="lazy">
+              <span class="choate-card-badge">Practical Science</span>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Practical Science</span>
-              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B] mt-1">Science Laboratories</h3>
-              <p class="text-xs text-[#3B4B42] leading-relaxed mt-1">
+            <div class="choate-card-body">
+              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B]">Science Laboratories</h3>
+              <p class="text-xs text-[#3B4B42] leading-relaxed mt-2">
                 Equipped with apparatus, glassware, microscopes, and specimens for Physics, Chemistry, and Biology experiments and annual exhibitions.
               </p>
+              <a href="facilities.html" class="choate-card-link">
+                <span>Explore Labs</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
             </div>
           </div>
 
           <!-- Facility 2: Computer Lab -->
-          <div class="space-y-4 fade-in-observe">
-            <div class="doon-photo-frame aspect-[4/3] rounded-xs">
+          <div class="choate-card fade-in-observe">
+            <div class="choate-card-media aspect-[4/3]">
               <img src="images/rebuild/computer-lab.webp" alt="Computer laboratory workstations with students" loading="lazy">
+              <span class="choate-card-badge">Technology & IT</span>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Technology & IT</span>
-              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B] mt-1">Modern Computer Lab</h3>
-              <p class="text-xs text-[#3B4B42] leading-relaxed mt-1">
+            <div class="choate-card-body">
+              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B]">Modern Computer Lab</h3>
+              <p class="text-xs text-[#3B4B42] leading-relaxed mt-2">
                 Individual computer systems with guided instruction in computer operations, digital literacy, and basic programming logic.
               </p>
+              <a href="facilities.html" class="choate-card-link">
+                <span>View Digital Lab</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
             </div>
           </div>
 
           <!-- Facility 3: Library -->
-          <div class="space-y-4 fade-in-observe">
-            <div class="doon-photo-frame aspect-[4/3] rounded-xs">
+          <div class="choate-card fade-in-observe">
+            <div class="choate-card-media aspect-[4/3]">
               <img src="images/rebuild/library-reading.webp" alt="School library with bookshelves and study desks" loading="lazy">
+              <span class="choate-card-badge">Reading Culture</span>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Reading Culture</span>
-              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B] mt-1">School Library</h3>
-              <p class="text-xs text-[#3B4B42] leading-relaxed mt-1">
+            <div class="choate-card-body">
+              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B]">School Library</h3>
+              <p class="text-xs text-[#3B4B42] leading-relaxed mt-2">
                 Comprehensive collection of textbooks, reference materials, children’s literature, Marathi storybooks, and competitive examination guides.
               </p>
+              <a href="facilities.html" class="choate-card-link">
+                <span>Browse Library</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
             </div>
           </div>
 
           <!-- Facility 4: Sports Ground -->
-          <div class="space-y-4 fade-in-observe">
-            <div class="doon-photo-frame aspect-[4/3] rounded-xs">
+          <div class="choate-card fade-in-observe">
+            <div class="choate-card-media aspect-[4/3]">
               <img src="images/rebuild/sports-athletics.webp" alt="Students running athletics relay on school playground" loading="lazy">
+              <span class="choate-card-badge">Athletics & Fitness</span>
             </div>
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Athletics & Fitness</span>
-              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B] mt-1">Sports Ground</h3>
-              <p class="text-xs text-[#3B4B42] leading-relaxed mt-1">
+            <div class="choate-card-body">
+              <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B]">Sports Ground</h3>
+              <p class="text-xs text-[#3B4B42] leading-relaxed mt-2">
                 Expansive outdoor playground supporting athletics, kho-kho, kabaddi, volleyball, and physical fitness periods under teacher supervision.
               </p>
+              <a href="facilities.html" class="choate-card-link">
+                <span>Tour Grounds</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
             </div>
           </div>
 
@@ -591,28 +643,28 @@
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           
-          <div class="p-6 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs text-center space-y-2">
-            <span class="block font-editorial-serif text-4xl font-bold text-[#153D2B]">100%</span>
-            <span class="block text-xs uppercase tracking-wider text-[#C5A15A] font-semibold">Board SSC Track Record</span>
-            <p class="text-[11px] text-[#3B4B42] pt-1">Consistent performance in Maharashtra State Board secondary examinations.</p>
+          <div class="choate-stat-box fade-in-observe">
+            <span class="block choate-stat-number">100%</span>
+            <span class="block text-xs uppercase tracking-wider text-[#A14C03] font-bold mb-2">Board SSC Track Record</span>
+            <p class="text-[12px] text-[#3B4B42] leading-relaxed">Consistent performance in Maharashtra State Board secondary examinations.</p>
           </div>
 
-          <div class="p-6 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs text-center space-y-2">
-            <span class="block font-editorial-serif text-4xl font-bold text-[#153D2B]">80+</span>
-            <span class="block text-xs uppercase tracking-wider text-[#C5A15A] font-semibold">Years of Heritage</span>
-            <p class="text-[11px] text-[#3B4B42] pt-1">Steadfast service to the community of Manjari Khurd and Pune since 1944.</p>
+          <div class="choate-stat-box fade-in-observe">
+            <span class="block choate-stat-number">80+</span>
+            <span class="block text-xs uppercase tracking-wider text-[#A14C03] font-bold mb-2">Years of Heritage</span>
+            <p class="text-[12px] text-[#3B4B42] leading-relaxed">Steadfast service to the community of Manjari Khurd and Pune since 1944.</p>
           </div>
 
-          <div class="p-6 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs text-center space-y-2">
-            <span class="block font-editorial-serif text-4xl font-bold text-[#153D2B]">1:25</span>
-            <span class="block text-xs uppercase tracking-wider text-[#C5A15A] font-semibold">Attentive Class Mentoring</span>
-            <p class="text-[11px] text-[#3B4B42] pt-1">Balanced teacher-student ratio ensuring conceptual clarity and care.</p>
+          <div class="choate-stat-box fade-in-observe">
+            <span class="block choate-stat-number">1:25</span>
+            <span class="block text-xs uppercase tracking-wider text-[#A14C03] font-bold mb-2">Attentive Class Mentoring</span>
+            <p class="text-[12px] text-[#3B4B42] leading-relaxed">Balanced teacher-student ratio ensuring conceptual clarity and care.</p>
           </div>
 
-          <div class="p-6 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs text-center space-y-2">
-            <span class="block font-editorial-serif text-4xl font-bold text-[#153D2B]">Active</span>
-            <span class="block text-xs uppercase tracking-wider text-[#C5A15A] font-semibold">Annual Day & Athletics</span>
-            <p class="text-[11px] text-[#3B4B42] pt-1">Comprehensive annual sports day, science exhibitions, and cultural concerts.</p>
+          <div class="choate-stat-box fade-in-observe">
+            <span class="block choate-stat-number">Active</span>
+            <span class="block text-xs uppercase tracking-wider text-[#A14C03] font-bold mb-2">Annual Day & Athletics</span>
+            <p class="text-[12px] text-[#3B4B42] leading-relaxed">Comprehensive annual sports day, science exhibitions, and cultural concerts.</p>
           </div>
 
         </div>
@@ -645,63 +697,63 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <div class="group bg-white border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
-              <img src="images/premises-building-front.webp" alt="Main campus building facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="choate-gallery-item p-3 fade-in-observe">
+            <div class="aspect-[4/3] overflow-hidden rounded-xs bg-[#E6DEC8]">
+              <img src="images/premises-building-front.webp" alt="Main campus building facade" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="pt-3 px-1">
-              <h3 class="font-editorial-serif text-sm font-bold text-[#153D2B]">Main Campus Building</h3>
-              <p class="text-[11px] text-[#596A60]">Institutional building and academic classrooms</p>
+              <h3 class="font-editorial-serif text-base font-bold text-[#153D2B]">Main Campus Building</h3>
+              <p class="text-[12px] text-[#596A60] mt-0.5">Institutional building and academic classrooms</p>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
-              <img src="images/premises-computer-lab.webp" alt="Modern computer lab workstations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="choate-gallery-item p-3 fade-in-observe">
+            <div class="aspect-[4/3] overflow-hidden rounded-xs bg-[#E6DEC8]">
+              <img src="images/premises-computer-lab.webp" alt="Modern computer lab workstations" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="pt-3 px-1">
-              <h3 class="font-editorial-serif text-sm font-bold text-[#153D2B]">Computer Science Workstations</h3>
-              <p class="text-[11px] text-[#596A60]">Practical IT and digital literacy laboratories</p>
+              <h3 class="font-editorial-serif text-base font-bold text-[#153D2B]">Computer Science Workstations</h3>
+              <p class="text-[12px] text-[#596A60] mt-0.5">Practical IT and digital literacy laboratories</p>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
-              <img src="images/premises-campus-entrance.webp" alt="School entrance gate and premises" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="choate-gallery-item p-3 fade-in-observe">
+            <div class="aspect-[4/3] overflow-hidden rounded-xs bg-[#E6DEC8]">
+              <img src="images/premises-campus-entrance.webp" alt="School entrance gate and premises" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="pt-3 px-1">
-              <h3 class="font-editorial-serif text-sm font-bold text-[#153D2B]">Campus Grounds & Entry</h3>
-              <p class="text-[11px] text-[#596A60]">Secure, tree-lined school grounds in Manjari Khurd</p>
+              <h3 class="font-editorial-serif text-base font-bold text-[#153D2B]">Campus Grounds & Entry</h3>
+              <p class="text-[12px] text-[#596A60] mt-0.5">Secure, tree-lined school grounds in Manjari Khurd</p>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
-              <img src="images/rebuild/library-reading.webp" alt="School library and study reading tables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="choate-gallery-item p-3 fade-in-observe">
+            <div class="aspect-[4/3] overflow-hidden rounded-xs bg-[#E6DEC8]">
+              <img src="images/rebuild/library-reading.webp" alt="School library and study reading tables" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="pt-3 px-1">
-              <h3 class="font-editorial-serif text-sm font-bold text-[#153D2B]">Library & Reading Space</h3>
-              <p class="text-[11px] text-[#596A60]">Rich collection of reference books and quiet reading rooms</p>
+              <h3 class="font-editorial-serif text-base font-bold text-[#153D2B]">Library & Reading Space</h3>
+              <p class="text-[12px] text-[#596A60] mt-0.5">Rich collection of reference books and quiet reading rooms</p>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
-              <img src="images/rebuild/science-laboratory.webp" alt="Science laboratory practical demonstration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="choate-gallery-item p-3 fade-in-observe">
+            <div class="aspect-[4/3] overflow-hidden rounded-xs bg-[#E6DEC8]">
+              <img src="images/rebuild/science-laboratory.webp" alt="Science laboratory practical demonstration" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="pt-3 px-1">
-              <h3 class="font-editorial-serif text-sm font-bold text-[#153D2B]">Science Practical Laboratory</h3>
-              <p class="text-[11px] text-[#596A60]">Hands-on experiment apparatus for physics, chemistry & biology</p>
+              <h3 class="font-editorial-serif text-base font-bold text-[#153D2B]">Science Practical Laboratory</h3>
+              <p class="text-[12px] text-[#596A60] mt-0.5">Hands-on experiment apparatus for physics, chemistry & biology</p>
             </div>
           </div>
 
-          <div class="group bg-white border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
-              <img src="images/premises-campus-building-side.webp" alt="Green campus perimeter and courtyard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="choate-gallery-item p-3 fade-in-observe">
+            <div class="aspect-[4/3] overflow-hidden rounded-xs bg-[#E6DEC8]">
+              <img src="images/premises-campus-building-side.webp" alt="Green campus perimeter and courtyard" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="pt-3 px-1">
-              <h3 class="font-editorial-serif text-sm font-bold text-[#153D2B]">Courtyard & Natural Surroundings</h3>
-              <p class="text-[11px] text-[#596A60]">Open-air recreational spaces and perimeter trees</p>
+              <h3 class="font-editorial-serif text-base font-bold text-[#153D2B]">Courtyard & Natural Surroundings</h3>
+              <p class="text-[12px] text-[#596A60] mt-0.5">Open-air recreational spaces and perimeter trees</p>
             </div>
           </div>
 
@@ -885,7 +937,27 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=37"></script>
+  <!-- Choate-Style Sticky Bottom Quick Access Bar for Mobile -->
+  <nav class="choate-mobile-quickbar" aria-label="Mobile Quick Action Bar">
+    <a href="#academics">
+      <i data-lucide="book-open"></i>
+      <span>Academics</span>
+    </a>
+    <a href="#facilities">
+      <i data-lucide="building"></i>
+      <span>Campus</span>
+    </a>
+    <a href="contact.html">
+      <i data-lucide="phone"></i>
+      <span>Contact</span>
+    </a>
+    <a href="admission-enquiry.html" class="highlight">
+      <i data-lucide="sparkles"></i>
+      <span>Enquire</span>
+    </a>
+  </nav>
+
+  <script src="js/editorial.js?v=38"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=37">
+  <link rel="stylesheet" href="css/editorial.css?v=38">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -216,7 +216,7 @@
 
           <!-- Column Right: General Inquiry Form -->
           <div class="lg:col-span-7 fade-in-observe">
-            <div class="p-8 sm:p-10 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs shadow-subtle space-y-6">
+            <div class="choate-card p-8 sm:p-10 space-y-6">
               <div class="space-y-1">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">General Inquiries</span>
                 <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Send an Official Inquiry</h3>
@@ -342,7 +342,27 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=37"></script>
+  <!-- Choate-Style Sticky Bottom Quick Access Bar for Mobile -->
+  <nav class="choate-mobile-quickbar" aria-label="Mobile Quick Action Bar">
+    <a href="academics.html">
+      <i data-lucide="book-open"></i>
+      <span>Academics</span>
+    </a>
+    <a href="facilities.html">
+      <i data-lucide="building"></i>
+      <span>Campus</span>
+    </a>
+    <a href="contact.html">
+      <i data-lucide="phone"></i>
+      <span>Contact</span>
+    </a>
+    <a href="admission-enquiry.html" class="highlight">
+      <i data-lucide="sparkles"></i>
+      <span>Enquire</span>
+    </a>
+  </nav>
+
+  <script src="js/editorial.js?v=38"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

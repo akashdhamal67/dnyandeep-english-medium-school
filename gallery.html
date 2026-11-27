@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=37">
+  <link rel="stylesheet" href="css/editorial.css?v=38">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -176,7 +176,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/premises-building-front.webp" alt="Main campus building facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -187,7 +187,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/premises-computer-lab.webp" alt="Computer lab workstations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -198,7 +198,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/premises-campus-entrance.webp" alt="Campus entrance and gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -209,7 +209,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/rebuild/primary-classroom.webp?v=21" alt="Primary classroom teaching in session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -220,7 +220,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/rebuild/science-laboratory.webp" alt="Students in science laboratory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -231,7 +231,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/premises-sports-ground.webp" alt="School sports ground and athletics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -242,7 +242,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/rebuild/library-reading.webp" alt="School library study space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -253,7 +253,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/rebuild/pre-primary-learning.webp" alt="Pre-Primary kindergarten classroom activities" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -264,7 +264,7 @@
             </div>
           </div>
 
-          <div class="group bg-[#F7F3E9] border border-[#E6DEC8] p-3 shadow-subtle hover:shadow-elevated transition-shadow">
+          <div class="choate-gallery-item p-3 fade-in-observe">
             <div class="aspect-[4/3] overflow-hidden bg-[#E6DEC8]">
               <img src="images/premises-campus-building-side.webp" alt="Campus courtyard and surrounding greenery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
@@ -349,7 +349,27 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=37"></script>
+  <!-- Choate-Style Sticky Bottom Quick Access Bar for Mobile -->
+  <nav class="choate-mobile-quickbar" aria-label="Mobile Quick Action Bar">
+    <a href="academics.html">
+      <i data-lucide="book-open"></i>
+      <span>Academics</span>
+    </a>
+    <a href="facilities.html">
+      <i data-lucide="building"></i>
+      <span>Campus</span>
+    </a>
+    <a href="contact.html">
+      <i data-lucide="phone"></i>
+      <span>Contact</span>
+    </a>
+    <a href="admission-enquiry.html" class="highlight">
+      <i data-lucide="sparkles"></i>
+      <span>Enquire</span>
+    </a>
+  </nav>
+
+  <script src="js/editorial.js?v=38"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

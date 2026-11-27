@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=37">
+  <link rel="stylesheet" href="css/editorial.css?v=38">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -170,25 +170,25 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <div class="p-8 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs space-y-3 fade-in-observe">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Pillar 01</span>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Individual Teacher Care</h3>
+          <div class="choate-card p-8 fade-in-observe">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#A14C03]">Pillar 01</span>
+            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B] mt-2 mb-3">Individual Teacher Care</h3>
             <p class="text-sm text-[#3B4B42] leading-relaxed">
               Experienced teachers give personal attention and care to every child's progress. Regular assessments, doubt-clearing sessions, and revision programs ensure no student is left behind.
             </p>
           </div>
 
-          <div class="p-8 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs space-y-3 fade-in-observe">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Pillar 02</span>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Science & Tech Exhibitions</h3>
+          <div class="choate-card p-8 fade-in-observe">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#A14C03]">Pillar 02</span>
+            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B] mt-2 mb-3">Science & Tech Exhibitions</h3>
             <p class="text-sm text-[#3B4B42] leading-relaxed">
               Science exhibitions & skill-based activities with working models, experiments, and hands-on projects encourage practical inquiry beyond theoretical memorization.
             </p>
           </div>
 
-          <div class="p-8 bg-[#F7F3E9] border border-[#E6DEC8] rounded-xs space-y-3 fade-in-observe">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Pillar 03</span>
-            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B]">Holistic Development</h3>
+          <div class="choate-card p-8 fade-in-observe">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#A14C03]">Pillar 03</span>
+            <h3 class="font-editorial-serif text-2xl font-bold text-[#153D2B] mt-2 mb-3">Holistic Development</h3>
             <p class="text-sm text-[#3B4B42] leading-relaxed">
               Balance of academics, sports, arts, and practical learning. Safe, disciplined campus nurturing values, sharing, respect, physical athletics, and cultural traditions.
             </p>
@@ -326,7 +326,27 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=37"></script>
+  <!-- Choate-Style Sticky Bottom Quick Access Bar for Mobile -->
+  <nav class="choate-mobile-quickbar" aria-label="Mobile Quick Action Bar">
+    <a href="academics.html">
+      <i data-lucide="book-open"></i>
+      <span>Academics</span>
+    </a>
+    <a href="facilities.html">
+      <i data-lucide="building"></i>
+      <span>Campus</span>
+    </a>
+    <a href="contact.html">
+      <i data-lucide="phone"></i>
+      <span>Contact</span>
+    </a>
+    <a href="admission-enquiry.html" class="highlight">
+      <i data-lucide="sparkles"></i>
+      <span>Enquire</span>
+    </a>
+  </nav>
+
+  <script src="js/editorial.js?v=38"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();
