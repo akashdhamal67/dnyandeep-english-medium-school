@@ -228,7 +228,8 @@ p {
   color: var(--c-charcoal-muted);
 }
 
-/* --- The Doon School Style Header & Navigation --- */
+/* --- Fluid, Non-Overflowing Header & Navigation System --- */
+/* Top Utility Bar with Graceful Responsive Hiding */
 .top-utility-bar {
   background-color: var(--primary);
   color: var(--white);
@@ -236,41 +237,68 @@ p {
   letter-spacing: 0.04em;
   border-bottom: 1px solid var(--accent);
   position: relative;
-  z-index: 40;
+  z-index: 60;
+  width: 100%;
+}
+.top-utility-bar .container-doon {
+  max-width: 100%;
+  padding-left: clamp(16px, 3vw, 48px);
+  padding-right: clamp(16px, 3vw, 48px);
 }
 .top-utility-bar i,
 .top-utility-bar svg {
   color: var(--accent-light, #F5A940) !important;
 }
 
+/* Sticky Header with Consistent Height & High Z-Index */
 .site-header-doon {
   position: sticky;
   top: 0;
   width: 100%;
+  max-width: 100%;
   z-index: 50;
   background-color: var(--c-white);
-  border-bottom: 1px solid var(--c-sand);
+  border-bottom: 1px solid var(--border-subtle);
   transition: var(--transition-smooth);
+}
+
+.site-header-doon .container-doon {
+  max-width: 100%;
+  padding-left: clamp(16px, 3vw, 48px);
+  padding-right: clamp(16px, 3vw, 48px);
 }
 
 .site-header-doon.scrolled {
   background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 4px 20px rgba(21, 61, 43, 0.07);
-  border-bottom-color: rgba(197, 161, 90, 0.3);
+  box-shadow: 0 4px 20px rgba(59, 31, 20, 0.08);
+  border-bottom-color: var(--border-subtle);
 }
 
-/* Brand Monogram & Official Crest */
+/* Single Flex Row Layout */
+.site-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: clamp(68px, 6.5vw, 88px);
+  gap: clamp(12px, 1.8vw, 32px);
+  min-width: 0;
+}
+
+/* Brand Anchor & Logo Scaling */
 .brand-anchor-doon {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(8px, 1.2vw, 16px);
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .brand-crest-frame {
-  width: 76px;
-  height: 52px;
+  height: clamp(44px, 4.5vw, 64px);
+  width: auto;
+  aspect-ratio: 72 / 44;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -278,13 +306,14 @@ p {
   transition: transform 0.25s ease;
 }
 .brand-anchor-doon:hover .brand-crest-frame {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .brand-crest-frame img,
 .brand-crest-frame svg {
-  width: 100%;
+  width: auto;
   height: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
@@ -292,47 +321,57 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
 }
 
 .brand-title-doon {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.03em;
   line-height: 1.1;
   color: var(--primary);
+  white-space: nowrap;
 }
 
 .brand-subtitle-doon {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: clamp(9px, 0.8vw, 12px);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--gold-text, #C26A12);
   margin-top: 0.15rem;
   white-space: nowrap;
 }
 
 /* Main Navigation Menu List */
+.site-primary-nav {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
 .nav-menu-doon {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 1.8vw, 1.75rem);
+  gap: clamp(12px, 1.6vw, 32px);
   list-style: none;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 .nav-link-doon {
   position: relative;
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-size: clamp(12px, 0.95vw, 15px);
+  letter-spacing: clamp(0.02em, 0.1vw, 0.06em);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--c-charcoal);
-  padding: 0.5rem 0.2rem;
+  color: var(--text);
+  padding: 0.5rem 0.15rem;
   white-space: nowrap;
   display: inline-block;
   transition: color 0.2s ease;
@@ -359,40 +398,50 @@ p {
   width: 100%;
 }
 
+/* Right Side Action Group */
 .header-action-group {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: clamp(8px, 1vw, 16px);
   flex-shrink: 0;
 }
 
 .btn-header-apply {
-  padding: 0.6875rem 1.375rem !important;
-  font-size: 0.75rem !important;
-  letter-spacing: 0.08em !important;
+  padding: clamp(10px, 1vw, 14px) clamp(14px, 1.6vw, 24px) !important;
+  font-size: clamp(12px, 0.9vw, 14px) !important;
+  letter-spacing: 0.06em !important;
   white-space: nowrap;
   border-radius: 3px;
+  flex-shrink: 0;
 }
 
 .btn-header-menu {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.625rem 0.875rem;
+  padding: clamp(8px, 0.9vw, 12px) clamp(10px, 1.2vw, 16px);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--c-forest);
+  color: var(--primary);
   background: transparent;
-  border: 1px solid rgba(21, 61, 43, 0.25);
+  border: 1px solid var(--border-subtle);
   border-radius: 3px;
   cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
   transition: all 0.2s ease;
 }
 .btn-header-menu:hover {
-  background-color: var(--c-sand-light);
-  border-color: var(--c-forest);
+  background-color: var(--cream);
+  border-color: var(--primary);
+}
+
+/* Anchor offset for sticky header */
+section[id],
+main > section:first-child {
+  scroll-margin-top: clamp(80px, 8vw, 120px);
 }
 
 /* Fullscreen Menu Drawer */
@@ -703,92 +752,114 @@ p {
   transform: translateY(0);
 }
 
-/* --- Fluid Layout Breakpoints for Header & Navigation --- */
-@media (min-width: 1441px) {
-  .nav-menu-doon {
-    gap: 1.75rem;
-  }
-}
+/* --- Breakpoints System (1280px+, 1024px-1279px, <1024px, <600px) --- */
 
-@media (max-width: 1440px) and (min-width: 1280px) {
-  .container-doon {
-    --container-pad: 1.5rem;
+/* 1. At 1280px and above:
+   Full layout: Logo, all 7 nav links, Admissions Enquiry button.
+   Hide hamburger MENU button here because it duplicates the nav. */
+@media (min-width: 1280px) {
+  .site-primary-nav {
+    display: flex !important;
   }
-  .brand-crest-frame {
-    width: 66px;
-    height: 46px;
-  }
-  .brand-title-doon {
-    font-size: 1.35rem;
-  }
-  .brand-subtitle-doon {
-    font-size: 0.6rem;
-  }
-  .nav-menu-doon {
-    gap: 1.15rem;
-  }
-  .nav-link-doon {
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-  }
-  .btn-header-apply {
-    padding: 0.625rem 1.1rem !important;
-    font-size: 0.72rem !important;
-  }
-  .header-action-group {
-    gap: 0.5rem;
-  }
-}
-
-@media (max-width: 1279px) and (min-width: 769px) {
-  .container-doon {
-    --container-pad: 1.25rem;
-  }
-  .brand-crest-frame {
-    width: 60px;
-    height: 42px;
-  }
-  .brand-title-doon {
-    font-size: 1.25rem;
-  }
-  .brand-subtitle-doon {
-    font-size: 0.58rem;
-  }
-  .btn-header-apply {
-    padding: 0.55rem 0.95rem !important;
-    font-size: 0.7rem !important;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --header-height: 72px;
-    --container-pad: 1rem;
-  }
-  .brand-crest-frame {
-    width: 52px;
-    height: 38px;
-  }
-  .brand-anchor-doon {
-    gap: 0.65rem;
-  }
-  .brand-title-doon {
-    font-size: 1.1rem;
-  }
-  .brand-subtitle-doon {
-    font-size: 0.52rem;
-  }
-  .hero-doon-section {
-    min-height: 75vh;
-    padding-bottom: 2rem;
-  }
-  .hero-display-doon {
-    font-size: clamp(1.625rem, 5.8vw, 1.95rem); /* ~26-31px on mobile */
-    line-height: 1.24;
-  }
-  .btn-header-apply {
+  .btn-header-menu {
     display: none !important;
   }
+  .btn-header-apply {
+    display: inline-flex !important;
+  }
+}
+
+/* 2. Between 1024px and 1279px:
+   Shrink subtitle and gaps slightly, keep all nav links visible.
+   Hide hamburger menu unless width is below 1024px. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .site-primary-nav {
+    display: flex !important;
+  }
+  .nav-menu-doon {
+    gap: clamp(8px, 1.1vw, 16px);
+  }
+  .nav-link-doon {
+    font-size: 12px;
+    padding: 0.4rem 0.1rem;
+  }
+  .brand-subtitle-doon {
+    font-size: 9px;
+  }
+  .btn-header-apply {
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+  }
+  .btn-header-menu {
+    display: none !important;
+  }
+}
+
+/* 3. Below 1024px:
+   Hide desktop nav links. Show logo, compact Admissions Enquiry button and hamburger MENU button.
+   Both buttons are fully visible and aligned to the right. */
+@media (max-width: 1023px) {
+  .site-primary-nav {
+    display: none !important;
+  }
+  .btn-header-menu {
+    display: inline-flex !important;
+  }
+  .btn-header-apply {
+    display: inline-flex !important;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+  /* Top info bar: on tablets hide office hours */
+  .top-bar-hours {
+    display: none !important;
+  }
+  .top-bar-hours-divider {
+    display: none !important;
+  }
+}
+
+/* 4. Below 600px:
+   Hide logo subtitle, keep Admissions Enquiry button short, make sure hamburger stays on screen.
+   Top info bar: show only the phone number */
+@media (max-width: 599px) {
+  .brand-subtitle-doon {
+    display: none !important;
+  }
+  .site-header-row {
+    height: 64px;
+    gap: 8px;
+  }
+  .btn-header-apply {
+    padding: 6px 10px !important;
+    font-size: 10.5px !important;
+  }
+  .btn-header-apply span {
+    font-size: 10.5px;
+  }
+  .btn-header-menu {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  .btn-header-menu span {
+    display: none !important; /* show icon only to save space */
+  }
+  /* Top info bar: on phones show only phone number */
+  .top-bar-address,
+  .top-bar-address-divider,
+  .top-bar-portal {
+    display: none !important;
+  }
+  .top-utility-bar .container-doon {
+    justify-content: center !important;
+  }
+}
+
+/* Fullscreen Menu Drawer link dimensions (at least 44px tall for touch target) */
+.doon-drawer-inner a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 
