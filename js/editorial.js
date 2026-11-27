@@ -39,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', openMenu);
     if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeMenu);
 
+    // Close on click outside (clicking on the drawer backdrop overlay)
+    drawerOverlay.addEventListener('click', (e) => {
+      if (e.target === drawerOverlay) {
+        closeMenu();
+      }
+    });
+
+    // Close on click of any link inside the drawer
+    drawerOverlay.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
     // Escape key closes menu
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && drawerOverlay.classList.contains('is-active')) {

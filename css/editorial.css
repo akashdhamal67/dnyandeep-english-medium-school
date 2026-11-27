@@ -274,46 +274,43 @@ p {
   border-bottom-color: var(--border-subtle);
 }
 
-/* Single Flex Row Layout */
+/* Header Row Layout — Strict Non-Overlapping Flex Architecture */
 .site-header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: clamp(68px, 6.5vw, 88px);
-  gap: clamp(12px, 1.8vw, 32px);
+  height: 84px;
+  gap: 24px;
   min-width: 0;
 }
 
-/* Brand Anchor & Logo Scaling */
+/* 1. Logo Block — Strictly Capped & Non-Scaling */
 .brand-anchor-doon {
   display: inline-flex;
   align-items: center;
-  gap: clamp(8px, 1.2vw, 16px);
+  gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
   min-width: 0;
 }
 
 .brand-crest-frame {
-  height: clamp(44px, 4.5vw, 64px);
+  height: 52px;
+  max-height: 56px;
   width: auto;
   aspect-ratio: 72 / 44;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease;
-}
-.brand-anchor-doon:hover .brand-crest-frame {
-  transform: scale(1.02);
 }
 
 .brand-crest-frame img,
 .brand-crest-frame svg {
   width: auto;
   height: 100%;
-  max-height: 100%;
+  max-height: 56px;
   object-fit: contain;
 }
 
@@ -321,12 +318,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-shrink: 0;
   min-width: 0;
 }
 
 .brand-title-doon {
   font-family: var(--font-serif);
-  font-size: clamp(18px, 2vw, 28px);
+  font-size: clamp(20px, 1.8vw, 26px);
   font-weight: 700;
   letter-spacing: 0.03em;
   line-height: 1.1;
@@ -336,7 +334,7 @@ p {
 
 .brand-subtitle-doon {
   font-family: var(--font-sans);
-  font-size: clamp(9px, 0.8vw, 12px);
+  font-size: clamp(9px, 0.75vw, 11px);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -345,18 +343,20 @@ p {
   white-space: nowrap;
 }
 
-/* Main Navigation Menu List */
+/* 2. Primary Navigation Container — Flex 1 1 auto, Centered */
 .site-primary-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
   min-width: 0;
-  flex-shrink: 1;
 }
 
 .nav-menu-doon {
   display: flex;
   align-items: center;
-  gap: clamp(12px, 1.6vw, 32px);
+  justify-content: center;
+  gap: clamp(14px, 1.4vw, 28px);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -366,12 +366,11 @@ p {
 .nav-link-doon {
   position: relative;
   font-family: var(--font-sans);
-  font-size: clamp(12px, 0.95vw, 15px);
-  letter-spacing: clamp(0.02em, 0.1vw, 0.06em);
+  font-size: clamp(12px, 0.9vw, 14px);
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text);
-  padding: 0.5rem 0.15rem;
+  padding: 0.5rem 0.1rem;
   white-space: nowrap;
   display: inline-block;
   transition: color 0.2s ease;
@@ -398,17 +397,18 @@ p {
   width: 100%;
 }
 
-/* Right Side Action Group */
+/* 3. Action Buttons Group — Flex 0 0 auto, Never Overlaps */
 .header-action-group {
   display: flex;
   align-items: center;
-  gap: clamp(8px, 1vw, 16px);
+  gap: 12px;
+  flex: 0 0 auto;
   flex-shrink: 0;
 }
 
 .btn-header-apply {
-  padding: clamp(10px, 1vw, 14px) clamp(14px, 1.6vw, 24px) !important;
-  font-size: clamp(12px, 0.9vw, 14px) !important;
+  padding: 10px 18px !important;
+  font-size: 13px !important;
   letter-spacing: 0.06em !important;
   white-space: nowrap;
   border-radius: 3px;
@@ -419,8 +419,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: clamp(8px, 0.9vw, 12px) clamp(10px, 1.2vw, 16px);
-  font-size: 0.75rem;
+  padding: 9px 14px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -752,99 +752,74 @@ main > section:first-child {
   transform: translateY(0);
 }
 
-/* --- Breakpoints System (1280px+, 1024px-1279px, <1024px, <600px) --- */
+/* --- Explicit Breakpoints System (1366px+ / Below 1366px / Below 600px) --- */
 
-/* 1. At 1280px and above:
-   Full layout: Logo, all 7 nav links, Admissions Enquiry button.
-   Hide hamburger MENU button here because it duplicates the nav. */
-@media (min-width: 1280px) {
+/* 1. At 1366px and above:
+   Full layout: Logo, all 7 nav links, and Admissions Enquiry button.
+   Hide MENU button completely. */
+@media (min-width: 1366px) {
   .site-primary-nav {
     display: flex !important;
-  }
-  .btn-header-menu {
-    display: none !important;
   }
   .btn-header-apply {
     display: inline-flex !important;
   }
+  .btn-header-menu {
+    display: none !important;
+  }
 }
 
-/* 2. Between 1024px and 1279px:
-   Shrink subtitle and gaps slightly, keep all nav links visible.
-   Hide hamburger menu unless width is below 1024px. */
-@media (min-width: 1024px) and (max-width: 1279px) {
+/* 2. Below 1366px (from 600px to 1365px):
+   Hide nav links. Show logo, Admissions Enquiry button and MENU button on one row.
+   MENU button is fully visible, clickable and never hidden. */
+@media (max-width: 1365px) {
   .site-primary-nav {
-    display: flex !important;
-  }
-  .nav-menu-doon {
-    gap: clamp(8px, 1.1vw, 16px);
-  }
-  .nav-link-doon {
-    font-size: 12px;
-    padding: 0.4rem 0.1rem;
-  }
-  .brand-subtitle-doon {
-    font-size: 9px;
+    display: none !important;
   }
   .btn-header-apply {
+    display: inline-flex !important;
     padding: 8px 14px !important;
-    font-size: 11px !important;
-  }
-  .btn-header-menu {
-    display: none !important;
-  }
-}
-
-/* 3. Below 1024px:
-   Hide desktop nav links. Show logo, compact Admissions Enquiry button and hamburger MENU button.
-   Both buttons are fully visible and aligned to the right. */
-@media (max-width: 1023px) {
-  .site-primary-nav {
-    display: none !important;
+    font-size: 12px !important;
   }
   .btn-header-menu {
     display: inline-flex !important;
-  }
-  .btn-header-apply {
-    display: inline-flex !important;
-    padding: 8px 12px !important;
-    font-size: 11px !important;
   }
   /* Top info bar: on tablets hide office hours */
-  .top-bar-hours {
-    display: none !important;
-  }
+  .top-bar-hours,
   .top-bar-hours-divider {
     display: none !important;
   }
 }
 
-/* 4. Below 600px:
-   Hide logo subtitle, keep Admissions Enquiry button short, make sure hamburger stays on screen.
-   Top info bar: show only the phone number */
+/* 3. Below 600px (Mobile Screens):
+   Hide logo subtitle. Move Admissions Enquiry into menu panel (hide in header).
+   Only logo and hamburger icon show in header. */
 @media (max-width: 599px) {
   .brand-subtitle-doon {
     display: none !important;
   }
   .site-header-row {
     height: 64px;
-    gap: 8px;
+    gap: 12px;
+  }
+  .brand-crest-frame {
+    height: 44px;
+  }
+  .brand-title-doon {
+    font-size: 20px;
   }
   .btn-header-apply {
-    padding: 6px 10px !important;
-    font-size: 10.5px !important;
-  }
-  .btn-header-apply span {
-    font-size: 10.5px;
+    display: none !important; /* Moved into menu panel */
   }
   .btn-header-menu {
-    padding: 6px 10px;
-    font-size: 11px;
+    display: inline-flex !important;
+    padding: 8px 10px;
+    font-size: 12px;
   }
   .btn-header-menu span {
-    display: none !important; /* show icon only to save space */
+    display: none !important; /* Show icon only to save space */
   }
-  /* Top info bar: on phones show only phone number */
+  /* Top info bar: on phones show only phone number centered */
   .top-bar-address,
   .top-bar-address-divider,
   .top-bar-portal {
