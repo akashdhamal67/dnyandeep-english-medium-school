@@ -84,62 +84,24 @@ document.addEventListener('DOMContentLoaded', () => {
     observeElements.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // 4. Hero Background Video Handling (Autoplay on Desktop & Mobile, Smooth Loop, Controls)
+  // 4. Hero Background Video Handling (Autoplay on Desktop & Mobile, Smooth Loop)
   const heroVideo = document.getElementById('hero-bg-video');
-  const heroToggleBtn = document.getElementById('hero-video-toggle');
   const heroSection = document.getElementById('hero-section');
 
   if (heroVideo) {
-    let isManuallyPaused = false;
-
-    const updateToggleButton = (paused) => {
-      if (!heroToggleBtn) return;
-      heroToggleBtn.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
-      heroToggleBtn.setAttribute('title', paused ? 'Play background video' : 'Pause background video');
-      heroToggleBtn.innerHTML = paused 
-        ? '<i data-lucide="play" class="w-4 h-4"></i>' 
-        : '<i data-lucide="pause" class="w-4 h-4"></i>';
-      if (window.lucide && typeof window.lucide.createIcons === 'function') {
-        window.lucide.createIcons();
-      }
-    };
-
     // Attempt video playback on load and log any issues
     const attemptPlay = () => {
       heroVideo.muted = true;
       const playPromise = heroVideo.play();
       if (playPromise !== undefined) {
         playPromise
-          .then(() => {
-            isManuallyPaused = false;
-            updateToggleButton(false);
-          })
           .catch((err) => {
             console.warn('Hero video autoplay was prevented or failed; poster fallback displayed.', err);
-            updateToggleButton(true);
           });
       }
     };
 
     attemptPlay();
-
-    // Play / Pause button interaction
-    if (heroToggleBtn) {
-      heroToggleBtn.addEventListener('click', () => {
-        if (heroVideo.paused) {
-          heroVideo.play().then(() => {
-            isManuallyPaused = false;
-            updateToggleButton(false);
-          }).catch((err) => {
-            console.warn('Play attempt failed:', err);
-          });
-        } else {
-          heroVideo.pause();
-          isManuallyPaused = true;
-          updateToggleButton(true);
-        }
-      });
-    }
 
     // Smooth loop handling: fade video out 0.5s before end and fade in at loop point
     heroVideo.addEventListener('timeupdate', () => {
@@ -158,9 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              if (!isManuallyPaused && heroVideo.paused) {
+              if (heroVideo.paused) {
                 heroVideo.play().catch(() => {});
-                updateToggleButton(false);
               }
             } else {
               if (!heroVideo.paused) {
@@ -179,9 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (document.hidden) {
         if (!heroVideo.paused) heroVideo.pause();
       } else {
-        if (!isManuallyPaused && (!heroSection || heroSection.getBoundingClientRect().bottom > 0)) {
+        if (!heroSection || heroSection.getBoundingClientRect().bottom > 0) {
           heroVideo.play().catch(() => {});
-          updateToggleButton(false);
         }
       }
     });
