@@ -115,6 +115,46 @@ a {
   padding-right: var(--container-pad);
 }
 
+/* --- Global Headings Hierarchy --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--c-forest);
+  line-height: 1.25;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: clamp(1rem, 1.6vw, 1.1875rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p {
+  font-family: var(--font-sans);
+  color: var(--c-charcoal-muted);
+}
+
 /* --- Typography Classes --- */
 .font-editorial-serif {
   font-family: var(--font-serif);
@@ -602,10 +642,10 @@ a {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--c-gold);
   margin-bottom: 1.25rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .footer-nav-col ul {
