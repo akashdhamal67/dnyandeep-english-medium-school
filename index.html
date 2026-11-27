@@ -20,7 +20,7 @@
   <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=39">
+  <link rel="stylesheet" href="css/editorial.css?v=40">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -162,11 +162,26 @@
          3. HERO SECTION — DOON SCHOOL STYLE FULL-BLEED
          High-Resolution Campus Photography, Mashal Badge & Dignified Typography
          ========================================== -->
-    <section class="hero-doon-section">
+    <section class="hero-doon-section" id="hero-section">
       <div class="hero-backdrop-media">
+        <!-- DEMO VIDEO - replace with real school footage before launch -->
+        <video 
+          id="hero-bg-video"
+          class="hero-backdrop-video"
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="metadata"
+          poster="images/rebuild/hero-campus-life.webp?v=17"
+          aria-hidden="true"
+        >
+          <source src="videos/Students_discussing_work_in_clas%E2%80%A6_6660cb83_1080p.mp4" type="video/mp4">
+        </video>
         <picture>
           <source media="(max-width: 768px)" srcset="images/rebuild/hero-campus-life-mobile.webp?v=17">
           <img 
+            id="hero-fallback-img"
             src="images/rebuild/hero-campus-life.webp?v=17" 
             alt="Dnyandeep English Medium School students engaged in collaborative study around classroom desk"
             class="hero-backdrop-img"
@@ -177,6 +192,17 @@
         </picture>
         <div class="hero-overlay-gradient"></div>
       </div>
+
+      <!-- Hero Video Play/Pause Control Button in Bottom Right -->
+      <button 
+        id="hero-video-toggle" 
+        class="hero-video-toggle-btn" 
+        type="button" 
+        aria-label="Pause background video"
+        title="Pause background video"
+      >
+        <i data-lucide="pause" id="hero-video-icon"></i>
+      </button>
 
       <div class="container-doon hero-content-doon">
         <div class="max-w-xl space-y-4">
@@ -957,7 +983,7 @@
     </a>
   </nav>
 
-  <script src="js/editorial.js?v=39"></script>
+  <script src="js/editorial.js?v=40"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

@@ -84,7 +84,102 @@ document.addEventListener('DOMContentLoaded', () => {
     observeElements.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // 4. Lucide icons initializer if available
+  // 4. Hero Background Video Handling (Smooth Loop, Visibility Pause, Accessibility & Fallbacks)
+  const heroVideo = document.getElementById('hero-bg-video');
+  const heroToggleBtn = document.getElementById('hero-video-toggle');
+  const heroSection = document.getElementById('hero-section');
+
+  if (heroVideo) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.innerWidth < 768;
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const isDataSaver = connection && (connection.saveData || (connection.effectiveType && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g')));
+
+    // If mobile, data-saver, slow connection, or reduced motion, disable video and show static poster
+    if (prefersReducedMotion || isMobile || isDataSaver) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.style.display = 'none';
+      if (heroToggleBtn) heroToggleBtn.style.display = 'none';
+    } else {
+      let isManuallyPaused = false;
+
+      const updateToggleButton = (paused) => {
+        if (!heroToggleBtn) return;
+        heroToggleBtn.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
+        heroToggleBtn.setAttribute('title', paused ? 'Play background video' : 'Pause background video');
+        heroToggleBtn.innerHTML = paused 
+          ? '<i data-lucide="play" class="w-4 h-4"></i>' 
+          : '<i data-lucide="pause" class="w-4 h-4"></i>';
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
+      };
+
+      // Play / Pause button interaction
+      if (heroToggleBtn) {
+        heroToggleBtn.addEventListener('click', () => {
+          if (heroVideo.paused) {
+            heroVideo.play().then(() => {
+              isManuallyPaused = false;
+              updateToggleButton(false);
+            }).catch(() => {});
+          } else {
+            heroVideo.pause();
+            isManuallyPaused = true;
+            updateToggleButton(true);
+          }
+        });
+      }
+
+      // Smooth loop handling: fade video out 0.5s before end and fade in at loop point
+      heroVideo.addEventListener('timeupdate', () => {
+        if (!heroVideo.duration) return;
+        const timeLeft = heroVideo.duration - heroVideo.currentTime;
+        if (timeLeft < 0.5 && !heroVideo.classList.contains('loop-fade')) {
+          heroVideo.classList.add('loop-fade');
+        } else if (heroVideo.currentTime < 0.5 && heroVideo.classList.contains('loop-fade')) {
+          heroVideo.classList.remove('loop-fade');
+        }
+      });
+
+      // Pause when hero scrolled out of view or resume when visible
+      if ('IntersectionObserver' in window && heroSection) {
+        const heroObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                if (!isManuallyPaused && heroVideo.paused) {
+                  heroVideo.play().catch(() => {});
+                  updateToggleButton(false);
+                }
+              } else {
+                if (!heroVideo.paused) {
+                  heroVideo.pause();
+                }
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        heroObserver.observe(heroSection);
+      }
+
+      // Pause when browser tab is hidden, resume when active
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (!heroVideo.paused) heroVideo.pause();
+        } else {
+          if (!isManuallyPaused && (!heroSection || heroSection.getBoundingClientRect().bottom > 0)) {
+            heroVideo.play().catch(() => {});
+            updateToggleButton(false);
+          }
+        }
+      });
+    }
+  }
+
+  // 5. Lucide icons initializer if available
   if (window.lucide && typeof window.lucide.createIcons === 'function') {
     window.lucide.createIcons();
   }
