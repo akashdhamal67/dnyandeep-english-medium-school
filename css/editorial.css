@@ -28,8 +28,13 @@
   --text-light: #6E5B50;      /* Light Meta Text */
   --border-subtle: #E8DAC4;   /* Subtle Parchment Dividers */
   --btn-accent-text: #1A1512; /* Dark Brown Text on Vivid Flame Button */
-  --overlay-start: rgba(30, 14, 8, 0.85);  /* Warm Dark Brown (No Red/Pink Tint) */
-  --overlay-end: rgba(30, 14, 8, 0.30);
+  --overlay-start: rgba(30, 14, 8, 0.78);
+  --overlay-end: rgba(30, 14, 8, 0.05);
+  --hero-overlay-left: rgba(30, 14, 8, 0.78);
+  --hero-overlay-mid: rgba(30, 14, 8, 0.55);
+  --hero-overlay-mid2: rgba(30, 14, 8, 0.20);
+  --hero-overlay-right: rgba(30, 14, 8, 0.05);
+  --hero-overlay-bottom: rgba(30, 14, 8, 0.25);
   --hero-badge-bg: rgba(59, 31, 20, 0.80); /* Dark Brown Translucent Badge */
   --hero-badge-border: #F5A940;
   --hero-badge-text: #F5A940;
@@ -607,7 +612,9 @@ main > section:first-child {
 }
 
 .btn-doon-outline-white {
-  background-color: transparent;
+  background-color: rgba(30, 14, 8, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: #FFFFFF;
   border-color: rgba(255, 255, 255, 0.65);
 }
@@ -649,6 +656,7 @@ main > section:first-child {
 }
 
 .hero-backdrop-video {
+  filter: brightness(1.08) saturate(1.05);
   transition: opacity 0.5s ease-in-out;
 }
 .hero-backdrop-video.loop-fade {
@@ -688,14 +696,36 @@ main > section:first-child {
   height: 18px;
 }
 
-/* Choate-Style Dual Gradient: Left-to-right legibility gradient + bottom anchor fade */
+/* Brighter Hero Left-to-Right Overlay using CSS Variables */
 .hero-overlay-gradient {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(90deg, rgba(30, 14, 8, 0.92) 0%, rgba(30, 14, 8, 0.65) 55%, rgba(30, 14, 8, 0.25) 100%),
-    linear-gradient(180deg, rgba(30, 14, 8, 0.3) 0%, transparent 40%, rgba(30, 14, 8, 0.8) 100%);
+    linear-gradient(
+      90deg, 
+      var(--hero-overlay-left, rgba(30, 14, 8, 0.78)) 0%, 
+      var(--hero-overlay-mid, rgba(30, 14, 8, 0.55)) 35%, 
+      var(--hero-overlay-mid2, rgba(30, 14, 8, 0.20)) 65%, 
+      var(--hero-overlay-right, rgba(30, 14, 8, 0.05)) 100%
+    ),
+    linear-gradient(
+      180deg, 
+      transparent 85%, 
+      var(--hero-overlay-bottom, rgba(30, 14, 8, 0.25)) 100%
+    );
   z-index: 2;
+}
+
+/* Mobile Hero Overlay: Top-to-Bottom gradient */
+@media (max-width: 767px) {
+  .hero-overlay-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(30, 14, 8, 0.60) 0%,
+      rgba(30, 14, 8, 0.45) 50%,
+      rgba(30, 14, 8, 0.35) 100%
+    );
+  }
 }
 
 .hero-content-doon {
@@ -713,7 +743,7 @@ main > section:first-child {
   margin-top: 0.75rem;
   margin-bottom: 1.25rem;
   letter-spacing: -0.01em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .hero-content-doon p {
@@ -722,7 +752,11 @@ main > section:first-child {
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.95);
   max-width: 580px;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.hero-identity-badge {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 /* --- The Doon Notice & Announcements Strip --- */
