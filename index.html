@@ -20,7 +20,7 @@
   <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=40">
+  <link rel="stylesheet" href="css/editorial.css?v=41">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -172,24 +172,13 @@
           muted 
           loop 
           playsinline 
-          preload="metadata"
+          preload="auto"
           poster="images/rebuild/hero-campus-life.webp?v=17"
           aria-hidden="true"
         >
-          <source src="videos/Students_discussing_work_in_clas%E2%80%A6_6660cb83_1080p.mp4" type="video/mp4">
+          <source src="videos/hero.webm" type="video/webm">
+          <source src="videos/hero.mp4" type="video/mp4">
         </video>
-        <picture>
-          <source media="(max-width: 768px)" srcset="images/rebuild/hero-campus-life-mobile.webp?v=17">
-          <img 
-            id="hero-fallback-img"
-            src="images/rebuild/hero-campus-life.webp?v=17" 
-            alt="Dnyandeep English Medium School students engaged in collaborative study around classroom desk"
-            class="hero-backdrop-img"
-            width="1600"
-            height="1000"
-            fetchpriority="high"
-          />
-        </picture>
         <div class="hero-overlay-gradient"></div>
       </div>
 
@@ -983,7 +972,7 @@
     </a>
   </nav>
 
-  <script src="js/editorial.js?v=40"></script>
+  <script src="js/editorial.js?v=41"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

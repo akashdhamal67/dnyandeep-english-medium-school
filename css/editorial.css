@@ -688,18 +688,6 @@ main > section:first-child {
   height: 18px;
 }
 
-/* Fallback: On mobile or reduced motion, hide video control */
-@media (max-width: 767px) {
-  .hero-video-toggle-btn {
-    display: none !important;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-video-toggle-btn {
-    display: none !important;
-  }
-}
-
 /* Choate-Style Dual Gradient: Left-to-right legibility gradient + bottom anchor fade */
 .hero-overlay-gradient {
   position: absolute;
