@@ -12,26 +12,23 @@
 /* --- Google Fonts Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
 
-/* --- Three-Theme Design System & Design Tokens --- */
-:root,
-html[data-theme="logo"],
-html[data-theme="maroon"],
-html:not([data-theme]) {
-  /* THEME 1 - Logo (Exact School Insignia Match: Flame Orange, Amber & Dark Brown) */
+/* --- School Brand Color Tokens & Variables (Root Level) --- */
+:root {
+  /* Exact School Logo Color System */
   --primary: #3B1F14;         /* Dark Brown — Top bar, footer and headings */
   --accent: #E8742A;          /* Flame Orange */
   --accent-light: #F5A940;    /* Amber */
   --gold: #F5A940;            /* Amber Accent */
   --gold-text: #C26A12;       /* Deep Orange — Small text on white, subtitle, labels */
-  --dark: #1A1512;
-  --cream: #FFF8EC;           /* Warm Ivory/Cream Alternate Background */
+  --dark: #1A1512;            /* Dark Charcoal */
+  --cream: #FFF8EC;           /* Warm Ivory/Cream Alternate Section Background */
   --white: #FFFFFF;           /* Pure White */
-  --text: #1A1512;            /* Dark Charcoal Body Text */
-  --text-muted: #4A3A30;
-  --text-light: #6E5B50;
-  --border-subtle: #E8DAC4;
-  --btn-accent-text: #1A1512; /* Dark text on vivid flame button */
-  --overlay-start: rgba(30, 14, 8, 0.85);  /* Warm Dark Brown (NO red or pink tint) */
+  --text: #1A1512;            /* Primary Body Text */
+  --text-muted: #4A3A30;      /* Muted Secondary Text */
+  --text-light: #6E5B50;      /* Light Meta Text */
+  --border-subtle: #E8DAC4;   /* Subtle Parchment Dividers */
+  --btn-accent-text: #1A1512; /* Dark Brown Text on Vivid Flame Button */
+  --overlay-start: rgba(30, 14, 8, 0.85);  /* Warm Dark Brown (No Red/Pink Tint) */
   --overlay-end: rgba(30, 14, 8, 0.30);
   --hero-badge-bg: rgba(59, 31, 20, 0.80); /* Dark Brown Translucent Badge */
   --hero-badge-border: #F5A940;
@@ -71,88 +68,6 @@ html:not([data-theme]) {
   --shadow-elevated: 0 12px 32px rgba(30, 14, 8, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
   --shadow-overlay: 0 24px 64px rgba(30, 14, 8, 0.45);
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-html[data-theme="orange"] {
-  /* THEME 2 - Orange (Warm Academic Theme with Logo Orange/Amber) */
-  --primary: #2A1A10;
-  --accent: #E8742A;          /* Flame Orange */
-  --accent-light: #F5A940;    /* Amber */
-  --gold: #F5A940;            /* Amber Accent */
-  --gold-text: #C26A12;       /* Deep Orange */
-  --dark: #2A1A10;
-  --cream: #FFF6E8;
-  --white: #FFFFFF;
-  --text: #2A1A10;
-  --text-muted: #543E30;
-  --text-light: #7A6252;
-  --border-subtle: #E8D8C5;
-  --btn-accent-text: #1A1512;
-  --overlay-start: rgba(28, 14, 8, 0.85);
-  --overlay-end: rgba(28, 14, 8, 0.30);
-  --hero-badge-bg: rgba(42, 26, 16, 0.80);
-  --hero-badge-border: #F5A940;
-  --hero-badge-text: #F5A940;
-
-  /* Backward Compatibility Aliases */
-  --c-forest-dark: var(--dark);
-  --c-forest: var(--primary);
-  --c-forest-mid: #1C110A;
-  --c-forest-light: #3D2618;
-  --c-olive: #7A6252;
-  --c-olive-light: #9C8270;
-  --c-gold: var(--gold);
-  --c-gold-light: #F7B85E;
-  --c-gold-dark: var(--gold-text);
-  --c-ivory: var(--cream);
-  --c-ivory-warm: #F7EAD7;
-  --c-sand: var(--border-subtle);
-  --c-sand-light: #F2E5D3;
-  --c-white: var(--white);
-  --c-charcoal: var(--text);
-  --c-charcoal-muted: var(--text-muted);
-  --c-charcoal-light: var(--text-light);
-}
-
-html[data-theme="navy"] {
-  /* THEME 3 - Navy (Classic Scholastic with Logo Orange/Amber Accents) */
-  --primary: #14213D;
-  --accent: #E8742A;          /* Flame Orange */
-  --accent-light: #F5A940;    /* Amber */
-  --gold: #F5A940;            /* Amber */
-  --gold-text: #C26A12;       /* Deep Orange */
-  --dark: #1F1A17;
-  --cream: #FBF7F0;
-  --white: #FFFFFF;
-  --text: #1F1A17;
-  --text-muted: #424652;
-  --text-light: #646875;
-  --border-subtle: #E2DBD0;
-  --btn-accent-text: #1A1512;
-  --overlay-start: rgba(14, 22, 42, 0.85);
-  --overlay-end: rgba(14, 22, 42, 0.30);
-  --hero-badge-bg: rgba(20, 33, 61, 0.80);
-  --hero-badge-border: #F5A940;
-  --hero-badge-text: #F5A940;
-
-  /* Backward Compatibility Aliases */
-  --c-forest-dark: var(--primary);
-  --c-forest: var(--primary);
-  --c-forest-mid: #0D1629;
-  --c-forest-light: #1E315C;
-  --c-olive: #646875;
-  --c-olive-light: #898E9C;
-  --c-gold: var(--gold);
-  --c-gold-light: #F7B85E;
-  --c-gold-dark: var(--gold-text);
-  --c-ivory: var(--cream);
-  --c-ivory-warm: #F2ECE0;
-  --c-sand: var(--border-subtle);
-  --c-sand-light: #EBE5DA;
-  --c-white: var(--white);
-  --c-charcoal: var(--text);
-  --c-charcoal-muted: var(--text-muted);
-  --c-charcoal-light: var(--text-light);
 }
 
 /* --- Base Reset & Typography --- */
@@ -877,74 +792,7 @@ p {
 }
 
 
-/* ==========================================================================
-   INTERACTIVE LIVE THEME SWITCHER (Can be removed before production launch)
-   ========================================================================== */
-.dnyandeep-theme-switcher {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 9999;
-  background-color: #FFFFFF;
-  padding: 0.45rem 0.65rem;
-  border-radius: 9999px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
-  border: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  user-select: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.dnyandeep-theme-switcher:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
-}
-
-.dnyandeep-theme-switcher-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text);
-  padding-left: 0.25rem;
-  padding-right: 0.15rem;
-}
-
-.theme-pill-btn {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  padding: 0;
-  position: relative;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.theme-pill-btn:hover {
-  transform: scale(1.15);
-}
-
-.theme-pill-btn.is-active {
-  box-shadow: 0 0 0 2.5px var(--gold);
-  transform: scale(1.12);
-}
-
-.theme-pill-btn[data-theme-name="logo"],
-.theme-pill-btn[data-theme-name="maroon"] {
-  background: linear-gradient(135deg, #E8742A 50%, #3B1F14 50%);
-}
-
-.theme-pill-btn[data-theme-name="orange"] {
-  background: linear-gradient(135deg, #E8742A 50%, #F5A940 50%);
-}
-
-.theme-pill-btn[data-theme-name="navy"] {
-  background: linear-gradient(135deg, #14213D 50%, #E8742A 50%);
-}
 
 
 /* ==========================================================================
