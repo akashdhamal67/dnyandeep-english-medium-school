@@ -19,7 +19,7 @@
   --accent: #E8742A;          /* Flame Orange */
   --accent-light: #F5A940;    /* Amber */
   --gold: #F5A940;            /* Amber Accent */
-  --gold-text: #C26A12;       /* Deep Orange — Small text on white, subtitle, labels */
+  --gold-text: #A14C03;       /* Accessible Deep Amber/Orange (5.91:1 on white, 5.60:1 on cream) */
   --dark: #1A1512;            /* Dark Charcoal */
   --cream: #FFF8EC;           /* Warm Ivory/Cream Alternate Section Background */
   --white: #FFFFFF;           /* Pure White */
@@ -33,6 +33,14 @@
   --hero-badge-bg: rgba(59, 31, 20, 0.80); /* Dark Brown Translucent Badge */
   --hero-badge-border: #F5A940;
   --hero-badge-text: #F5A940;
+
+  /* High Contrast Dark-Background Theme Tokens (WCAG AAA >= 7:1) */
+  --text-on-dark: #F3E9DD;       /* Warm Off-White (12.58:1 contrast against #3B1F14) */
+  --text-on-dark-label: #FFFFFF; /* Pure White for labels (15.09:1 contrast) */
+  --link-on-dark: #F5A940;       /* Vivid Amber for links (7.64:1 contrast) */
+  --link-on-dark-hover: #FFFFFF; /* White on Hover */
+  --heading-on-dark: #F5A940;    /* Amber Section Headings (7.64:1 contrast) */
+  --meta-on-dark: #D9C8B4;       /* Small text & copyright line (9.25:1 contrast) */
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--primary);
@@ -755,8 +763,19 @@ main > section:first-child {
 /* --- Institutional Footer --- */
 .doon-footer {
   background-color: var(--primary);
-  color: var(--white);
+  color: var(--text-on-dark);
   border-top: 4px solid var(--accent);
+}
+
+.doon-footer p {
+  color: var(--text-on-dark) !important;
+  opacity: 1 !important;
+}
+
+.doon-footer strong,
+.doon-footer b {
+  color: var(--text-on-dark-label) !important;
+  font-weight: 600;
 }
 
 .footer-nav-col h3,
@@ -765,7 +784,7 @@ main > section:first-child {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: normal;
-  color: var(--accent-light, #F5A940);
+  color: var(--heading-on-dark) !important;
   margin-bottom: 1.25rem;
   text-transform: none;
 }
@@ -774,26 +793,90 @@ main > section:first-child {
   list-style: none;
 }
 
+.footer-nav-col a {
+  color: var(--link-on-dark) !important;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+.footer-nav-col a:hover {
+  color: var(--link-on-dark-hover) !important;
+}
+
 .footer-link-doon {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-on-dark) !important;
+  text-decoration: none !important;
   display: block;
   padding: 0.25rem 0;
   text-transform: none;
   letter-spacing: normal;
+  opacity: 1 !important;
   transition: all 0.2s ease;
 }
 .footer-link-doon:hover {
-  color: var(--c-gold);
+  color: var(--link-on-dark) !important;
   transform: translateX(3px);
 }
 
 .footer-bottom-strip {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 1.75rem 0;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--meta-on-dark) !important;
+}
+.footer-bottom-strip p,
+.footer-bottom-strip span {
+  color: var(--meta-on-dark) !important;
+}
+
+/* Generic Dark Section Contrast Enforcer */
+.bg-\[\#153D2B\],
+.bg-\[\#0F2C1F\],
+.bg-\[\#3B1F14\],
+.bg-\[\#1A1512\] {
+  color: var(--text-on-dark) !important;
+}
+.bg-\[\#153D2B\] p,
+.bg-\[\#0F2C1F\] p,
+.bg-\[\#3B1F14\] p,
+.bg-\[\#1A1512\] p {
+  color: var(--text-on-dark) !important;
+  opacity: 1 !important;
+}
+.bg-\[\#153D2B\] strong,
+.bg-\[\#0F2C1F\] strong,
+.bg-\[\#3B1F14\] strong,
+.bg-\[\#1A1512\] strong {
+  color: var(--text-on-dark-label) !important;
+}
+.bg-\[\#153D2B\] a:not(.btn-doon),
+.bg-\[\#0F2C1F\] a:not(.btn-doon),
+.bg-\[\#3B1F14\] a:not(.btn-doon),
+.bg-\[\#1A1512\] a:not(.btn-doon) {
+  color: var(--link-on-dark) !important;
+}
+.bg-\[\#153D2B\] a:not(.btn-doon):hover,
+.bg-\[\#0F2C1F\] a:not(.btn-doon):hover,
+.bg-\[\#3B1F14\] a:not(.btn-doon):hover,
+.bg-\[\#1A1512\] a:not(.btn-doon):hover {
+  color: var(--link-on-dark-hover) !important;
+}
+
+/* Fullscreen Menu Drawer High Contrast Rules */
+.doon-drawer-overlay {
+  background-color: rgba(30, 14, 8, 0.96) !important;
+  color: var(--text-on-dark);
+}
+.doon-drawer-inner p {
+  color: var(--text-on-dark) !important;
+  opacity: 1 !important;
+}
+.doon-drawer-inner a:not(.btn-doon) {
+  color: var(--text-on-dark) !important;
+}
+.doon-drawer-inner a:not(.btn-doon):hover {
+  color: var(--link-on-dark) !important;
 }
 
 /* --- Animations & Reveal --- */
@@ -937,10 +1020,10 @@ main > section:first-child {
   color: var(--primary) !important;
 }
 .text-\[\#C5A15A\] {
-  color: var(--gold) !important;
+  color: var(--gold-text, #A14C03) !important;
 }
 .text-\[\#DEC084\] {
-  color: var(--gold) !important;
+  color: var(--gold-text, #A14C03) !important;
 }
 .text-\[\#26332C\] {
   color: var(--text) !important;
@@ -951,6 +1034,20 @@ main > section:first-child {
 .text-\[\#596A60\],
 .text-\[\#738279\] {
   color: var(--text-light) !important;
+}
+
+/* Ensure text on dark backgrounds uses accessible high-contrast tokens */
+.bg-\[\#153D2B\] .text-\[\#C5A15A\],
+.bg-\[\#153D2B\] .text-\[\#DEC084\],
+.bg-\[\#0F2C1F\] .text-\[\#C5A15A\],
+.bg-\[\#0F2C1F\] .text-\[\#DEC084\],
+.bg-\[\#3B1F14\] .text-\[\#C5A15A\],
+.bg-\[\#3B1F14\] .text-\[\#DEC084\],
+.doon-footer .text-\[\#C5A15A\],
+.doon-footer .text-\[\#DEC084\],
+.doon-drawer-overlay .text-\[\#C5A15A\],
+.doon-drawer-overlay .text-\[\#DEC084\] {
+  color: var(--heading-on-dark, #F5A940) !important;
 }
 
 /* Hover Colors */
