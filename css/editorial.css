@@ -99,6 +99,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--c-ivory);
   color: var(--c-charcoal);
+  overflow-x: hidden;
 }
 
 body {
@@ -108,11 +109,16 @@ body {
   color: var(--c-charcoal);
   background-color: var(--c-ivory);
   overflow-x: hidden;
+  width: 100%;
 }
 
-img, picture, svg, video {
+img, picture, svg, video, iframe, table {
   display: block;
   max-width: 100%;
+}
+
+iframe {
+  width: 100%;
 }
 
 a {
@@ -512,15 +518,18 @@ main > section:first-child {
 .doon-drawer-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--primary);
-  backdrop-filter: blur(8px);
+  background-color: rgba(30, 14, 8, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 100;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .doon-drawer-overlay.is-active {
@@ -531,20 +540,27 @@ main > section:first-child {
 .doon-drawer-inner {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 2.5rem var(--container-pad);
+  margin: auto 0;
+  padding: 3.5rem var(--container-pad) 2.5rem;
 }
 
 .doon-drawer-close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #FFFFFF;
-  padding: 0.75rem;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 10;
   transition: all 0.2s ease;
 }
 .doon-drawer-close:hover {
@@ -686,15 +702,72 @@ main > section:first-child {
   z-index: 2;
 }
 
-/* Mobile Hero Overlay: Top-to-Bottom gradient */
+/* Hero Section on Mobile Screens (< 768px) */
 @media (max-width: 767px) {
+  .hero-doon-section {
+    min-height: 85svh;
+    min-height: 85dvh;
+    padding-top: clamp(2.5rem, 6vw, 4rem);
+    padding-bottom: clamp(3rem, 7vw, 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-backdrop-video {
+    transform: none !important;
+    object-fit: cover !important;
+    object-position: 70% center !important;
+  }
   .hero-overlay-gradient {
     background: linear-gradient(
       180deg,
-      rgba(30, 14, 8, 0.60) 0%,
-      rgba(30, 14, 8, 0.45) 50%,
-      rgba(30, 14, 8, 0.35) 100%
-    );
+      rgba(30, 14, 8, 0.35) 0%,
+      rgba(30, 14, 8, 0.55) 50%,
+      rgba(30, 14, 8, 0.80) 100%
+    ) !important;
+  }
+  .hero-content-doon {
+    text-align: left;
+  }
+  .hero-identity-badge {
+    max-width: 100%;
+    white-space: normal;
+    padding: 0.35rem 0.65rem;
+  }
+  .hero-identity-badge span {
+    font-size: 10px !important;
+    letter-spacing: 0.06em !important;
+    line-height: 1.35;
+    display: inline;
+  }
+  .hero-content-doon h1,
+  .hero-display-doon {
+    font-size: clamp(28px, 8vw, 38px) !important;
+    line-height: 1.15 !important;
+    margin-top: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+  .hero-content-doon p {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    max-width: 100% !important;
+  }
+  .hero-content-doon .pt-1\.5 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px !important;
+    width: 100%;
+    max-width: 360px;
+    margin-top: 0.5rem;
+  }
+  .hero-content-doon .pt-1\.5 .btn-doon {
+    width: 100% !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    padding: 0 1.25rem !important;
+    font-size: 13px !important;
+    justify-content: center;
   }
 }
 
@@ -1248,8 +1321,9 @@ main > section:first-child {
   }
 }
 
-/* 3. Below 1100px (from 600px to 1099px):
-   Hide 7 nav links. Show logo, compact Admissions Enquiry button and MENU button on one row, all fully visible. */
+/* 3. Below 1100px (Tablets 768px to 1099px):
+   Hide 7 nav links from main row. Show logo, compact Admissions Enquiry button and MENU button on one row.
+   Hide only office hours from top bar. */
 @media (max-width: 1099px) {
   .site-primary-nav {
     display: none !important;
@@ -1264,57 +1338,120 @@ main > section:first-child {
     padding: 8px 12px !important;
     font-size: 11.5px !important;
   }
-  /* Top info bar: on tablets/smaller screens hide office hours */
+  /* Top info bar: on tablets hide only office hours */
   .top-bar-hours,
   .top-bar-hours-divider {
     display: none !important;
   }
 }
 
-/* 4. Below 600px (Mobile Screens):
+/* 4. Below 600px (Mobile Screens / Phones 320px to 599px):
+   One row with logo on left, MENU icon button on right, no overflow.
    Hide logo subtitle. Move Admissions Enquiry into menu panel (hide in header).
-   Header shows only logo and hamburger icon. */
+   Logo image height 40px, DNYANDEEP name font-size 18px. */
 @media (max-width: 599px) {
   .brand-subtitle-doon {
     display: none !important;
   }
   .site-header-row {
     height: 64px;
-    gap: 10px;
+    gap: 8px;
   }
   .brand-crest-frame {
-    height: 40px;
+    height: 40px !important;
+    max-height: 40px !important;
+  }
+  .brand-crest-frame img {
+    max-height: 40px !important;
   }
   .brand-title-doon {
-    font-size: 19px;
+    font-size: 18px !important;
+    letter-spacing: 0.02em;
   }
   .btn-header-apply {
     display: none !important; /* Moved into menu panel */
   }
   .btn-header-menu {
     display: inline-flex !important;
-    padding: 8px 10px;
-    font-size: 12px;
+    min-height: 48px;
+    padding: 0 14px;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
   }
   .btn-header-menu span {
     display: none !important; /* Show icon only to save space */
   }
-  /* Top info bar: on phones show only phone number centered */
+  /* Top info bar on phones: show only phone number (and parent portal if space permits) */
   .top-bar-address,
   .top-bar-address-divider,
-  .top-bar-portal {
+  .top-bar-hours,
+  .top-bar-hours-divider {
     display: none !important;
   }
   .top-utility-bar .container-doon {
     justify-content: center !important;
+    text-align: center;
   }
 }
 
-/* Fullscreen Menu Drawer link dimensions (at least 44px tall for touch target) */
+/* Fullscreen Menu Drawer link dimensions & tap targets */
 .doon-drawer-inner a {
-  min-height: 44px;
+  min-height: 48px;
+  font-size: 16px;
   display: inline-flex;
   align-items: center;
+}
+
+.doon-drawer-inner a.btn-doon {
+  width: 100% !important;
+  min-height: 48px !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  margin-top: 1rem;
+}
+
+/* Global mobile padding and tap target safeguards (< 768px) */
+@media (max-width: 767px) {
+  :root {
+    --container-pad: clamp(16px, 4vw, 24px);
+  }
+  .container-doon {
+    padding-left: clamp(16px, 4vw, 24px) !important;
+    padding-right: clamp(16px, 4vw, 24px) !important;
+  }
+  /* Section padding on mobile */
+  section {
+    padding-inline: clamp(16px, 4vw, 24px);
+  }
+  /* Form fields font-size 16px to prevent iOS auto-zoom */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px;
+  }
+  /* Tap target helper for interactive buttons */
+  .btn-doon {
+    min-height: 48px;
+  }
+  /* Prevent any heading from overflowing */
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  /* Ensure tables scroll inside wrapper on small screens */
+  .overflow-x-auto {
+    width: 100%;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 
