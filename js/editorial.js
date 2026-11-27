@@ -83,10 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   (function initThemeSwitcher() {
     const THEME_KEY = 'dnyandeep_school_theme';
-    const DEFAULT_THEME = 'maroon';
+    const DEFAULT_THEME = 'logo';
 
-    // Retrieve saved theme or default to maroon
+    // Retrieve saved theme or default to logo (migrate any legacy maroon to logo)
     let currentTheme = localStorage.getItem(THEME_KEY) || DEFAULT_THEME;
+    if (currentTheme === 'maroon') currentTheme = 'logo';
     document.documentElement.setAttribute('data-theme', currentTheme);
 
     // Create floating switcher if not already present
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       switcher.innerHTML = [
         '<span class="dnyandeep-theme-switcher-label">Theme</span>',
-        '<button type="button" class="theme-pill-btn" data-theme-name="maroon" title="Theme 1: Maroon (Default)" aria-label="Maroon Theme"></button>',
+        '<button type="button" class="theme-pill-btn" data-theme-name="logo" title="Theme 1: Logo Match (Flame Orange & Dark Brown)" aria-label="Logo Theme"></button>',
         '<button type="button" class="theme-pill-btn" data-theme-name="orange" title="Theme 2: Flame Orange" aria-label="Orange Theme"></button>',
         '<button type="button" class="theme-pill-btn" data-theme-name="navy" title="Theme 3: Classic Navy" aria-label="Navy Theme"></button>'
       ].join('');
@@ -106,8 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(switcher);
 
       const updateActiveButtons = (theme) => {
+        const activeTheme = (theme === 'maroon') ? 'logo' : theme;
         switcher.querySelectorAll('.theme-pill-btn').forEach((btn) => {
-          if (btn.getAttribute('data-theme-name') === theme) {
+          if (btn.getAttribute('data-theme-name') === activeTheme) {
             btn.classList.add('is-active');
           } else {
             btn.classList.remove('is-active');

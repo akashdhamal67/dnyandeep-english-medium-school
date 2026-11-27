@@ -14,34 +14,39 @@
 
 /* --- Three-Theme Design System & Design Tokens --- */
 :root,
+html[data-theme="logo"],
 html[data-theme="maroon"],
 html:not([data-theme]) {
-  /* THEME 1 - Maroon (Default School Mashal Theme) */
-  --primary: #7A1F1F;
-  --accent: #D35F0B;
-  --gold: #C9962B;
-  --dark: #1F1A17;
-  --cream: #FFF8EC;
-  --white: #FFFFFF;
-  --text: #1F1A17;
-  --text-muted: #4A3E39;
-  --text-light: #6E5F58;
+  /* THEME 1 - Logo (Exact School Insignia Match: Flame Orange, Amber & Dark Brown) */
+  --primary: #3B1F14;         /* Dark Brown — Top bar, footer and headings */
+  --accent: #E8742A;          /* Flame Orange */
+  --accent-light: #F5A940;    /* Amber */
+  --gold: #F5A940;            /* Amber Accent */
+  --gold-text: #C26A12;       /* Deep Orange — Small text on white, subtitle, labels */
+  --dark: #1A1512;
+  --cream: #FFF8EC;           /* Warm Ivory/Cream Alternate Background */
+  --white: #FFFFFF;           /* Pure White */
+  --text: #1A1512;            /* Dark Charcoal Body Text */
+  --text-muted: #4A3A30;
+  --text-light: #6E5B50;
   --border-subtle: #E8DAC4;
-  --btn-accent-text: #FFFFFF;
-  --overlay-start: rgba(40, 10, 10, 0.85);
-  --overlay-end: rgba(40, 10, 10, 0.35);
-  --hero-badge-bg: rgba(60, 15, 15, 0.75);
+  --btn-accent-text: #1A1512; /* Dark text on vivid flame button */
+  --overlay-start: rgba(30, 14, 8, 0.85);  /* Warm Dark Brown (NO red or pink tint) */
+  --overlay-end: rgba(30, 14, 8, 0.30);
+  --hero-badge-bg: rgba(59, 31, 20, 0.80); /* Dark Brown Translucent Badge */
+  --hero-badge-border: #F5A940;
+  --hero-badge-text: #F5A940;
 
   /* Backward Compatibility Aliases */
-  --c-forest-dark: var(--dark);
+  --c-forest-dark: var(--primary);
   --c-forest: var(--primary);
-  --c-forest-mid: #5E1616;
-  --c-forest-light: #942929;
-  --c-olive: #6E5F58;
-  --c-olive-light: #8C7B73;
+  --c-forest-mid: #2A150D;
+  --c-forest-light: #4E2A1C;
+  --c-olive: #6E5B50;
+  --c-olive-light: #8C7669;
   --c-gold: var(--gold);
-  --c-gold-light: #DFC074;
-  --c-gold-dark: #A6751C;
+  --c-gold-light: #F7B85E;
+  --c-gold-dark: var(--gold-text);
   --c-ivory: var(--cream);
   --c-ivory-warm: #F7EBD7;
   --c-sand: var(--border-subtle);
@@ -62,17 +67,19 @@ html:not([data-theme]) {
   --container-pad: clamp(1rem, 3.5vw, 2.5rem);
 
   /* Elevation & Shadows */
-  --shadow-subtle: 0 2px 10px rgba(31, 26, 23, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
-  --shadow-elevated: 0 12px 32px rgba(31, 26, 23, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
-  --shadow-overlay: 0 24px 64px rgba(31, 26, 23, 0.45);
+  --shadow-subtle: 0 2px 10px rgba(30, 14, 8, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-elevated: 0 12px 32px rgba(30, 14, 8, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-overlay: 0 24px 64px rgba(30, 14, 8, 0.45);
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html[data-theme="orange"] {
-  /* THEME 2 - Orange (Warm Academic Theme) */
+  /* THEME 2 - Orange (Warm Academic Theme with Logo Orange/Amber) */
   --primary: #2A1A10;
-  --accent: #D35F0B;
-  --gold: #C9962B;
+  --accent: #E8742A;          /* Flame Orange */
+  --accent-light: #F5A940;    /* Amber */
+  --gold: #F5A940;            /* Amber Accent */
+  --gold-text: #C26A12;       /* Deep Orange */
   --dark: #2A1A10;
   --cream: #FFF6E8;
   --white: #FFFFFF;
@@ -80,10 +87,12 @@ html[data-theme="orange"] {
   --text-muted: #543E30;
   --text-light: #7A6252;
   --border-subtle: #E8D8C5;
-  --btn-accent-text: #FFFFFF;
-  --overlay-start: rgba(35, 18, 10, 0.85);
-  --overlay-end: rgba(35, 18, 10, 0.35);
-  --hero-badge-bg: rgba(42, 26, 16, 0.75);
+  --btn-accent-text: #1A1512;
+  --overlay-start: rgba(28, 14, 8, 0.85);
+  --overlay-end: rgba(28, 14, 8, 0.30);
+  --hero-badge-bg: rgba(42, 26, 16, 0.80);
+  --hero-badge-border: #F5A940;
+  --hero-badge-text: #F5A940;
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--dark);
@@ -93,8 +102,8 @@ html[data-theme="orange"] {
   --c-olive: #7A6252;
   --c-olive-light: #9C8270;
   --c-gold: var(--gold);
-  --c-gold-light: #DFC074;
-  --c-gold-dark: #A6751C;
+  --c-gold-light: #F7B85E;
+  --c-gold-dark: var(--gold-text);
   --c-ivory: var(--cream);
   --c-ivory-warm: #F7EAD7;
   --c-sand: var(--border-subtle);
@@ -106,10 +115,12 @@ html[data-theme="orange"] {
 }
 
 html[data-theme="navy"] {
-  /* THEME 3 - Navy (Distinguished Scholastic Theme) */
+  /* THEME 3 - Navy (Classic Scholastic with Logo Orange/Amber Accents) */
   --primary: #14213D;
-  --accent: #C9962B;
-  --gold: #E8731A;
+  --accent: #E8742A;          /* Flame Orange */
+  --accent-light: #F5A940;    /* Amber */
+  --gold: #F5A940;            /* Amber */
+  --gold-text: #C26A12;       /* Deep Orange */
   --dark: #1F1A17;
   --cream: #FBF7F0;
   --white: #FFFFFF;
@@ -117,10 +128,12 @@ html[data-theme="navy"] {
   --text-muted: #424652;
   --text-light: #646875;
   --border-subtle: #E2DBD0;
-  --btn-accent-text: #14213D; /* Contrast specification: navy text in Theme 3 */
-  --overlay-start: rgba(16, 26, 48, 0.85);
-  --overlay-end: rgba(16, 26, 48, 0.35);
-  --hero-badge-bg: rgba(20, 33, 61, 0.75);
+  --btn-accent-text: #1A1512;
+  --overlay-start: rgba(14, 22, 42, 0.85);
+  --overlay-end: rgba(14, 22, 42, 0.30);
+  --hero-badge-bg: rgba(20, 33, 61, 0.80);
+  --hero-badge-border: #F5A940;
+  --hero-badge-text: #F5A940;
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--primary);
@@ -130,8 +143,8 @@ html[data-theme="navy"] {
   --c-olive: #646875;
   --c-olive-light: #898E9C;
   --c-gold: var(--gold);
-  --c-gold-light: #F2954B;
-  --c-gold-dark: #C45B0A;
+  --c-gold-light: #F7B85E;
+  --c-gold-dark: var(--gold-text);
   --c-ivory: var(--cream);
   --c-ivory-warm: #F2ECE0;
   --c-sand: var(--border-subtle);
@@ -306,9 +319,13 @@ p {
   color: var(--white);
   font-size: 0.75rem;
   letter-spacing: 0.04em;
-  border-bottom: 1px solid var(--gold);
+  border-bottom: 1px solid var(--accent);
   position: relative;
   z-index: 40;
+}
+.top-utility-bar i,
+.top-utility-bar svg {
+  color: var(--accent-light, #F5A940) !important;
 }
 
 .site-header-doon {
@@ -368,7 +385,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.04em;
   line-height: 1.1;
-  color: var(--c-forest);
+  color: var(--primary);
 }
 
 .brand-subtitle-doon {
@@ -377,7 +394,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #A8731A;
+  color: var(--gold-text, #C26A12);
   margin-top: 0.15rem;
   white-space: nowrap;
 }
@@ -413,13 +430,13 @@ p {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--c-gold);
+  background-color: var(--accent);
   transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-link-doon:hover,
 .nav-link-doon.active {
-  color: var(--c-forest);
+  color: var(--primary);
 }
 
 .nav-link-doon:hover::after,
@@ -529,19 +546,20 @@ p {
 
 .btn-doon-gold,
 .btn-header-apply {
-  background: linear-gradient(135deg, #E07B2A 0%, #F0A93B 100%) !important;
-  color: #3A1A10 !important;
-  border: 1px solid #E07B2A !important;
-  font-weight: 600;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(135deg, #E8742A 0%, #F5A940 100%) !important;
+  color: #1A1512 !important;
+  border: 1px solid #E8742A !important;
+  font-weight: 700;
+  opacity: 1 !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .btn-doon-gold:hover,
 .btn-header-apply:hover {
-  background: #D35F0B !important;
-  border-color: #D35F0B !important;
+  background: #E8742A !important;
+  border-color: #E8742A !important;
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(211, 95, 11, 0.4);
+  box-shadow: 0 6px 18px rgba(232, 116, 42, 0.45);
 }
 
 .btn-doon-forest {
@@ -723,7 +741,7 @@ p {
 .doon-footer {
   background-color: var(--primary);
   color: var(--white);
-  border-top: 4px solid var(--gold);
+  border-top: 4px solid var(--accent);
 }
 
 .footer-nav-col h4 {
@@ -731,7 +749,7 @@ p {
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--c-gold);
+  color: var(--accent-light, #F5A940);
   margin-bottom: 1.25rem;
   text-transform: capitalize;
 }
@@ -915,16 +933,17 @@ p {
   transform: scale(1.12);
 }
 
+.theme-pill-btn[data-theme-name="logo"],
 .theme-pill-btn[data-theme-name="maroon"] {
-  background: linear-gradient(135deg, #7A1F1F 50%, #D35F0B 50%);
+  background: linear-gradient(135deg, #E8742A 50%, #3B1F14 50%);
 }
 
 .theme-pill-btn[data-theme-name="orange"] {
-  background: linear-gradient(135deg, #D35F0B 50%, #2A1A10 50%);
+  background: linear-gradient(135deg, #E8742A 50%, #F5A940 50%);
 }
 
 .theme-pill-btn[data-theme-name="navy"] {
-  background: linear-gradient(135deg, #14213D 50%, #E8731A 50%);
+  background: linear-gradient(135deg, #14213D 50%, #E8742A 50%);
 }
 
 
@@ -1034,11 +1053,11 @@ hr,
 
 /* Hero Identity Badge (ESTD. 1944) */
 .hero-identity-badge {
-  background-color: var(--hero-badge-bg, rgba(60, 15, 15, 0.75)) !important;
-  border: 1px solid var(--gold) !important;
+  background-color: var(--hero-badge-bg, rgba(59, 31, 20, 0.8)) !important;
+  border: 1px solid var(--hero-badge-border, #F5A940) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 .hero-identity-badge span {
-  color: var(--gold) !important;
+  color: var(--hero-badge-text, #F5A940) !important;
 }
