@@ -28,8 +28,9 @@ html:not([data-theme]) {
   --text-light: #6E5F58;
   --border-subtle: #E8DAC4;
   --btn-accent-text: #FFFFFF;
-  --overlay-start: rgba(122, 31, 31, 0.78);
-  --overlay-end: rgba(31, 26, 23, 0.92);
+  --overlay-start: rgba(40, 10, 10, 0.85);
+  --overlay-end: rgba(40, 10, 10, 0.35);
+  --hero-badge-bg: rgba(60, 15, 15, 0.75);
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--dark);
@@ -80,8 +81,9 @@ html[data-theme="orange"] {
   --text-light: #7A6252;
   --border-subtle: #E8D8C5;
   --btn-accent-text: #FFFFFF;
-  --overlay-start: rgba(42, 26, 16, 0.82);
-  --overlay-end: rgba(18, 10, 5, 0.94);
+  --overlay-start: rgba(35, 18, 10, 0.85);
+  --overlay-end: rgba(35, 18, 10, 0.35);
+  --hero-badge-bg: rgba(42, 26, 16, 0.75);
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--dark);
@@ -116,8 +118,9 @@ html[data-theme="navy"] {
   --text-light: #646875;
   --border-subtle: #E2DBD0;
   --btn-accent-text: #14213D; /* Contrast specification: navy text in Theme 3 */
-  --overlay-start: rgba(20, 33, 61, 0.84);
-  --overlay-end: rgba(10, 16, 30, 0.94);
+  --overlay-start: rgba(16, 26, 48, 0.85);
+  --overlay-end: rgba(16, 26, 48, 0.35);
+  --hero-badge-bg: rgba(20, 33, 61, 0.75);
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--primary);
@@ -374,7 +377,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--gold);
+  color: #A8731A;
   margin-top: 0.15rem;
   white-space: nowrap;
 }
@@ -526,16 +529,19 @@ p {
 
 .btn-doon-gold,
 .btn-header-apply {
-  background-color: var(--accent) !important;
-  color: var(--btn-accent-text) !important;
-  border-color: var(--accent) !important;
+  background: linear-gradient(135deg, #E07B2A 0%, #F0A93B 100%) !important;
+  color: #3A1A10 !important;
+  border: 1px solid #E07B2A !important;
   font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .btn-doon-gold:hover,
 .btn-header-apply:hover {
-  filter: brightness(1.1);
+  background: #D35F0B !important;
+  border-color: #D35F0B !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(211, 95, 11, 0.35);
+  box-shadow: 0 6px 18px rgba(211, 95, 11, 0.4);
 }
 
 .btn-doon-forest {
@@ -603,15 +609,6 @@ p {
   background: linear-gradient(
     90deg,
     var(--overlay-start) 0%,
-    rgba(0, 0, 0, 0.55) 45%,
-    rgba(0, 0, 0, 0.2) 75%,
-    rgba(0, 0, 0, 0.05) 100%
-  ),
-  linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.25) 0%,
-    transparent 30%,
-    var(--overlay-start) 70%,
     var(--overlay-end) 100%
   );
   z-index: 2;
@@ -1032,4 +1029,16 @@ p {
 hr,
 .border-divider {
   border-color: var(--border-subtle) !important;
+}
+
+
+/* Hero Identity Badge (ESTD. 1944) */
+.hero-identity-badge {
+  background-color: var(--hero-badge-bg, rgba(60, 15, 15, 0.75)) !important;
+  border: 1px solid var(--gold) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hero-identity-badge span {
+  color: var(--gold) !important;
 }
