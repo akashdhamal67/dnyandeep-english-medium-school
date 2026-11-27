@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="maroon">
 <head>
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('dnyandeep_school_theme') || 'maroon';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dnyandeep English Medium School & Jr. College | Manjari Khurd, Pune (Estd. 1944)</title>
@@ -20,7 +28,7 @@
   <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=27">
+  <link rel="stylesheet" href="css/editorial.css?v=28">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -885,7 +893,7 @@
     </div>
   </footer>
 
-  <script src="js/editorial.js?v=14"></script>
+  <script src="js/editorial.js?v=15"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

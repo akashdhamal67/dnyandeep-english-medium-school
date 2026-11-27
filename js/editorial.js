@@ -76,4 +76,56 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide && typeof window.lucide.createIcons === 'function') {
     window.lucide.createIcons();
   }
+
+  // ==========================================================================
+  // THEME SWITCHER CONTROLLER (Live Preview: Maroon, Orange, Navy)
+  // [NOTE: Can be easily removed before final production launch]
+  // ==========================================================================
+  (function initThemeSwitcher() {
+    const THEME_KEY = 'dnyandeep_school_theme';
+    const DEFAULT_THEME = 'maroon';
+
+    // Retrieve saved theme or default to maroon
+    let currentTheme = localStorage.getItem(THEME_KEY) || DEFAULT_THEME;
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    // Create floating switcher if not already present
+    if (!document.querySelector('.dnyandeep-theme-switcher')) {
+      const switcher = document.createElement('div');
+      switcher.className = 'dnyandeep-theme-switcher';
+      switcher.setAttribute('role', 'region');
+      switcher.setAttribute('aria-label', 'Theme Selector Preview');
+
+      switcher.innerHTML = [
+        '<span class="dnyandeep-theme-switcher-label">Theme</span>',
+        '<button type="button" class="theme-pill-btn" data-theme-name="maroon" title="Theme 1: Maroon (Default)" aria-label="Maroon Theme"></button>',
+        '<button type="button" class="theme-pill-btn" data-theme-name="orange" title="Theme 2: Flame Orange" aria-label="Orange Theme"></button>',
+        '<button type="button" class="theme-pill-btn" data-theme-name="navy" title="Theme 3: Classic Navy" aria-label="Navy Theme"></button>'
+      ].join('');
+
+      document.body.appendChild(switcher);
+
+      const updateActiveButtons = (theme) => {
+        switcher.querySelectorAll('.theme-pill-btn').forEach((btn) => {
+          if (btn.getAttribute('data-theme-name') === theme) {
+            btn.classList.add('is-active');
+          } else {
+            btn.classList.remove('is-active');
+          }
+        });
+      };
+
+      updateActiveButtons(currentTheme);
+
+      switcher.querySelectorAll('.theme-pill-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const selected = btn.getAttribute('data-theme-name');
+          document.documentElement.setAttribute('data-theme', selected);
+          localStorage.setItem(THEME_KEY, selected);
+          updateActiveButtons(selected);
+        });
+      });
+    }
+  })();
+
 });
