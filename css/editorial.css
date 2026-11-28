@@ -1312,74 +1312,128 @@ main > section:first-child {
   transform: scale(1.06);
 }
 
-/* --- Institutional Footer --- */
+/* --- Professional Institutional Compact 4-Column Footer --- */
 .doon-footer {
-  background-color: var(--primary);
-  color: var(--text-on-dark);
-  border-top: 2.5px solid var(--accent);
+  background-color: var(--surface-dark, #24140D);
+  color: var(--text-on-dark, #F3E9DD);
+  border-top: 2px solid var(--accent, #E8742A);
+  padding-top: 2.75rem !important;
+  padding-bottom: 1.25rem !important;
 }
 
-.doon-footer p {
-  color: var(--text-on-dark) !important;
-  opacity: 1 !important;
-}
-
-.doon-footer strong,
-.doon-footer b {
-  color: var(--text-on-dark-label) !important;
-  font-weight: 600;
-}
-
-.footer-nav-col h3,
-.footer-nav-col h4 {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: normal;
-  color: var(--heading-on-dark) !important;
-  margin-bottom: 1.25rem;
+.footer-column-heading {
+  font-family: var(--font-heading, 'Cormorant Garamond', Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent-light, #F5A940) !important;
+  margin-bottom: 0.85rem;
   text-transform: none;
 }
 
-.footer-nav-col ul {
+.footer-nav-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.footer-nav-col a {
-  color: var(--link-on-dark) !important;
-  text-decoration: underline;
+.footer-nav-link {
+  font-family: var(--font-body, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 0.8125rem;
+  color: #F3E9DD !important;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #F5A940 !important;
+  transform: translateX(2px);
+}
+
+.footer-contact-item {
+  font-family: var(--font-body, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: #F3E9DD;
+}
+
+.footer-contact-phone {
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  color: #F3E9DD !important;
+  display: inline-block;
   transition: color 0.2s ease;
 }
-.footer-nav-col a:hover {
-  color: var(--link-on-dark-hover) !important;
+
+.footer-contact-phone:hover,
+.footer-contact-link:hover {
+  color: #F5A940 !important;
 }
 
-.footer-link-doon {
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--text-on-dark) !important;
+.footer-contact-link {
   text-decoration: none !important;
-  display: block;
-  padding: 0.25rem 0;
-  text-transform: none;
-  letter-spacing: normal;
-  opacity: 1 !important;
-  transition: all 0.2s ease;
+  color: #F3E9DD !important;
+  transition: color 0.2s ease;
 }
-.footer-link-doon:hover {
-  color: var(--link-on-dark) !important;
-  transform: translateX(3px);
+
+.footer-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #F5A940 !important;
+  text-decoration: none !important;
+  margin-top: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.footer-directions-btn:hover {
+  color: #FFFFFF !important;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #F3E9DD;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-social-icon:hover {
+  background-color: #E8742A;
+  color: #FFFFFF;
+  border-color: #E8742A;
+  transform: translateY(-2px);
 }
 
 .footer-bottom-strip {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 1.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   font-size: 0.75rem;
-  color: var(--meta-on-dark) !important;
+  color: rgba(243, 233, 221, 0.65);
 }
-.footer-bottom-strip p,
-.footer-bottom-strip span {
-  color: var(--meta-on-dark) !important;
+
+.footer-bottom-strip a {
+  color: rgba(243, 233, 221, 0.65) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-strip a:hover {
+  color: #F5A940 !important;
 }
 
 /* Generic Dark Section Contrast Enforcer */
