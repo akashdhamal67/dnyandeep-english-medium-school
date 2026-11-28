@@ -223,4 +223,115 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide && typeof window.lucide.createIcons === 'function') {
     window.lucide.createIcons();
   }
+
+  // 6. Testimonials Carousel on Mobile
+  const testimonialCarousels = document.querySelectorAll('.testimonials-carousel-container');
+  testimonialCarousels.forEach((container) => {
+    const track = container.querySelector('.testimonials-carousel-track');
+    const slides = container.querySelectorAll('.testimonials-carousel-slide');
+    const dotsContainer = container.querySelector('.testimonials-dots');
+    if (!track || slides.length <= 1) return;
+
+    let currentIndex = 0;
+    let autoSlideTimer = null;
+    let startX = 0;
+    let currentTranslate = 0;
+    let isDragging = false;
+
+    // Create dots if dots container exists
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `testimonials-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to testimonial slide ${idx + 1}`);
+        dot.addEventListener('click', () => {
+          goToSlide(idx);
+          resetTimer();
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    const updateDots = () => {
+      if (!dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll('.testimonials-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+
+    const goToSlide = (idx) => {
+      if (window.innerWidth >= 1024) {
+        track.style.transform = 'none';
+        return;
+      }
+      currentIndex = (idx + slides.length) % slides.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateDots();
+    };
+
+    const nextSlide = () => {
+      goToSlide(currentIndex + 1);
+    };
+
+    const startTimer = () => {
+      if (window.innerWidth < 1024) {
+        autoSlideTimer = setInterval(nextSlide, 4500);
+      }
+    };
+
+    const stopTimer = () => {
+      if (autoSlideTimer) {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = null;
+      }
+    };
+
+    const resetTimer = () => {
+      stopTimer();
+      startTimer();
+    };
+
+    // Pause auto-sliding on touch / hover
+    container.addEventListener('mouseenter', stopTimer);
+    container.addEventListener('mouseleave', startTimer);
+    container.addEventListener('touchstart', (e) => {
+      stopTimer();
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const endX = e.changedTouches[0].clientX;
+      const diffX = endX - startX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) {
+          goToSlide(currentIndex - 1);
+        } else {
+          goToSlide(currentIndex + 1);
+        }
+      }
+      startTimer();
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        stopTimer();
+        track.style.transform = 'none';
+      } else {
+        goToSlide(currentIndex);
+        resetTimer();
+      }
+    });
+
+    // Start auto-slide if on mobile/tablet
+    startTimer();
+  });
 });

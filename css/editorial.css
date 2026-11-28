@@ -1739,3 +1739,118 @@ hr,
 .hero-identity-badge span {
   color: var(--hero-badge-text, #F5A940) !important;
 }
+
+/* ==========================================================================
+   Testimonials Section ("What Parents Say") & Mobile Carousel
+   ========================================================================== */
+.testimonial-card-doon {
+  background: var(--surface-dark, #24140D);
+  border: 1px solid rgba(222, 192, 132, 0.2);
+  border-radius: 6px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--text-on-dark, #F3E9DD);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card-doon:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 169, 64, 0.45);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-quote-icon {
+  color: var(--accent-light, #F5A940);
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.testimonial-quote-text {
+  font-family: inherit;
+  font-size: clamp(0.9375rem, 1.1vw, 1.05rem);
+  line-height: 1.7;
+  color: rgba(243, 233, 221, 0.9);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonial-author-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--heading-on-dark, #FFFFFF);
+  letter-spacing: 0.02em;
+}
+
+.testimonial-author-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-light, #F5A940);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.2rem;
+}
+
+/* Mobile carousel track */
+@media (max-width: 1023px) {
+  .testimonials-carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .testimonials-carousel-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+  }
+
+  .testimonials-carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+  }
+
+  .testimonials-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+  }
+
+  .testimonials-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background-color: rgba(245, 169, 64, 0.3);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.25s ease;
+  }
+
+  .testimonials-dot.active {
+    background-color: var(--accent-light, #F5A940);
+    width: 24px;
+    border-radius: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-carousel-track {
+    display: grid !important;
+    transform: none !important;
+  }
+  .testimonials-dots {
+    display: none !important;
+  }
+}

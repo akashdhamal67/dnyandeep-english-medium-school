@@ -24,7 +24,7 @@
   <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=49">
+  <link rel="stylesheet" href="css/editorial.css?v=50">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -887,7 +887,126 @@
     </section>
 
     <!-- ==========================================
-         9. Full-Width Institutional Quote Break
+         9. WHAT PARENTS SAY — TESTIMONIALS SECTION
+         <!-- REPLACE WITH REAL TESTIMONIALS BEFORE LAUNCH -->
+         ========================================== -->
+    <section id="testimonials" class="py-20 lg:py-28 bg-[#FFFFFF] border-b border-[#E6DEC8]">
+      <div class="container-doon">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 lg:mb-18 space-y-3">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#E8742A]">Voices of Our Community</span>
+          <h2 class="font-editorial-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#4A2C22]">What Parents Say</h2>
+          <div class="w-16 h-0.5 bg-[#E8742A] mx-auto mt-2"></div>
+          <p class="text-sm sm:text-base text-[#5C4D44] font-light leading-relaxed pt-2">
+            Reflections from families whose children thrive in our structured classrooms, value-driven environment, and holistic campus life.
+          </p>
+        </div>
+
+        <!-- Desktop: 3 cards in a row; Mobile/Tablet: auto-sliding carousel with dots -->
+        <div class="testimonials-carousel-container">
+          <div class="testimonials-carousel-track lg:grid lg:grid-cols-3 lg:gap-8">
+            
+            <!-- Slide 1 -->
+            <div class="testimonials-carousel-slide">
+              <div class="testimonial-card-doon h-full">
+                <div>
+                  <svg class="testimonial-quote-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p class="testimonial-quote-text">
+                    “Dnyandeep provides an ideal balance of academic discipline and individual attention. My daughter's confidence in mathematics and public speaking has improved noticeably since joining the primary section.”
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                  <div class="testimonial-author-name">Sunita Patil</div>
+                  <div class="testimonial-author-label">Parent of Std 5 student</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonials-carousel-slide">
+              <div class="testimonial-card-doon h-full">
+                <div>
+                  <svg class="testimonial-quote-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p class="testimonial-quote-text">
+                    “The focus on Maharashtra SSC Board preparation combined with consistent science practicals and teacher mentorship gives us complete peace of mind. The faculty is genuinely invested in every student's growth.”
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                  <div class="testimonial-author-name">Rajesh Deshmukh</div>
+                  <div class="testimonial-author-label">Parent of Std 9 student</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonials-carousel-slide">
+              <div class="testimonial-card-doon h-full">
+                <div>
+                  <svg class="testimonial-quote-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p class="testimonial-quote-text">
+                    “Finding a nurturing, secure environment for our child was our top priority. The early learning classrooms, caring teachers, and structured phonics activities make coming to school a joyful experience every day.”
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                  <div class="testimonial-author-name">Priyanka Kulkarni</div>
+                  <div class="testimonial-author-label">Parent of Pre-Primary student</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 (Carousel on mobile/tablet) -->
+            <div class="testimonials-carousel-slide lg:hidden">
+              <div class="testimonial-card-doon h-full">
+                <div>
+                  <svg class="testimonial-quote-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p class="testimonial-quote-text">
+                    “The emphasis on values, physical education, and sports alongside the regular curriculum sets Dnyandeep apart. We truly appreciate the open communication and regular feedback from the school staff.”
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                  <div class="testimonial-author-name">Sachin Shinde</div>
+                  <div class="testimonial-author-label">Parent of Std 7 student</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 (Carousel on mobile/tablet) -->
+            <div class="testimonials-carousel-slide lg:hidden">
+              <div class="testimonial-card-doon h-full">
+                <div>
+                  <svg class="testimonial-quote-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p class="testimonial-quote-text">
+                    “The structured revisions, weekly assessments, and dedicated doubt-clearing sessions before board examinations helped our child stay calm and thoroughly prepared throughout high school.”
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-white/10">
+                  <div class="testimonial-author-name">Dr. Vaishali More</div>
+                  <div class="testimonial-author-label">Parent of Std 10 student</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel dots on mobile/tablet -->
+          <div class="testimonials-dots" aria-label="Testimonial navigation dots"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         10. Full-Width Institutional Quote Break
          ========================================== -->
     <section class="py-20 lg:py-24 bg-[#0F2C1F] text-white text-center">
       <div class="container-doon max-w-4xl space-y-6 fade-in-observe">
@@ -999,7 +1118,7 @@
     </a>
   </nav>
 
-  <script src="js/editorial.js?v=49"></script>
+  <script src="js/editorial.js?v=50"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();
