@@ -84,17 +84,41 @@ document.addEventListener('DOMContentLoaded', () => {
     observeElements.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // 4. Hero Background Video Handling (Autoplay on Desktop & Mobile, Smooth Loop)
+  // 4. Hero Background Video Handling (Autoplay on Desktop & Mobile, Smooth Fade-in & Loop)
   const heroVideo = document.getElementById('hero-bg-video');
   const heroSection = document.getElementById('hero-section');
 
   if (heroVideo) {
+    // Dynamic poster optimization: use mobile poster on small screens
+    const updatePoster = () => {
+      const isMobile = window.innerWidth < 768;
+      const targetPoster = isMobile ? 'images/hero-poster-mobile.jpg' : 'images/hero-poster.jpg';
+      if (heroVideo.getAttribute('poster') !== targetPoster) {
+        heroVideo.setAttribute('poster', targetPoster);
+      }
+    };
+    updatePoster();
+
+    // Smooth fade in once video is playing or loaded data
+    const markVideoPlaying = () => {
+      heroVideo.classList.add('is-playing');
+    };
+
+    heroVideo.addEventListener('playing', markVideoPlaying, { once: true });
+    heroVideo.addEventListener('loadeddata', () => {
+      // Fallback in case 'playing' event is delayed
+      setTimeout(markVideoPlaying, 200);
+    }, { once: true });
+
     // Attempt video playback on load and log any issues
     const attemptPlay = () => {
       heroVideo.muted = true;
       const playPromise = heroVideo.play();
       if (playPromise !== undefined) {
         playPromise
+          .then(() => {
+            markVideoPlaying();
+          })
           .catch((err) => {
             console.warn('Hero video autoplay was prevented or failed; poster fallback displayed.', err);
           });

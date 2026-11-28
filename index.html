@@ -17,10 +17,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
+  <!-- Hero Poster Preload (Instant first-frame rendering) -->
+  <link rel="preload" as="image" href="images/hero-poster.jpg" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="images/hero-poster-mobile.jpg" media="(max-width: 767px)">
+
   <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=46">
+  <link rel="stylesheet" href="css/editorial.css?v=47">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -173,13 +177,17 @@
           loop 
           playsinline 
           preload="auto"
-          poster="images/rebuild/hero-campus-life.webp?v=17"
+          poster="images/hero-poster.jpg"
           aria-hidden="true"
         >
           <source src="videos/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
-          <source src="videos/hero.webm" type="video/webm">
           <source src="videos/hero.mp4" type="video/mp4">
         </video>
+        <noscript>
+          <style>
+            .hero-backdrop-video { opacity: 1 !important; }
+          </style>
+        </noscript>
         <div class="hero-overlay-gradient"></div>
       </div>
 
