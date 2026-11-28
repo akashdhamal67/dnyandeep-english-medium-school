@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=50">
+  <link rel="stylesheet" href="css/editorial.css?v=51">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -179,18 +179,18 @@
       <div class="container-doon">
         
         <!-- Filter / Category Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-          <span class="px-4 py-1.5 rounded-full bg-[#153D2B] text-white text-xs font-semibold">All Articles</span>
-          <span class="px-4 py-1.5 rounded-full bg-white border border-[#E6DEC8] text-[#5C4D44] text-xs font-medium hover:border-[#153D2B] transition-colors cursor-pointer">Academic Excellence</span>
-          <span class="px-4 py-1.5 rounded-full bg-white border border-[#E6DEC8] text-[#5C4D44] text-xs font-medium hover:border-[#153D2B] transition-colors cursor-pointer">Student Life</span>
-          <span class="px-4 py-1.5 rounded-full bg-white border border-[#E6DEC8] text-[#5C4D44] text-xs font-medium hover:border-[#153D2B] transition-colors cursor-pointer">Parenting &amp; Guidance</span>
+        <div class="blog-filter-bar" role="tablist" aria-label="Filter blog posts by category">
+          <button type="button" class="blog-filter-btn active" data-category="all" role="tab" aria-selected="true">All Articles</button>
+          <button type="button" class="blog-filter-btn" data-category="Academic Excellence" role="tab" aria-selected="false">Academic Excellence</button>
+          <button type="button" class="blog-filter-btn" data-category="Student Life" role="tab" aria-selected="false">Student Life</button>
+          <button type="button" class="blog-filter-btn" data-category="Parenting & Guidance" role="tab" aria-selected="false">Parenting &amp; Guidance</button>
         </div>
 
         <!-- 6 Post Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-posts-grid">
           
           <!-- Card 1 -->
-          <article class="bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <article class="blog-post-card bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group" data-category="Academic Excellence">
             <div>
               <div class="relative h-48 overflow-hidden bg-[#24140D]">
                 <img src="images/classroom-activity.jpg" alt="Effective Study Habits for Board Exams" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -218,11 +218,11 @@
           </article>
 
           <!-- Card 2 -->
-          <article class="bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <article class="blog-post-card bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group" data-category="Academic Excellence">
             <div>
               <div class="relative h-48 overflow-hidden bg-[#24140D]">
                 <img src="images/computer-lab.jpg" alt="The Value of Hands-on STEM in Early High School" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                <span class="absolute top-3 left-3 bg-[#153D2B] text-[#DEC084] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">STEM &amp; Innovation</span>
+                <span class="absolute top-3 left-3 bg-[#153D2B] text-[#DEC084] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">Academic Excellence</span>
               </div>
               <div class="p-6 space-y-3">
                 <div class="text-xs text-[#8A7B70] flex items-center gap-1.5">
@@ -246,7 +246,7 @@
           </article>
 
           <!-- Card 3 -->
-          <article class="bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <article class="blog-post-card bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group" data-category="Student Life">
             <div>
               <div class="relative h-48 overflow-hidden bg-[#24140D]">
                 <img src="images/sports-ground.jpg" alt="Character Building Through Sports and Physical Fitness" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -274,11 +274,11 @@
           </article>
 
           <!-- Card 4 -->
-          <article class="bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <article class="blog-post-card bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group" data-category="Academic Excellence">
             <div>
               <div class="relative h-48 overflow-hidden bg-[#24140D]">
                 <img src="images/library.jpg" alt="Nurturing a Love for Reading" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                <span class="absolute top-3 left-3 bg-[#153D2B] text-[#DEC084] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">Literary Life</span>
+                <span class="absolute top-3 left-3 bg-[#153D2B] text-[#DEC084] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">Academic Excellence</span>
               </div>
               <div class="p-6 space-y-3">
                 <div class="text-xs text-[#8A7B70] flex items-center gap-1.5">
@@ -302,11 +302,11 @@
           </article>
 
           <!-- Card 5 -->
-          <article class="bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <article class="blog-post-card bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group" data-category="Student Life">
             <div>
               <div class="relative h-48 overflow-hidden bg-[#24140D]">
                 <img src="images/activity-hall.jpg" alt="The Role of Arts and Cultural Expression" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                <span class="absolute top-3 left-3 bg-[#153D2B] text-[#DEC084] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">Cultural Arts</span>
+                <span class="absolute top-3 left-3 bg-[#153D2B] text-[#DEC084] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">Student Life</span>
               </div>
               <div class="p-6 space-y-3">
                 <div class="text-xs text-[#8A7B70] flex items-center gap-1.5">
@@ -330,7 +330,7 @@
           </article>
 
           <!-- Card 6 -->
-          <article class="bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group">
+          <article class="blog-post-card bg-white rounded-lg border border-[#E6DEC8] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow group" data-category="Parenting & Guidance">
             <div>
               <div class="relative h-48 overflow-hidden bg-[#24140D]">
                 <img src="images/campus-students.jpg" alt="Partnering for Student Well-Being" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -356,6 +356,15 @@
               </a>
             </div>
           </article>
+
+          <!-- Empty state when a category has 0 posts -->
+          <div class="blog-empty-state">
+            <div class="w-12 h-12 mx-auto mb-3 text-[#E8742A] flex items-center justify-center rounded-full bg-[#FAF8F5] border border-[#E6DEC8]">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-editorial-serif text-xl font-bold text-[#153D2B] mb-1">No articles in this category yet</h3>
+            <p class="text-xs text-[#5C4D44] font-light">Check back soon as our faculty regularly publishes new insights and updates.</p>
+          </div>
 
         </div>
 
@@ -432,7 +441,7 @@
     </a>
   </nav>
 
-  <script src="js/editorial.js?v=50"></script>
+  <script src="js/editorial.js?v=51"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

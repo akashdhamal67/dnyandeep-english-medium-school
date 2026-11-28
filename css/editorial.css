@@ -1741,8 +1741,94 @@ hr,
 }
 
 /* ==========================================================================
-   Testimonials Section ("What Parents Say") & Mobile Carousel
+   Blog Category Filter Buttons & Transition Styles
    ========================================================================== */
+.blog-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .blog-filter-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .blog-filter-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}
+
+.blog-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.15rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #E6DEC8;
+  background-color: #FFFFFF;
+  color: #5C4D44;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  user-select: none;
+  font-family: inherit;
+}
+
+.blog-filter-btn:hover {
+  border-color: #4A2C22;
+  color: #4A2C22;
+  background-color: #FAF8F5;
+  transform: translateY(-1px);
+}
+
+.blog-filter-btn.active {
+  background-color: #24140D !important;
+  color: #F3E9DD !important;
+  border-color: #24140D !important;
+  box-shadow: 0 2px 8px rgba(36, 20, 13, 0.25);
+  transform: none;
+}
+
+/* Post card transitions */
+.blog-post-card {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.blog-post-card.is-hidden {
+  display: none !important;
+}
+
+.blog-post-card.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.blog-empty-state {
+  display: none;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background-color: #FFFFFF;
+  border: 1px dashed #E6DEC8;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+  color: #5C4D44;
+}
+
+.blog-empty-state.is-visible {
+  display: block !important;
+}
+
 .testimonial-card-doon {
   background: var(--surface-dark, #24140D);
   border: 1px solid rgba(222, 192, 132, 0.2);

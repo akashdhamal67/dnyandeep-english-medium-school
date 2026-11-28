@@ -334,4 +334,58 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start auto-slide if on mobile/tablet
     startTimer();
   });
+
+  // 7. Blog Category Filter Functionality
+  const blogFilterBar = document.querySelector('.blog-filter-bar');
+  if (blogFilterBar) {
+    const filterBtns = blogFilterBar.querySelectorAll('.blog-filter-btn');
+    const postCards = document.querySelectorAll('.blog-post-card');
+    const emptyState = document.querySelector('.blog-empty-state');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selectedCategory = btn.getAttribute('data-category');
+
+        // Update active class on buttons
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter cards with smooth fade
+        let visibleCount = 0;
+
+        postCards.forEach((card) => {
+          const cardCategory = card.getAttribute('data-category');
+          const isMatch = (selectedCategory === 'all' || cardCategory === selectedCategory);
+
+          if (isMatch) {
+            visibleCount++;
+            card.classList.remove('is-hidden');
+            // Trigger reflow then remove fade-out
+            requestAnimationFrame(() => {
+              card.classList.remove('fade-out');
+            });
+          } else {
+            card.classList.add('fade-out');
+            setTimeout(() => {
+              if (card.classList.contains('fade-out')) {
+                card.classList.add('is-hidden');
+              }
+            }, 300);
+          }
+        });
+
+        // Handle empty state if no articles match
+        if (emptyState) {
+          if (visibleCount === 0) {
+            setTimeout(() => {
+              emptyState.classList.add('is-visible');
+            }, 300);
+          } else {
+            emptyState.classList.remove('is-visible');
+          }
+        }
+      });
+    });
+  }
 });

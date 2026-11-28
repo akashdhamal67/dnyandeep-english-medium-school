@@ -1,0 +1,62 @@
+[
+  {
+    "id": "effective-study-habits-ssc-board",
+    "title": "Effective Study Habits for Maharashtra SSC Board Preparation",
+    "category": "Academic Excellence",
+    "date": "November 24, 2026",
+    "image": "images/classroom-activity.jpg",
+    "author": "Academic Council",
+    "excerpt": "How consistent daily revisions, concept mapping in Science, and practicing previous years' board question papers build unflappable exam confidence.",
+    "url": "blog-single.html"
+  },
+  {
+    "id": "hands-on-science-computer-labs",
+    "title": "Why Hands-on Computer Lab & Science Experiments Matter Early",
+    "category": "Academic Excellence",
+    "date": "November 15, 2026",
+    "image": "images/computer-lab.jpg",
+    "author": "Science Dept",
+    "excerpt": "Moving beyond textbooks: practical science labs cultivate curiosity, logical deduction, and foundational digital literacy in students from Std 5 through 10.",
+    "url": "blog-single.html"
+  },
+  {
+    "id": "character-building-outdoor-sports",
+    "title": "Character Building Through Outdoor Sports & Team Discipline",
+    "category": "Student Life",
+    "date": "November 02, 2026",
+    "image": "images/sports-ground.jpg",
+    "author": "Physical Education",
+    "excerpt": "How structured sports training on our open athletic grounds instills resilience, mutual camaraderie, and lifelong fitness habits in young scholars.",
+    "url": "blog-single.html"
+  },
+  {
+    "id": "nurturing-reading-culture",
+    "title": "Nurturing a Reading Culture in the Digital Distraction Era",
+    "category": "Academic Excellence",
+    "date": "October 22, 2026",
+    "image": "images/library.jpg",
+    "author": "Library Committee",
+    "excerpt": "The role of curated library periods, Marathi and English literature clubs, and structured silent reading hours in vocabulary and attention expansion.",
+    "url": "blog-single.html"
+  },
+  {
+    "id": "performing-arts-public-speaking",
+    "title": "How Performing Arts and Public Speaking Build Student Confidence",
+    "category": "Student Life",
+    "date": "October 08, 2026",
+    "image": "images/activity-hall.jpg",
+    "author": "Arts Faculty",
+    "excerpt": "Annual stage functions, debate competitions, and assembly presentations empower students to express ideas articulate and fearlessly.",
+    "url": "blog-single.html"
+  },
+  {
+    "id": "parents-teachers-partners-middle-school",
+    "title": "Parents and Teachers as Partners: Navigating the Middle School Years",
+    "category": "Parenting & Guidance",
+    "date": "September 28, 2026",
+    "image": "images/campus-students.jpg",
+    "author": "Student Counseling Cell",
+    "excerpt": "Practical strategies for emotional grounding, routines, and collaborative school communication during the transition from primary to high school.",
+    "url": "blog-single.html"
+  }
+]
