@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=48">
+  <link rel="stylesheet" href="css/editorial.css?v=49">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -132,47 +132,38 @@
             </a>
           </div>
         </div>
-        <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 pl-0 md:pl-6">
-          <div class="space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Main Navigation</span>
-            <ul class="space-y-2 text-base">
-              <li><a href="index.html" class="hover:text-[#C5A15A] transition-colors ">Homepage</a></li>
-              <li><a href="about.html" class="hover:text-[#C5A15A] transition-colors ">About Us (School Heritage)</a></li>
-              <li class="drawer-dropdown-group is-open">
-                <button type="button" class="drawer-dropdown-toggle " aria-expanded="true">
-                  <span>Academics</span>
-                  <i data-lucide="chevron-down"></i>
-                </button>
-                <ul class="drawer-submenu">
-                  <li><a href="academics.html" class="hover:text-[#F5A940] transition-colors">Curriculum Overview</a></li>
-                  <li><a href="pre-primary.html" class="hover:text-[#F5A940] transition-colors">Pre-Primary Section (Ages 3–5)</a></li>
-                  <li><a href="primary.html" class="hover:text-[#F5A940] transition-colors">Primary Section (Std 1–4)</a></li>
-                  <li><a href="secondary.html" class="hover:text-[#F5A940] transition-colors">Secondary SSC Section (Std 5–10)</a></li>
-                </ul>
-              </li>
-              <li><a href="admissions.html" class="hover:text-[#C5A15A] transition-colors ">Admissions (2026–27)</a></li>
-              <li><a href="contact.html" class="hover:text-[#C5A15A] transition-colors ">Campus Location &amp; Contact</a></li>
-            </ul>
-          </div>
-          <div class="space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Campus &amp; Resources</span>
-            <ul class="space-y-2 text-base">
-              <li class="drawer-dropdown-group is-open">
-                <button type="button" class="drawer-dropdown-toggle text-[#F5A940]" aria-expanded="true">
-                  <span>Resources &amp; Campus</span>
-                  <i data-lucide="chevron-down"></i>
-                </button>
-                <ul class="drawer-submenu">
-                  <li><a href="facilities.html" class="hover:text-[#F5A940] transition-colors">School Facilities &amp; Labs</a></li>
-                  <li><a href="gallery.html" class="hover:text-[#F5A940] transition-colors">Campus Life &amp; Gallery</a></li>
-                  <li><a href="resources.html" class="hover:text-[#F5A940] transition-colors">Parent Resources Hub</a></li>
-                  <li><a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#C5A15A] transition-colors flex items-center justify-between">Parent Portal <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#C5A15A]"></i></a></li>
-                  <li><a href="career.html" class="hover:text-[#F5A940] transition-colors active text-[#F5A940] font-medium">Teaching Careers at Dnyandeep</a></li>
-                </ul>
-              </li>
-              <li><a href="admission-enquiry.html" class="hover:text-[#C5A15A] transition-colors text-sm text-[#F5A940] font-medium flex items-center gap-1.5 pt-2">Online Admission Enquiry <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a></li>
-            </ul>
-          </div>
+        <div class="md:col-span-7 pl-0 md:pl-8">
+          <ul class="space-y-3 text-lg font-medium">
+            <li><a href="index.html" class="transition-colors inline-block hover:text-[#F5A940] text-white/90">Home</a></li>
+            <li><a href="about.html" class="transition-colors inline-block hover:text-[#F5A940] text-white/90">About Us</a></li>
+            <li class="drawer-dropdown-group">
+              <button type="button" class="drawer-dropdown-toggle" aria-expanded="false">
+                <span>Academics</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <ul class="drawer-submenu">
+                <li><a href="academics.html" class="hover:text-[#F5A940] transition-colors">Curriculum Overview</a></li>
+                <li><a href="pre-primary.html" class="hover:text-[#F5A940] transition-colors">Pre-Primary Section</a></li>
+                <li><a href="primary.html" class="hover:text-[#F5A940] transition-colors">Primary Section (Std 1–4)</a></li>
+                <li><a href="secondary.html" class="hover:text-[#F5A940] transition-colors">Secondary SSC Section (Std 5–10)</a></li>
+              </ul>
+            </li>
+            <li class="drawer-dropdown-group is-open">
+              <button type="button" class="drawer-dropdown-toggle active text-[#F5A940]" aria-expanded="true">
+                <span>Resources</span>
+                <i data-lucide="chevron-down"></i>
+              </button>
+              <ul class="drawer-submenu">
+                <li><a href="facilities.html" class="hover:text-[#F5A940] transition-colors">Facilities</a></li>
+                <li><a href="gallery.html" class="hover:text-[#F5A940] transition-colors">Gallery</a></li>
+                <li><a href="resources.html" class="hover:text-[#F5A940] transition-colors">Parent Resources Hub</a></li>
+                <li><a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#F5A940] transition-colors flex items-center justify-between">Parent Portal <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#C5A15A]"></i></a></li>
+                <li><a href="career.html" class="text-[#F5A940] font-semibold active transition-colors">Teaching Careers</a></li>
+              </ul>
+            </li>
+            <li><a href="admissions.html" class="transition-colors inline-block hover:text-[#F5A940] text-white/90">Admissions</a></li>
+            <li><a href="contact.html" class="transition-colors inline-block hover:text-[#F5A940] text-white/90">Contact Us</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -381,7 +372,7 @@
     </a>
   </nav>
 
-  <script src="js/editorial.js?v=42"></script>
+  <script src="js/editorial.js?v=49"></script>
   <script>
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
       lucide.createIcons();

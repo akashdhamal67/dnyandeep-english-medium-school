@@ -569,15 +569,22 @@ input::placeholder, textarea::placeholder {
 }
 
 .drawer-submenu {
-  display: none;
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
   list-style: none;
   padding-left: 1.25rem;
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
   border-left: 1.5px solid rgba(245, 169, 64, 0.35);
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin 0.3s ease;
 }
 .drawer-dropdown-group.is-open .drawer-submenu {
-  display: block;
+  max-height: 320px;
+  opacity: 1;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 .drawer-submenu li a {
   min-height: 40px !important;

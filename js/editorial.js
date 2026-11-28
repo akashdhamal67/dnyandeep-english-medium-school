@@ -58,7 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const parentGroup = toggleBtn.closest('.drawer-dropdown-group');
         if (parentGroup) {
           const isOpen = parentGroup.classList.contains('is-open');
-          // Close other groups optionally or toggle this one
+          
+          // Only one accordion open at a time: close all other drawer dropdown groups
+          drawerOverlay.querySelectorAll('.drawer-dropdown-group').forEach((group) => {
+            if (group !== parentGroup) {
+              group.classList.remove('is-open');
+              const otherBtn = group.querySelector('.drawer-dropdown-toggle');
+              if (otherBtn) {
+                otherBtn.setAttribute('aria-expanded', 'false');
+              }
+            }
+          });
+
+          // Toggle current group
           parentGroup.classList.toggle('is-open', !isOpen);
           toggleBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
         }
