@@ -15,7 +15,7 @@
 /* --- School Brand Color Tokens & Variables (Root Level) --- */
 :root {
   /* Exact School Logo Color System */
-  --primary: #3B1F14;         /* Dark Brown — Top bar, footer and headings */
+  --primary: #4A2C22;         /* Softened Institutional Dark Brown (warm, elegant & balanced) */
   --accent: #E8742A;          /* Flame Orange */
   --accent-light: #F5A940;    /* Amber */
   --gold: #F5A940;            /* Amber Accent */
@@ -24,9 +24,9 @@
   --cream: #FFF8EC;           /* Warm Ivory/Cream Alternate Section Background */
   --white: #FFFFFF;           /* Pure White */
   --text: #1A1512;            /* Primary Body Text */
-  --text-muted: #4A3A30;      /* Muted Secondary Text */
-  --text-light: #6E5B50;      /* Light Meta Text */
-  --border-subtle: #E8DAC4;   /* Subtle Parchment Dividers */
+  --text-muted: #54443A;      /* Muted Secondary Text */
+  --text-light: #78665B;      /* Light Meta Text */
+  --border-subtle: #ECE2D4;   /* Soft Warm Parchment Dividers */
   --btn-accent-text: #1A1512; /* Dark Brown Text on Vivid Flame Button */
   --overlay-start: rgba(30, 14, 8, 0.78);
   --overlay-end: rgba(30, 14, 8, 0.05);
@@ -35,17 +35,17 @@
   --hero-overlay-mid2: rgba(30, 14, 8, 0.10);
   --hero-overlay-right: rgba(30, 14, 8, 0);
   --hero-overlay-bottom: rgba(30, 14, 8, 0.25);
-  --hero-badge-bg: rgba(59, 31, 20, 0.80); /* Dark Brown Translucent Badge */
+  --hero-badge-bg: rgba(74, 44, 34, 0.75); /* Softened Dark Brown Translucent Badge */
   --hero-badge-border: #F5A940;
   --hero-badge-text: #F5A940;
 
   /* High Contrast Dark-Background Theme Tokens (WCAG AAA >= 7:1) */
-  --text-on-dark: #F3E9DD;       /* Warm Off-White (12.58:1 contrast against #3B1F14) */
-  --text-on-dark-label: #FFFFFF; /* Pure White for labels (15.09:1 contrast) */
-  --link-on-dark: #F5A940;       /* Vivid Amber for links (7.64:1 contrast) */
+  --text-on-dark: #F3E9DD;       /* Warm Off-White (10.45:1 contrast against #4A2C22) */
+  --text-on-dark-label: #FFFFFF; /* Pure White for labels (12.54:1 contrast) */
+  --link-on-dark: #F5A940;       /* Vivid Amber for links (6.35:1 contrast) */
   --link-on-dark-hover: #FFFFFF; /* White on Hover */
-  --heading-on-dark: #F5A940;    /* Amber Section Headings (7.64:1 contrast) */
-  --meta-on-dark: #D9C8B4;       /* Small text & copyright line (9.25:1 contrast) */
+  --heading-on-dark: #F5A940;    /* Amber Section Headings (6.35:1 contrast) */
+  --meta-on-dark: #D9C8B4;       /* Small text & copyright line (7.69:1 contrast) */
 
   /* Backward Compatibility Aliases */
   --c-forest-dark: var(--primary);
@@ -78,10 +78,10 @@
   --max-width: 1440px;
   --container-pad: clamp(1rem, 3.5vw, 2.5rem);
 
-  /* Elevation & Shadows */
-  --shadow-subtle: 0 2px 10px rgba(30, 14, 8, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
-  --shadow-elevated: 0 12px 32px rgba(30, 14, 8, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
-  --shadow-overlay: 0 24px 64px rgba(30, 14, 8, 0.45);
+  /* Elevation & Shadows (Softer, cleaner depth) */
+  --shadow-subtle: 0 2px 10px rgba(50, 30, 22, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-elevated: 0 10px 28px rgba(50, 30, 22, 0.06), 0 4px 10px rgba(0, 0, 0, 0.03);
+  --shadow-overlay: 0 20px 48px rgba(50, 30, 22, 0.25);
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -288,7 +288,7 @@ input::placeholder, textarea::placeholder {
   color: var(--white);
   font-size: 0.75rem;
   letter-spacing: 0.04em;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid rgba(232, 116, 42, 0.45);
   position: relative;
   z-index: 60;
   width: 100%;
@@ -1087,16 +1087,16 @@ main > section:first-child {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(59, 31, 20, 0.96);
+    background: rgba(74, 44, 34, 0.94);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid var(--accent);
+    border-top: 1px solid rgba(232, 116, 42, 0.45);
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 8px 12px;
     z-index: 49;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 -4px 18px rgba(30, 14, 8, 0.15);
   }
   .choate-mobile-quickbar a {
     display: inline-flex;
@@ -1163,7 +1163,7 @@ main > section:first-child {
 .doon-footer {
   background-color: var(--primary);
   color: var(--text-on-dark);
-  border-top: 4px solid var(--accent);
+  border-top: 2.5px solid var(--accent);
 }
 
 .doon-footer p {
@@ -1526,7 +1526,7 @@ main > section:first-child {
   border-color: var(--border-subtle) !important;
 }
 .border-\[\#153D2B\] {
-  border-color: var(--primary) !important;
+  border-color: rgba(74, 44, 34, 0.28) !important;
 }
 .border-\[\#C5A15A\] {
   border-color: var(--gold) !important;
@@ -1543,7 +1543,7 @@ main > section:first-child {
   border-color: var(--primary) !important;
 }
 .focus\:ring-\[\#153D2B\]\/15:focus {
-  --tw-ring-color: rgba(122, 31, 31, 0.15) !important;
+  --tw-ring-color: rgba(74, 44, 34, 0.15) !important;
 }
 .focus\:ring-\[\#C5A15A\]:focus {
   --tw-ring-color: var(--gold) !important;
