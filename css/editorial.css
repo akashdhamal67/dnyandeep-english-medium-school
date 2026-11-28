@@ -1401,20 +1401,40 @@ main > section:first-child {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.08);
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.06);
   color: #F3E9DD;
-  transition: all 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(243, 233, 221, 0.15);
+  text-decoration: none !important;
+  outline: none;
+}
+
+.footer-social-icon svg {
+  width: 21px;
+  height: 21px;
+  color: #F3E9DD;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .footer-social-icon:hover {
-  background-color: #E8742A;
-  color: #FFFFFF;
-  border-color: #E8742A;
-  transform: translateY(-2px);
+  background-color: rgba(245, 169, 64, 0.15) !important;
+  border-color: rgba(245, 169, 64, 0.5) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(245, 169, 64, 0.2);
+}
+
+.footer-social-icon:hover svg {
+  color: #F5A940 !important;
+}
+
+/* Accessible visible gold focus ring for keyboard navigation */
+.footer-social-icon:focus-visible {
+  outline: none;
+  border-color: #F5A940 !important;
+  box-shadow: 0 0 0 3px rgba(245, 169, 64, 0.45);
 }
 
 .footer-bottom-strip {
