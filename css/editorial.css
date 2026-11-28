@@ -453,6 +453,147 @@ input::placeholder, textarea::placeholder {
   width: 100%;
 }
 
+/* --- Nav Dropdown System (Desktop Hover & Mobile Touch) --- */
+.nav-item-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-dropdown-toggle svg,
+.nav-dropdown-toggle i {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.25s ease;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 12px 32px rgba(50, 30, 22, 0.12);
+  border-radius: 0 0 4px 4px;
+  padding: 0.65rem 0;
+  margin-top: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  list-style: none;
+}
+
+/* Show dropdown on hover or when open class is applied */
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown.is-open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-item-dropdown:hover .nav-dropdown-toggle svg,
+.nav-item-dropdown:hover .nav-dropdown-toggle i,
+.nav-item-dropdown.is-open .nav-dropdown-toggle svg,
+.nav-item-dropdown.is-open .nav-dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-dropdown-item:hover {
+  background-color: var(--cream);
+  color: var(--primary);
+  border-left-color: var(--accent);
+  padding-left: 1.45rem;
+}
+
+.nav-dropdown-item.active {
+  color: var(--accent);
+  background-color: var(--cream);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
+/* Menu Panel Accordion / Drawer Dropdown Styles */
+.drawer-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  font-size: 16px;
+  color: var(--text-on-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-weight: 600;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+.drawer-dropdown-toggle:hover,
+.drawer-dropdown-toggle.active {
+  color: var(--heading-on-dark);
+}
+.drawer-dropdown-toggle svg,
+.drawer-dropdown-toggle i {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease;
+  color: var(--accent-light);
+}
+.drawer-dropdown-group.is-open .drawer-dropdown-toggle svg,
+.drawer-dropdown-group.is-open .drawer-dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.drawer-submenu {
+  display: none;
+  list-style: none;
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  border-left: 1.5px solid rgba(245, 169, 64, 0.35);
+}
+.drawer-dropdown-group.is-open .drawer-submenu {
+  display: block;
+}
+.drawer-submenu li a {
+  min-height: 40px !important;
+  font-size: 14.5px !important;
+  color: rgba(243, 233, 221, 0.85) !important;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0;
+  transition: all 0.2s ease;
+}
+.drawer-submenu li a:hover,
+.drawer-submenu li a.active {
+  color: var(--link-on-dark) !important;
+  transform: translateX(4px);
+}
+
 /* 3. Action Buttons Group (Admissions Enquiry + MENU) — Flex 0 0 auto, Never Overlaps */
 .header-action-group {
   display: flex;

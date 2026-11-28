@@ -18,7 +18,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/editorial.css?v=47">
+  <link rel="stylesheet" href="css/editorial.css?v=48">
 </head>
 <body class="bg-[#F7F3E9] text-[#26332C]">
 
@@ -58,12 +58,34 @@
         </a>
 
         <nav class="site-primary-nav" aria-label="Primary Navigation">
-                    <ul class="nav-menu-doon">
+          <ul class="nav-menu-doon">
             <li><a href="index.html" class="nav-link-doon">Home</a></li>
             <li><a href="about.html" class="nav-link-doon active">About Us</a></li>
-            <li><a href="academics.html" class="nav-link-doon">Academics</a></li>
-            <li><a href="facilities.html" class="nav-link-doon">Facilities</a></li>
-            <li><a href="gallery.html" class="nav-link-doon">Gallery</a></li>
+            <li class="nav-item-dropdown">
+              <a href="academics.html" class="nav-link-doon nav-dropdown-toggle">
+                <span>Academics</span>
+                <i data-lucide="chevron-down"></i>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="academics.html" class="nav-dropdown-item">Curriculum Overview</a></li>
+                <li><a href="pre-primary.html" class="nav-dropdown-item">Pre-Primary Section</a></li>
+                <li><a href="primary.html" class="nav-dropdown-item">Primary Section (Std 1–4)</a></li>
+                <li><a href="secondary.html" class="nav-dropdown-item">Secondary SSC Section (Std 5–10)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="resources.html" class="nav-link-doon nav-dropdown-toggle">
+                <span>Resources</span>
+                <i data-lucide="chevron-down"></i>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="facilities.html" class="nav-dropdown-item">School Facilities &amp; Labs</a></li>
+                <li><a href="gallery.html" class="nav-dropdown-item">Campus Life &amp; Gallery</a></li>
+                <li><a href="resources.html" class="nav-dropdown-item">Parent Resources Hub</a></li>
+                <li><a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="nav-dropdown-item flex items-center justify-between">Parent Portal <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 ml-1 text-[#F5A940]"></i></a></li>
+                <li><a href="career.html" class="nav-dropdown-item">Teaching Careers</a></li>
+              </ul>
+            </li>
             <li><a href="admissions.html" class="nav-link-doon">Admissions</a></li>
             <li><a href="contact.html" class="nav-link-doon">Contact Us</a></li>
           </ul>
@@ -112,26 +134,43 @@
         </div>
         <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 pl-0 md:pl-6">
           <div class="space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Academics & Life</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Main Navigation</span>
             <ul class="space-y-2 text-base">
-              <li><a href="index.html" class="hover:text-[#C5A15A] transition-colors">Homepage</a></li>
-              <li><a href="about.html" class="hover:text-[#C5A15A] transition-colors">About Us (School Heritage)</a></li>
-              <li><a href="academics.html" class="hover:text-[#C5A15A] transition-colors">Academic Curriculum Overview</a></li>
-              <li><a href="facilities.html" class="hover:text-[#C5A15A] transition-colors">School Facilities &amp; Labs</a></li>
-              <li><a href="gallery.html" class="hover:text-[#C5A15A] transition-colors">Campus Life &amp; Photo Gallery</a></li>
-              <li><a href="pre-primary.html" class="hover:text-[#C5A15A] transition-colors pl-3 text-sm text-white/80">&bull; Pre-Primary Section</a></li>
-              <li><a href="primary.html" class="hover:text-[#C5A15A] transition-colors pl-3 text-sm text-white/80">&bull; Primary Section (Std 1–4)</a></li>
-              <li><a href="secondary.html" class="hover:text-[#C5A15A] transition-colors pl-3 text-sm text-white/80">&bull; Secondary SSC Section (Std 5–10)</a></li>
+              <li><a href="index.html" class="hover:text-[#C5A15A] transition-colors ">Homepage</a></li>
+              <li><a href="about.html" class="hover:text-[#C5A15A] transition-colors text-[#F5A940] font-semibold">About Us (School Heritage)</a></li>
+              <li class="drawer-dropdown-group is-open">
+                <button type="button" class="drawer-dropdown-toggle " aria-expanded="true">
+                  <span>Academics</span>
+                  <i data-lucide="chevron-down"></i>
+                </button>
+                <ul class="drawer-submenu">
+                  <li><a href="academics.html" class="hover:text-[#F5A940] transition-colors">Curriculum Overview</a></li>
+                  <li><a href="pre-primary.html" class="hover:text-[#F5A940] transition-colors">Pre-Primary Section (Ages 3–5)</a></li>
+                  <li><a href="primary.html" class="hover:text-[#F5A940] transition-colors">Primary Section (Std 1–4)</a></li>
+                  <li><a href="secondary.html" class="hover:text-[#F5A940] transition-colors">Secondary SSC Section (Std 5–10)</a></li>
+                </ul>
+              </li>
+              <li><a href="admissions.html" class="hover:text-[#C5A15A] transition-colors ">Admissions (2026–27)</a></li>
+              <li><a href="contact.html" class="hover:text-[#C5A15A] transition-colors ">Campus Location &amp; Contact</a></li>
             </ul>
           </div>
           <div class="space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Admissions & Resources</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#C5A15A]">Campus &amp; Resources</span>
             <ul class="space-y-2 text-base">
-              <li><a href="admissions.html" class="hover:text-[#C5A15A] transition-colors">Admissions Guide & Age Criteria</a></li>
-              <li><a href="resources.html" class="hover:text-[#C5A15A] transition-colors">Parent Resources Hub</a></li>
-              <li><a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#C5A15A] transition-colors flex items-center gap-1.5">Parent Portal <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#C5A15A]"></i></a></li>
-              <li><a href="career.html" class="hover:text-[#C5A15A] transition-colors">Teaching Careers at Dnyandeep</a></li>
-              <li><a href="contact.html" class="hover:text-[#C5A15A] transition-colors">Campus Location & Office Hours</a></li>
+              <li class="drawer-dropdown-group is-open">
+                <button type="button" class="drawer-dropdown-toggle " aria-expanded="true">
+                  <span>Resources &amp; Campus</span>
+                  <i data-lucide="chevron-down"></i>
+                </button>
+                <ul class="drawer-submenu">
+                  <li><a href="facilities.html" class="hover:text-[#F5A940] transition-colors">School Facilities &amp; Labs</a></li>
+                  <li><a href="gallery.html" class="hover:text-[#F5A940] transition-colors">Campus Life &amp; Gallery</a></li>
+                  <li><a href="resources.html" class="hover:text-[#F5A940] transition-colors">Parent Resources Hub</a></li>
+                  <li><a href="https://parent.neverskip.com/#/auth/login" target="_blank" rel="noopener noreferrer" class="hover:text-[#C5A15A] transition-colors flex items-center justify-between">Parent Portal <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#C5A15A]"></i></a></li>
+                  <li><a href="career.html" class="hover:text-[#F5A940] transition-colors">Teaching Careers at Dnyandeep</a></li>
+                </ul>
+              </li>
+              <li><a href="admission-enquiry.html" class="hover:text-[#C5A15A] transition-colors text-sm text-[#F5A940] font-medium flex items-center gap-1.5 pt-2">Online Admission Enquiry <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a></li>
             </ul>
           </div>
         </div>

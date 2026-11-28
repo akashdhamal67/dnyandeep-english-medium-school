@@ -46,9 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close on click of any link inside the drawer
+    // Close on click of any link inside the drawer (except dropdown toggles)
     drawerOverlay.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', closeMenu);
+    });
+
+    // Mobile / Drawer accordion dropdown toggles
+    drawerOverlay.querySelectorAll('.drawer-dropdown-toggle').forEach((toggleBtn) => {
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parentGroup = toggleBtn.closest('.drawer-dropdown-group');
+        if (parentGroup) {
+          const isOpen = parentGroup.classList.contains('is-open');
+          // Close other groups optionally or toggle this one
+          parentGroup.classList.toggle('is-open', !isOpen);
+          toggleBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        }
+      });
     });
 
     // Escape key closes menu
@@ -58,6 +72,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Desktop Navbar Touch / Keyboard Dropdown Support
+  const navDropdowns = document.querySelectorAll('.nav-item-dropdown');
+  navDropdowns.forEach((item) => {
+    const toggle = item.querySelector('.nav-dropdown-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth < 1100 || 'ontouchstart' in window) {
+          // If clicking arrow specifically or on touch
+          const isExpanded = item.classList.contains('is-open');
+          navDropdowns.forEach((d) => d.classList.remove('is-open'));
+          item.classList.toggle('is-open', !isExpanded);
+        }
+      });
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-dropdown')) {
+      navDropdowns.forEach((d) => d.classList.remove('is-open'));
+    }
+  });
 
   // 3. Intersection Observer for Subtle Editorial Reveals
   const observeElements = document.querySelectorAll('.fade-in-observe');
